@@ -104,6 +104,7 @@
       <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="ImportNCCToMisa" sap:VirtualizedContainerService.HintSize="608,3264" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -272,7 +273,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Nhà cung cấp | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="804deb97-3b4d-42d1-81ae-610d441b0ed5" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Nhà cung cấp | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="483.20000000000005,687.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="804deb97-3b4d-42d1-81ae-610d441b0ed5" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -423,7 +424,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="2" DisplayName="Click 'Đóng'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DelayBefore="1" DisplayName="Click 'Đóng'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/Ultilities/Import/9021" CvElementArea="1754, 991, 88, 43" CvTextArea="1775, 1002, 45, 20" CvTextArgument="Dong" CvType="Button" DesignTimeRectangle="1756, 993, 85, 38" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Đóng'" FullSelectorArgument="&lt;webctrl parentid='footer-layout' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='footer-layout' tag='BUTTON' type='' class='ms-component ms-button add-button ms-button-size-default ms-button-primary ms-button-primary-disabled-false ms-button-radius-false ms-button' aaname='Đóng' check:innerText='Đóng' /&gt;" Guid="77da45b7-4693-40bc-9608-f84ebe941732" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFkAAAAqCAYAAADYvffAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQDSURBVGhD7ZvNSxtBGIf7h9iWUkovWk0rmLaxhAolJ3MSD4FQkB4EDx7Ei5CCxYN40ktJe2hOCgHJoSQHQwQ/QCkRg6HBWrUoSmmiVBOUFZVfZ2Z3Nrtx2saYrBpn4DnknXc35NnZd2aW7C3702ZIKouUbAFnJDc5nzMK45L/09TyTBg3SW70PEb9uweoDdRISuFTDeoH76PRaxNLfvK6AXUf7ogPlpyLR8P3TKJ1yXIElxc6os2SXzhQ9/6uMFlSIqR0NL1Sa7Q+koWJkgvB3UrJFURKtgAp2QKkZAuQki1ASraA6yM56EJH1IvOaDvagoL+K4yFkr0YSgUwamIQvgkXnMJ8IzYMbe+DNmXHD48w5+pioWQ/UkyToB2tIDznFByj4kkmoZC0zFb/tRNMuQTJKxhnt30XhpZCmM9RfbSlEZ21CY6zoW2C5Bc14q8mlyA5iYApboNvM816cBBCt7Ev2I6B7zGsHewje0TIxRFeaDfLjg5jOh1HdNGNjoUQEjlDbtydz2O4MbSeRIb2H6WRWh9Ex6R6/PSStyC3fFwByYTPAayxPjKap3j8DUZ/a6P8VCFSFFYyaMts9ORFz0SQocFjtV85JgJPaIA2cr4Zfr58XadNIaKVU5qvnjWz0aXllR+LJPdhPL2JLPs5+9giIydBGJ/j/V2IHrJOpJJqrG15RQ0cxjAQUmPOiTH9YoQntWO5ZKI49ZWPXDdG91gQmR+aPMOFnOZlKdSHae17q0CyeNLjQkWS/Tvq561V8218Js4ln8QxYsjr3VBLkC5vKck+IxdCpyGvc3WThatAshOeKB+FfOLzwqON0NrAIBLsFlcw/0WNBTSZ+QuhckYel3wYQe+/8sgKhTWyBOQ5xngVSKb8vSY7E3Gt3pI+baPBJa8tu0y5I78Kauh5Je/6zRPnTZDcOkVGuDZRZbf7dQH8NsZeIL82DvZj/ogGFSQWtVixkg1lxa/vGMlk+LNqJj5Kvi7TmZ0ts7SZnTZlN4Bu43Y5yEsIkZ+NIfwtgsSBlm8UWqxksloJ51iIfBlZ3qXGEE2ntTuoCiXrjS7N6Hp20YtWwTHOiWHMH+YvBG3ZvZC+2mAULZkQIecznk6ZRXhbkFdmLJR8AULusj4Yao2QiTeibuOFF6PMXA/JZcGFjljB1jzYo6+TCyfYcnKDJGtr8RO6e0xjbZdsjvjOkJQaXwUfn94gyS74lmNI8WcbFGUTiQ0/eo01vgLcIMmXh5RsAVKyBUjJFiAlW8AZyXUfbwsTJaVjf6m+saBLbnj7UJgoKQ36f297S4Fk+s9wUbLk/NA3FuirIdytLtnucDDRdETL0lEa9I/0dATTV0N0rybJkgvT1OwQxqXkitOMP23wLU3bCOBaAAAAAElFTkSuQmCC" InformativeScreenshot="a5574d88257988b16506ff4470691999.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='branch_name' title='Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.PointOffset>
