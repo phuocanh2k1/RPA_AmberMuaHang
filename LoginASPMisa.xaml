@@ -1,0 +1,203 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginASPMisa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>834.4,987.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LoginASPMisa" sap:VirtualizedContainerService.HintSize="608,922.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ASP - Đăng nhập" sap:VirtualizedContainerService.HintSize="545.6,810.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,593.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Sequence - Đăng nhập Misa" sap:VirtualizedContainerService.HintSize="449.6,588.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Đăng nhập'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://asp.misa.vn/App/Account/Login?gidzl=K-GW0LaWabnGyYC4LZUJMbty801DCi4B4Fnv04XaoWr7-NW56sIRN1MjULCUPvy85gqkKZG-_81kNokOMG&amp;ReturnUrl=/App/223/Customer" CvElementArea="748, 506, 472, 59" CvTextArea="765, 529, 96, 16" CvTextArgument="0906249919" CvType="InputBox" DesignTimeRectangle="750, 508, 467, 55" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT UserName'" FullSelectorArgument="&lt;webctrl id='UserName' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='UserName' tag='INPUT' type='text' class='font-roboto txt-input' aaname='' /&gt;" Guid="d04ad304-27e1-4d55-a1b8-ac2a60278ac4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdcAAAA7CAYAAAApdcCMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASUSURBVHhe7dnPahRJHMDxPFi8+Cbi0YcQcvUZvHnMW3jwtl42CFEQUXEhIEHPs71T3V1JVVfVTCfUOAP7+cEHlp7qP9OH/VqTs8EYY4wxXUdcjTHGmM4jrsYYY0znqcb15+2v4frz1+H91cfhr7+vAYCK0MnQy9DNdIq4fvtxM3z49GX4fvN7+Od2s/UvAFC1GXsZuhn6GSeLayhvWCCqAPAQm7GfcQebxTVsbacda+1EAKAl9DN0NEwW1/DbsV0rADzGZuxomCyu4Y+z9RMAgH1CR8OIKwB0Iq4A0Jm4AkBn4goAnYkrAHQmrgDQmbgCQGfiCgCdiSsAdCauANCZuAJAZ+IKAJ2JKwB0Jq4A0Jm4AkBn4goAnYkrAHR24LheDS+fnA1nZ9GL4fWj1my9eZGsORvOL67KNe9eDefJmuq1Ftdp3u/O/HzPL4vP3l48za717E3++WjNcydeP6/fa/V7AuDoDhjXMkpjOLIoXA7PQiievBrezsemYD0dXr6La7bGQCXH5ohmoZojdn8sxuj+fjGGaQSnZ1rcL3EX0EXwivMqz1Teb/6+1Xi277X6PQFwEg4W1/r//KdIxADV1yyjXA/SdG4MZ2N3OQdviltjzeKZMulOOD2vFvet/JkaIV3+Q2EU/yFQudfWuvcEwKk4WFzHnV2y06odb63JIpUFMpEeH//7sbu4RgTneJ1fXJYRqwZyq3imynMXMY9hDd+3HsxV7wmAk3GguLZ3VdPPqVMQdkdjjteekI2RGtckcQqxDCrXLqTXSY7fP1vlu6x5pj1xrb2b1ntb9Z4WnwFwPH88ruluq7XzmgK8J67JDnC6TjgnjVkM7a6dXWNNds/Kd2mFczwvhnq5Q53N5z4krqve0+IzAI7nqHG928Ulu7L7UD48rq2QFcdnU5yWkVxGsf5dirDFaCbnxue6v/78fYMHxHXVe8rWA3BMfzyuU5TSXVgSnK0xTGlQW3FNwllGLNr3HOU54/HsJ9j91xiN5yzDnEYwCN+7fb1d99r7nor1ABzLgeJai9Tu46kxSHFN6yfY9Pj8c+y6uM7HquvzgJX2hGx8pn2xm+5R3jvYFddS9p4AOBkHi+u0Y1v+nTDf2dXXLANT7gaD/Nw5issoFWGOYX3Ibq8SvEbwa8+0fO7du816XNe9JwBOxcHiehe8ZGc1/YyaRqIMULkmxiWJ2Ry39LxiTYxPcf+H/oxaj1ixA6/snosoVp471wrmuvcEwGk4YFyDORbbMExqMZgjHLV+5pzjFVUDtViTXWsOW/Z5qnXfHTvEKXBRPdox+tFyt5tr32v1ewLg6A4cVwD4/xFXAOhMXAGgM3EFgM7EFQA6E1cA6ExcAaAzcQWAzsQVADoTVwDoTFwBoDNxBYDOxBUAOhNXAOhMXAGgs2pc31993H64KRYDAPtsxo6GyeJ6/fnr8P3md+UEAGCX0M/Q0TBZXH/e/ho+fPqyXWT3CgDrbcZ+ho6GyeIa5tuPm3HBtIMVWQBo24y9DN0M/YxTxDVMKG/Y2obfjsMfZwGAUuhk6GXcscapxtUYY4wxj51h+A+7pu91q9riWQAAAABJRU5ErkJggg==" InformativeScreenshot="3b2a1be58d07386082c83cbc691be26a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ASP - Đăng nhập' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArgument="Dang nhap" CvType="Text" DesignTimeRectangle="750, 451, 131, 32" ElementType="Text" FriendlyName="'Đăng nhập'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Đăng nhập' check:innerText='Đăng nhập' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_config["username"].ToString()</CSharpValue>
+                  </InArgument>
+                </uix:NTypeInto.Text>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Đăng nhập'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://asp.misa.vn/App/Account" CvType="InputBox" DesignTimeRectangle="750, 583, 467, 55" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT Password'" FullSelectorArgument="&lt;webctrl id='Password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Password' tag='INPUT' type='password' class='font-roboto txt-input' aaname='' /&gt;" Guid="94418739-1607-41d2-a16d-094a271292e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdcAAAA7CAYAAAApdcCMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQrSURBVHhe7dvBalRXGMDxeTDd+Cbi0ocQ3PoM7lwK2bW1No0YbARpQ2lTSxRiiKI1VIKWQhfT03w3+eKdyb2TTOZMyYy/D36QOffeyfLPOTMzKMYYY4ypOuJqjDHGVB5xNcYYYypPZ1w/HHws2zt7ZXPrRfnp120AoEN0MnoZ3WzPqbi+frtfnr/cLW/2P5V3B8ND/wIAnYZNL6Ob0c+ckbhGeeMGUQWAaQybfuYOdiSusbU92rF2PQgA9Il+RkdjRuIaZ8d2rQBwEcOmozEjcY0PZ7sfAADOEh2NEVcAqERcAaAycQWAysQVACoTVwCoTFwBoDJxBYDKxBUAKhNXAKhMXAGgMnEFgMrEFQAqE1cAqExcAfgibb96X1bX1juvzUpcAfgiRVjFFQAuaPfdX43265WVlfLL769G7qtFXAFYKhHOZ5u/NbvSCGhbxvTJ0x+b1+PP1iKuACyFiGpGM3z19YPmdYQ2otrepca1vCeut9+nBnEFYOFFOCfFMq7nsXDeG/eFfK4d31mJKwALLWMZu9TxaxnPkHEdPxLOY+Sau1hxBWBhZTy7opifuUZ8d/bel7//KeWPP4++yNT1LeFJ7zWtOcb1frk+GJRBuHqnrOf6vZtHa4eu3N46uX/99rWT9ev38j22yq2rx+8xuFnu5nv0rk/3P3vXAbj04neqGc/xa7mbzd+y5j0/HO5a1x4/ObnW99ysgZ1bXO/eOI7csaNgtuLXOA7jxp1ypb1+HMZ2cEMGsG99qv/Zuw7AZZdh7YtgHP1GVON6HPfm+nerj8rTZz83z3btXkMGtiva5yWup9YBuOwinu1ojotr7cDGWsTy0fpG83esT3o+rnd9hntec4vrSLxu3P+83jqK/Xz82w7mtXJrI9dbx7/tY97e9en+Z+86AJfaWce3Gdb27rP9haV4ti+euSvuOjY+rznGFQDmJ0LZF9iMb/vnN98+/L55ndfa4U0Z1ll2rUFcAVhIEcrYnfYFNtYyrnFffJEpgxyvx+/PsE46Lj4vcQVgYeVvVM/abcb11BXWSdG9CHEFYOFlHPNz1dyxhjj+/ebBw2Z9/HPUuC+eqRnWIK4ALIUIZexeM7K5Hn/HeoQ1QhuRzRjnvbN8eamLuAKwVCKyGcuI6era45PftmZMQ9dOthZxBWBpxVFvhDSC2z4qnjdxBWBpxU616yc38yauACyl/LLS/7ljTeIKAJWJKwBUJq4AUJm4AkBl4goAlYkrAFQmrgBQmbgCQGXiCgCViSsAVNYZ182tF4cXh6duBgDOMmw6GjMS1+2dvfJm/1PHAwDAJNHP6GjMSFw/HHwsz1/uHt5k9woA5zds+hkdjRmJa8zrt/vNDUc7WJEFgH7DppfRzehnzqm4xkR5Y2sbZ8fx4SwAcFp0MnqZO9aczrgaY4wx5qJTyn9naFbWeSadjQAAAABJRU5ErkJggg==" InformativeScreenshot="a50372e998068b5bf050ef77ded80b2b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ASP - Đăng nhập' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArgument="Dang nhap" CvType="Text" DesignTimeRectangle="750, 451, 131, 32" ElementType="Text" FriendlyName="'Đăng nhập'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Đăng nhập' check:innerText='Đăng nhập' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_config["password"].ToString() + "[k(Enter)]"</CSharpValue>
+                  </InArgument>
+                </uix:NTypeInto.Text>
+              </uix:NTypeInto>
+            </Sequence>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'Truy cập'" sap:VirtualizedContainerService.HintSize="449.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://asp.misa.vn/App/Account/Join" CvTextArgument="Truy cap" CvType="Text" DesignTimeRectangle="1303, 382, 131, 43" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Truy cập'" FullSelectorArgument="&lt;webctrl parentid='1794' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='1794' tag='A' type='' class='join m-btn primary' aaname='Truy cập' check:innerText='Truy cập' /&gt;" Guid="c7b27997-c9d9-4877-9198-993c5263267f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAvCAYAAADJqNmJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAT+SURBVHhe7Zzva9tGGMf3L4VRxlbWQfAgL/ZiDPIiEAiUsWFYIBAWSsibkLFAXoS8CH5VShdM52rdXFIwJiFpi83G7HRZUlZ7JAhSbEKHQopDg00zvruTTpbOvrNrFv9Q9DzweSHdI/lkfXT36BzyHigoNEFyUGiD5KDQhlKOw9NDfPv4FobuXiNCwo17w/gy/TV+Kj4QFijk+PnvX/Bh/GPlCYirz3DiU3z36/e2C5IcmVIW1+M3lAcR4SFyf8R2QZIjuvGNMpkIH9wFSQ4+76gSifDBXZDkUCUR4YXkILSQHIQWkoPQQnIQWkgOQgvJQWghOQgtfZBjDlvn4gPbxWsDY8pzBIkRLJcr4oJYWHFElHmDB8nRZSaeF1Hl13JRQeXCviqYxZvK3EGjD3KMYGxjCpObLjHk7G+PRSWN2fp+xsZ4YJ4yJak4CrYQNSbEDCb2hSgwkUgp8geMAag5fCPJlZhGrg4DL8fskeW0vc1j9amB3FmFPX015HKsPbMNp1Vsa45bZtvTpthGBZmsnDv0W5bt5VFD4a82Q74RxeJBHqVqzT6CR7VmYe/FAsaMhtzkHBLH5fp0wqcW8yiG1InYFn3juf7+JvazMOvnr6H6Zh+Jp6PyuXtAcOSQonM5hh4ZbDB3ovoqJuUulkTBWNvH6iNvfxPGArbeOKnKqLHPeihy61NKi1DJ0SJ6XasETI4aSv9sI/nCwPIWa+9EDkZdAhSx5j7lxh3siZtYYdK0mtb8fbGO45hPsafZGMf0bhbWv6yuMJcwYeeOI3EqElnfCuYKJpPXEFlfQPLUG3G0clSLSOam8AWvz7IPUXgr9qOM1Kbcp24SIDnYl38wIxeoHcoxtJ0W+UDpcMreF/lzXxSJFptuRqRzyMTqElVP4kICj8j6OLuZYnszjZKTCqu8Il+TsYKc64dSDgtbjf2oXyfrt+n0uxcEqOZQDPmdyuF/os/SmGzals8h4bvhpYM2w/uuKxzr106zcPMvxQimkqOWxaIv12EBGfeNzoo3tHWPQBWk3k0WtJBjuSwez4bjvJGCFaY7Xh3ijiRaOpGDvbI6weVobv9fcpw2f0fd4orIAezt+tuWkFEM3U1tblywGqTtuoM3raj6GUmOelOeT6TKywUpT7pelRy8ruD1lP8Y33RoHc3JbV0k2HLcvYOC02ovoLlFX8JyC08WiuO811onqmyofpen0StoefEax/Q6mzJYQTr/PM8KUl4PuDXRTSRei0Q2epgHzmuuXZCevENBemEimeULgLwgNVBwRw0uzpNWddHlEnA5RrD6qnEYaAjVcb7XWj697D0bl9t1tHuVPWd1kfvUX/qrrLPK2ssV44DLwTCiuF3yLzRZKBzFsVZqddyoV4ieZzHfuHjVCs0iGP/MWTZySbmpJSSlRTB93/zXufZs21sEY6/IlbM8kr9HeyoGZwDk6AO+kcNiNUGvv3QVbR+CPhBKObyaQ1H89QmSYyCYQcqtG9g01riY1Q3qP9uzG7+qmcJIjkGgkx/ZLgVfTcXCLKqLX5IjpEwXTWfkqOZxOwB/x+FCchBaSA5CC8lBaCE5CC0kB6GF5CC0SHJ89uBzZRIRTiQ5vkpH8f4PHygTifDAHeAuSHLkj3fwEf03QYLBXZDk4LH6R8wWhEaQ8OHe8x8L920XmuTgwa3hwwrVIOHhk3vDuPVk1r73bijloKAAgP8A5+nMc2Ky/CwAAAAASUVORK5CYII=" InformativeScreenshot="075e48fd0ce3ac014a36178d3238d012.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ASP.MISA.VN - Nền tảng kế toán dịch vụ | Kết nối nhanh, hiệu quả' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="CONG TY TNHH HANG KIEM TOAN AMA" CvType="Text" DesignTimeRectangle="592, 388, 500, 31" ElementType="Text" FriendlyName="'CÔNG TY'" FullSelectorArgument="&lt;webctrl parentid='1794' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='1794' tag='SPAN' type='' class='name-company' aaname='CÔNG TY TNHH HÃNG KIỂM TOÁN AMA' check:innerText='CÔNG TY TNHH HÃNG KIỂM TOÁN AMA' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'Xem dữ liệu'" sap:VirtualizedContainerService.HintSize="449.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://asp.misa.vn/App/1794/Customer" CvTextArgument="Xem du lieu" CvType="Text" DesignTimeRectangle="1703, 492, 92, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Xem dữ liệu'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='3' tag='TABLE' /&gt;&lt;webctrl class='il-text' tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='il-text' type='' tag='DIV' aaname='Xem dữ liệu' check:innerText='Xem dữ liệu' /&gt;" Guid="adfc2749-637e-4978-82df-c65c63947bb7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAnCAYAAABtyERkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ4SURBVGhD7Zi/SxthGMf712Tr5uToli1btmxu2dycVEQcxIqEIKVCKEFKW0oJUrRTi0MI0oqUDKUpIg6l3JnzckZj0/Dt89z7XpK7y+VOY30d3g+Umid374/PPe/zvpcn0Dw4WroCtHQFaOkK0NIVoKUrQEtXgJauAC1dAVq6ArR0BWjpCtDSFaClK0BLV4BPun1oYXrBwPTLS9gy1se5xNyKgdSKhX1Hxh4B+y9pTAs0JvkZ6GC7wDED2b1r+tyja0xkPvDf4/G3Re0UTTxdbmL7zA0M6HVhnN/AcP7KwO0IZHoX+2WTOjYxf9SVMSYqrp6Q9GMLU2sXqP5uY37NxOqRg9klA3OHPXlBNP62aM47JmbWg0lGcXqIKWoztXSO4ml8u0HC5YUyOr9MDXJGt0XIPhqzAhQTlN6o2iifiMTgcc+QnKcFG/UEbsKrJshf1CvnUvYfIZ88VazbiR9Z0+0aZQtLLrdh99pY5LKyTI0/orLiES9qiDMbGZpXZrcjA35u1dYERGykXbx5zgOgWrjOZcXA7EGwrHRR/Wghyw+Evk8tmciWWqj2H0wHxQ2Kb9iofLaQ4dVD102tNVGmJdk5cTC3Idrme2d3r2JWEfW320RatpNa5nvaKJf4sxQVIbWxS9m5QNlZs5Hm7/eSSQ8/hJg5x/Uv94YI6YTRQo7rFjf+3AkIGdT47GsHddpU6l9s5Hgwm95SltL5/lUL2987aHy7QIbbXKFaSQPOvb9E/Vcbz2jDcveL46hlKusoT2jHwddfor/8mmw/kXQT+ZL4/9lP+UWA8dLHzJkSy53zf5VO32Upnn53JQMS3sQonq/yqvCkDzpjxAAo43fkhsHIwc4E2/P4KTI01J8jNslk0sUqW6zdyGiYsdJj5uxWgsmkD8pLtiAyzFde6GgpMmz0P9GplL5OWSDuEsh787XhrKbjKN9LG/UoGnsiQ1d/yECfHiq3KS9DD38UY6UnmfMk0u2DptvQ9CvKxjYdvXgJLTXxxqtd9aGnG8mgpjdkxEUOfu5QfnaJke4OmsrCqQwM4RMTMemv7zhxJpSeZM4R/dcr/v7D0oeOjJ9kMnpHxqmSPDLSiWaerwkKda7xSR7X7lN6dHmRY/XEnFNJ5HEOl67eFVbd2j+hdG/OhRZ8zQzPOWH/AeldWq5is1j0HWwHm0i+JjoQS55Ww5aN/ZMbNL479DJCjfOKsPiKe5Q+aiP91hL98X19UTcoF3kMtClXr2HQJl3cEvdNLJ2In3Oy/n3S+z8D8PlcxvqEfgbo4ax2gRy99YlG6b5Ni15MvFfj+5RO9P6Ejoy594EjI2PRe8Umvb7zNTT59At6WXp7DzXdJW7ORIL+IzZSzf9ES78Ljsjm7OsRFSEBWvpdOKMzu/ubTstfOhOipStAS1eAlq4ALV0BWroCtHQFaOkK0NIVoKU/OMA/YrmdAiDGs1cAAAAASUVORK5CYII=" InformativeScreenshot="423f19258355519e1de391b35e6222d4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ASP.MISA.VN - Nền tảng kế toán dịch vụ | Kết nối nhanh, hiệu quả' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="CHUC NANG" CvType="Text" DesignTimeRectangle="1691, 433, 121, 21" ElementType="Text" FriendlyName="'Chức năng'" FullSelectorArgument="&lt;webctrl aaname='Chức năng' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Chức năng' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='header-text' aaname='Chức năng' check:innerText='CHỨC NĂNG' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH0AAAAZCAYAAAAc5SFpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVoSURBVGhD7ZnvR2RfHMe//8olimWIGZZrnkxi1IOx+2AUpbgMRQw7xHdF2mVjyGwPKtLGV8Myw5chtkfFl4nVJpKY9aUUw9BoH/XwvZ9zzzn3nnvvmenHNG2ZefCmzo9P535e5/M5n3P66+rXDbrqLHWhd6C60DtQXegdqC70DtQLgl5DYToCwzAQni6gUteN+TOqFjMwzSimNi9wdV5CejCK8Nscypqxz0EvBno5O8SBW1s4fkbAbV0SaNOw18fVh+T6T/3YZ6AXAv0aZ5ULVEhVP/CjFYxRlJnme5TU9qdW/Rrl7QLy+RJ2T6/1Y56JHgH6NQ6KOaRHBxB+xXd6bySKxHQOhSPl43/kELejYAYFz3ymEqbsviFkf4i24gyPmngOB/7xqi2N3epRCdn0CGKRPm7jVQRmYgbZ4gmqqh2fDkQ2MSIZFC79/SfIxtnfMTBV9PeRLrdg9fD+2Mf9YD+pMM37jWHNN+l84Ih8nF/AWIKODdvHfQibA0imV/Dtf//Y29Ua9PpPfLH4OWuLOdeMoFf+TotLZA+5o9sCPYXs0hs+LrmBCvUdb6YQtvuYmHOko7h62Vlb89kTcqCTwtMlnHn6m0M/25xw5hrmAnZ9/UwOdFKc/OLtbwC9fojsW7F5mZiPX4fc33uiSBdrip3b1RL08ifppAisdYIrU2/tBPn0gN1npkXR1RboQuYEVr9T+/dFpz1sbaBclXNYpGQQY5FoZpBvEB0qdPZNUx5nNoN+gdWknMcUwuy2f4wXutFD38rW7PTroFPxmhZBRXCtdSVTVQ+xmopq7Nyuh0NX0ln8k3/XMtXojDt0o6VNkb5aqQlH1Cjr8PUY8UWUNcXe2f4OyufBdikvdFKE1uqMbwL9dAUJe84ILItHYejdjncMyQOdidK8u06NDxy7BpJrusKQap3z+9cPD4f+b0YsfgJfAuefRm2BrtqiClpswrHN+6U7KQf6+AymItyWm+YbQz9edo+Y41IGIfZzfwYl38aT0GOpGcRlwDhpPuiDytoIt6ux1YoeDN1xkA6KTg4ofs6ye60rWQe0AN1pU2zcU843MdC0qXltEIL1lW2iRtDd9sQyRWN9B+l+3TgXejx7goMlmVWG8MFOz0HopVlxdk9u+eqL1vQHoDfT84HuOU/7U8ifN4D+3yJi9t99g8+nvM1J45YXlgrd3izDYpx9HAWhO3bs9Qg7Oj/elYHQw9O7hNLu9D5IDvGPp4KNO9qb3rmNR0jv0skUtbMizRuTC5jVQN/9yAtWj+Pl2ntSHt94oVPb6QaS8po3vwCLzVF8sDtPhRprEzcTe47zLkGSV9Ing97uQu5IjncjSMo5Qz333Ucs5NTI2n6vXAG5XOj7mPO8xAWlbsAAdNKxPLcdKT6Q9YExgLk90aaqWTZsoodDJ+3Oi13e5MoWHqWrE2u/L3Ry6IcYa6NKOOnerav7OSTFmRl4BNlbEBmgyZUtMsKvd+o8IS10kvudXA502hAcShTJdAZpRdawOI+VKNVBtzfrpGvb6wPlCKB1f95TKnX2AijfKJ4SOns4WB0XKYhJ9zizJLLAvaFTZFIxZYpsYvSEEFYfJei+HXw1u0F5bcKd0+hxpkEl3Aj6VZ0iWmxAJgm99K5JoeVsiOBZ74VOOt/CmLNmrw/sf+Co2STEfRxyxtM3jW+56f8Oag26reAzLFtYgs7AfCvPsELVowJmFduh1wNI/l3AQYNXNabAMyzbMIkJzOXv+Azrh86kPPzY0JUq3fpHV0O4mcqu6qmtIXTS2deU2CRBH1zVL/BtOYPkoBJQFGCx0cytT8s6PQL0rl6autA7UF3oHagu9A5UF3rH6Qa/AW5I5jJb11KeAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJvSURBVFhHtVY9TxwxEN2fcD/hfoIRuyVFWgqgS5E2Umqk1AnUCEEZpdmlIGlSQUMFFKmSQ1AhISEBBYSKRBwNaYyfd6zMjca7djie9HQfY8+zn2e8W6TC1GZgtspF01S1acoD93kx01QWxHf6r/Zj3Fia9ny4ZEMkDmKp9ItxcylNPvyOm3JDS55D58jHbEda8epYS/g/RK7kRZi6Mm7nv7VEkvPfFuzcl1dqTBI5kZtkdJDtSeLg2d2Z3T79qsY0touIOJFr+4fvqzYATmhjNEaPw9mzqU3QCNvvH+9J3tpPJ5/VcTGaulwh2RZuRUNtYIwQDBj/HWc5EAhNkve7b7RBGiHGkbv7QGiSuBloA2LcOd8laWtvHm6Su0CjrwVTzy5pQY1v996RdAsUYojBmevxddaCoJ1l/+j2iKSt/85jwZmcI/HH4CryUAtK8rYD4EaISWdSixLaxUxdXmpBTtgKewOwWx7nzgD7VwcT8RhxJxRaQLKr7aQzAdyhLvYuAGKxS0c6w/Hz12giT4y9R8DbDrvnVc6dAaQbvEtU1tVJZxH2tZ3mDF9wX1v6IuxqQ15cEOOxmDNYGH4HdLUltaF+ES3vv6cU/ZBW86PBwmNtSReRfhXjmk0B3gnkXLjB58u2DfTPAkAew9qPdZraj1i7yYJ8vfNmIu7tD5CPY+wAifsok0rysTI28TgG8JIgB70UoUWy/+BrwfWlNmGqdBr+MayhXUT5R504DbrcUfEAVxzmRRbhxXteywOmfhxdtseACdMoTOTIFudwk4fynkgh5mAupXk+Wkdml9rE7gHGj8hbXB62MYxJ3XFRPAEtMZ+1jfjxAgAAAABJRU5ErkJggg==" InformativeScreenshot="0b90090f0b609ce138ef9d07b847a238.jpg" Selector="&lt;html app='msedge.exe' title='ASP - Đăng nhập' /&gt;" Title="ASP - Đăng nhập" Url="https://asp.misa.vn/App/Account/Login?gidzl=K-GW0LaWabnGyYC4LZUJMbty801DCi4B4Fnv04XaoWr7-NW56sIRN1MjULCUPvy85gqkKZG-_81kNokOMG&amp;ReturnUrl=/App/223/Customer" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
