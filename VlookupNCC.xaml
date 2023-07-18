@@ -174,7 +174,7 @@
                               </ueab:VLookupX.Label>
                               <ueab:VLookupX.SourceRange>
                                 <InArgument x:TypeArguments="ue:IReadRangeRef">
-                                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">supplierDirectory.Sheet["Danh mục cũ"].Range["F:F"]</CSharpValue>
+                                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">supplierDirectory.Sheet["Danh mục cũ"].Range["B:B"]</CSharpValue>
                                 </InArgument>
                               </ueab:VLookupX.SourceRange>
                               <ueab:VLookupX.Value>
