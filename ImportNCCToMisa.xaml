@@ -3,7 +3,7 @@
     <x:Property Name="supplierFileAddress" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1100,3166.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1100,3704</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,19 +119,19 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ImportNCCToMisa" sap:VirtualizedContainerService.HintSize="1110.4,3101.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ImportNCCToMisa" sap:VirtualizedContainerService.HintSize="1110.4,3639.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1048,2989.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1048,3527.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,2772.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,3310.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -237,7 +237,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Đóng'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DelayBefore="2" DisplayName="Click 'Đóng'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/Ultilities/Import/9021" CvElementArea="1754, 1002, 88, 42" CvTextArea="1775, 1014, 45, 20" CvTextArgument="Dong" CvType="Button" DesignTimeRectangle="1756, 1005, 85, 38" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Đóng'" FullSelectorArgument="&lt;webctrl parentid='footer-layout' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='footer-layout' tag='BUTTON' type='' class='ms-component ms-button add-button ms-button-size-default ms-button-primary ms-button-primary-disabled-false ms-button-radius-false ms-button' aaname='Đóng' check:innerText='Đóng' /&gt;" Guid="8c821ebd-21ec-4206-8954-157a2486ad12" ImageBase64="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" InformativeScreenshot="fc73bde938403b0906a947225890436e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='state' title='Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -260,51 +260,99 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="XOÁ DŨ LIỆU TRÊN FILE MẪU NCC" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="952,1077.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="XOÁ DŨ LIỆU TRÊN FILE MẪU NCC" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="952,1615.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
               <ueab:ExcelProcessScopeX.Body>
                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,991.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="596.8,1528.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,879.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Output\\Danh muc NCC mau.xlsx">
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="534.4,1416.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Output\\Danh muc NCC mau.xlsx">
                       <ueab:ExcelApplicationCard.Body>
                         <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,609.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="500.8,1147.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="DeleteRowsX_2">
+                            <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="DeleteRowsX_2">
                               <ueab:DeleteRowsX.Range>
                                 <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
                                   <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">Excel.Sheet["Danh mục cập nhật"]</CSharpValue>
                                 </InArgument>
                               </ueab:DeleteRowsX.Range>
                             </ueab:DeleteRowsX>
-                            <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="DeleteRowsX_3">
+                            <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="DeleteRowsX_3">
                               <ueab:DeleteRowsX.Range>
                                 <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
                                   <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">Excel.Sheet["Danh mục mới"]</CSharpValue>
                                 </InArgument>
                               </ueab:DeleteRowsX.Range>
                             </ueab:DeleteRowsX>
-                            <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="False" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="DeleteRowsX_4">
+                            <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="False" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="DeleteRowsX_4">
                               <ueab:DeleteRowsX.Range>
                                 <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
                                   <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">Excel.Sheet["Danh mục cũ"]</CSharpValue>
                                 </InArgument>
                               </ueab:DeleteRowsX.Range>
                             </ueab:DeleteRowsX>
+                            <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="FormatRangeX_1">
+                              <ueab:FormatRangeX.Alignment>
+                                <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                              </ueab:FormatRangeX.Alignment>
+                              <ueab:FormatRangeX.Font>
+                                <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                              </ueab:FormatRangeX.Font>
+                              <ueab:FormatRangeX.Format>
+                                <ueab:TextFormat />
+                              </ueab:FormatRangeX.Format>
+                              <ueab:FormatRangeX.Range>
+                                <InArgument x:TypeArguments="ue:IReadRangeRef">
+                                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">Excel.Sheet["Danh mục cập nhật"]</CSharpValue>
+                                </InArgument>
+                              </ueab:FormatRangeX.Range>
+                            </ueab:FormatRangeX>
+                            <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="FormatRangeX_2">
+                              <ueab:FormatRangeX.Alignment>
+                                <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                              </ueab:FormatRangeX.Alignment>
+                              <ueab:FormatRangeX.Font>
+                                <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                              </ueab:FormatRangeX.Font>
+                              <ueab:FormatRangeX.Format>
+                                <ueab:TextFormat />
+                              </ueab:FormatRangeX.Format>
+                              <ueab:FormatRangeX.Range>
+                                <InArgument x:TypeArguments="ue:IReadRangeRef">
+                                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">Excel.Sheet["Danh mục mới"]</CSharpValue>
+                                </InArgument>
+                              </ueab:FormatRangeX.Range>
+                            </ueab:FormatRangeX>
+                            <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="FormatRangeX_3">
+                              <ueab:FormatRangeX.Alignment>
+                                <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                              </ueab:FormatRangeX.Alignment>
+                              <ueab:FormatRangeX.Font>
+                                <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                              </ueab:FormatRangeX.Font>
+                              <ueab:FormatRangeX.Format>
+                                <ueab:TextFormat />
+                              </ueab:FormatRangeX.Format>
+                              <ueab:FormatRangeX.Range>
+                                <InArgument x:TypeArguments="ue:IReadRangeRef">
+                                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">Excel.Sheet["Danh mục cũ"]</CSharpValue>
+                                </InArgument>
+                              </ueab:FormatRangeX.Range>
+                            </ueab:FormatRangeX>
                           </Sequence>
                         </ActivityAction>
                       </ueab:ExcelApplicationCard.Body>
