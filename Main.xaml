@@ -477,7 +477,7 @@
               </Assign.To>
               <Assign.Value>
                 <InArgument x:TypeArguments="x:Int32">
-                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">countMaxVal</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">countMaxVal + 1</CSharpValue>
                 </InArgument>
               </Assign.Value>
             </Assign>
