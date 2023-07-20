@@ -1,0 +1,468 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DownloadVTHHFromASP" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="832,2936.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DownloadVTHHFromASP" sap:VirtualizedContainerService.HintSize="641.6,2872" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="userFolder" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" sap:VirtualizedContainerService.HintSize="579.2,85.6" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_1" SpecialFolder="UserProfile">
+      <ui:GetEnvironmentFolder.FolderPath>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">userFolder</CSharpReference>
+        </OutArgument>
+      </ui:GetEnvironmentFolder.FolderPath>
+    </ui:GetEnvironmentFolder>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="579.2,2452" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,2235.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="si:FileInfo" Name="fileNCC_Cu" />
+              <Variable x:TypeArguments="si:FileInfo" Name="fileVTHH_Cu" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://actasp.misa.vn/app/DI" Version="V3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGoToUrl>
+            <uix:NCheckState DisplayName="Check App State 'Vật tư hàng hóa'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Timeout="60" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI" CvTextArgument="Vat tur hang hoa" CvType="Text" DesignTimeRectangle="827, 420, 122, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Vật tư hàng hóa'" FullSelectorArgument="&lt;webctrl aaname=' Vật tư hàng hóa ' class='di-link-text' parentid='main-content' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Vật tư hàng hóa ' class='di-link-text' parentid='main-content' tag='A' type='' check:innerText='Vật tư hàng hóa' /&gt;" Guid="c12e402e-c752-419f-b019-2566ec3f7708" ImageBase64="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" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='logo' title='Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Vật tư hàng hóa'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI" CvTextArgument="Vat tur hang hoa" CvType="Text" DesignTimeRectangle="827, 420, 122, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Vật tư hàng hóa'" FullSelectorArgument="&lt;webctrl aaname=' Vật tư hàng hóa ' class='di-link-text' parentid='main-content' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Vật tư hàng hóa ' class='di-link-text' parentid='main-content' tag='A' type='' check:innerText='Vật tư hàng hóa' /&gt;" Guid="a725c73a-d301-47ad-a49e-458dcfc7908c" ImageBase64="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" InformativeScreenshot="afe3fbbc1c705b2d2c64aa7b313007d1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='logo' title='Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Mã'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Timeout="5" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvTextArgument="Ma" CvType="Text" DesignTimeRectangle="697, 404, 233, 20" DesignTimeScaleFactor="1.25" FriendlyName="'Mã'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Mã ' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Mã ' type='' tag='SPAN' class='ms-head-title flex justify-left' check:innerText='Mã' /&gt;" Guid="af0692ad-26ae-4315-bc4e-60eff16d75bb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO0AAAAYCAYAAAAWEnolAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ9SURBVHhe7drBa9pgHMbx/Qv5C3IQepsyaHcRKcjoIZTBKIVQBhJ66KmCh4IwYYceCjkIHnIbTJCuMHQw1EtpL0UozckeRhUGCxQqDAx46PnZm8RU46KHJR0EnsMHNb+kty/vm6Qv7MkjiCg5GC1RwjBaooRhtEQJw2iJEobREiUMoyVKmBijtTG8aKNr2t7v8R26jSvc/nUeEUURjPZ7GdnNnOe9AXN+5rhvoujPNzXUbmezbvk1JEkSZKTfajjYzUHOn6A3fz0RRRaM9mtpGp5jB7UfczPBamiQn+bb0E1/1kYx9QaVjgWzU0VBEVHnNegXo8D1RBRdaLTpVxn3UzWsuZNHqO/L4nhGzBej9Yx+9nHZOkW9cY7er+k2mYhiFb7SqntQ3U8DQ382FlvjlHNMQ2Ex2gcxW3eCdo77ZGRLTVj+9UQUi/BoDw3UVCc8DfX72czZGquGgaIbZXClvTwRoX8wUG+18e1TGYoTuFiVjzqzc4gouiXRNmHq2+73wmfvvvTs0FlJ91AbiFU1JNqgPnTFOUeCUr0LmRPRv1oarW1WoYjv8v4prKetsbNdDon2dx/10g421rxQ5yl6f/b3iSiy5dFObnCcF99TJZx98bfGzoOpxWhHYhX2HlxJ6xr0zg2Gg3NUthgt0XNYEa24T/2YE78z2HAfMvmvgBajndsK+4GOr1DJMlqi57AyWrtTRtoNVNg1pv/dtBitNX1oJbbSWxqO9SoOlDXIKe9pMqMlitfqaCfnOHJf70h4V/MfKIXc015Xob70X/nIyBYM9Fpe8IyWKF7BaCOxYQ0sDB/CZkQUlxijJaL/gdESJQyjJUoYRkuUKI/4A8Z2spaXnIp6AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='state' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Click 'Xuất ra Excel'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvElementArea="1711, 346, 34, 30" CvTextArea="1715, 354, 12, 13" CvTextArgument="X" CvType="Icon" DesignTimeRectangle="1714, 346, 20, 30" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Xuất ra Excel'" FullSelectorArgument="&lt;webctrl parentid='layout-dictionary-body' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='layout-dictionary-body' tag='BUTTON' type='' class='ms-component ms-button ms-button-size-default ms-button-feature ms-button-feature-disabled-false ms-button-radius-false ms-button ms-radius-true ms-dropdown-style-default ms-radius-true ms-dropdown-type-feature ms-dropdown-padding-custom-feature' aaname='Xuất ra Excel  ' check:text='Xuất ra Excel' /&gt;" Guid="20ab61ee-e141-4793-9c9b-b6ad55bb28b6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAiCAYAAABFlhkzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHvSURBVEhL7ZZLS0JBFMf7IFG0DSkiCKJdtGvXqlW72lRgm4p2fYp2kS6Sahv0sBSfKRaYEpph+MDU8lFpDzQ7ecY741zvxbzphYL+cMA5c/73N3MG750uUFn/gG/1+wDlchmKxRfI5h4hkUzDbSQO8UQSSqWyUCGWBFComqkxcB0Gry8A7vNLsDg8YDQ54PDEJhsmqwvS9xkC5oMBcNJodsqa2wkGwBU2TuKKrdU87sDrD5Ad4c5wh5lsnq2y0ccHA9CE/ypEeoy9blXUexOOCpl6TgLgi1qVnJfmOgrwVXff2LaOAtwXPvabRlPAunMVJvZGwJM6I+PKZwWWLfMkF8oFSA5FvYoBYwYNaLa6YXx3GAqlAmz6N8gYYyeoF6rqXsUt4h+oNc/CkL5PBKSS89JcUwC2ZHp/kkFouO7sQkVN1PujQ449R2BQ18sevmJdFGbqol7FZ4CSAhaEmbqoVzFA9Rbxh7xknuv8IY9u94seyAMNQZ1Q1cYO1mxaGND1gDNhJWNs2czBFAF35I/WqqhXdYDqLzveS3MSgGofnOafTJ/sJxMvCLiQRh8fDBCNJeDo1C5b1E4wAOqjUoFc/klybXF5ateW4ybXFlxcMvXADpmGCNCKStWWYGuwRfzF6/XtXagQSzFAqf46AOALx06Mtuv8nmEAAAAASUVORK5CYII=" InformativeScreenshot="d234f4265220a37a28864c8fec584c95.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='state' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Tên'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" DesignTimeRectangle="916, 361, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="8b73f7ab-25d1-4079-aa62-21243b21e110" InformativeScreenshot="257f3eaa0237696c3b6b3103b3e6e920.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='visible' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="970, 359, 27, 22" ElementType="Text" FriendlyName="'Tên'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Tên' tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Tên' type='' tag='SPAN' class='' check:innerText='Tên' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAaCAYAAABPY4eKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIRSURBVEhL7ZPfS5NhFMf9F3btbk2iEBGds2n+qLBsOGtj/siKCJKICkMooqILQ2KIqIGbqDXR1NLEGRWNRDA2KmThlBxMHLoVLlamJAriN86BvbzTBa/O8d7s4nPxnHOe83k4z/MkBVYBuUjIZSEhl4U9yWcWQpiaD8K/shU1LxWWf5ldQEfv0H95NmDDtO8nbxgdcyJTpcbBQ4fR+fzVjoa7geX9Njty84sYzdFCpBxI5ebh2EmtDnaHC073HE5py/CkowfdL0dRcOwEH2Z7U6nsGLvn+x8YKqpRc/1WRJygcRPhNdXGMv5dyReXN9E9+BqXrlyDTm/E4+Y2fPP/FvKOKS8ePDJh0uOH2doP47kLXNdkfgrv0t+IXoRkue/XBmpv30NGpgoPGxrRbLGi+HQpygwVcPuCXPNm/DPUmjyOGyrPc03tnft8hTfq7nIPcU/J8hH7Rxb3jbwXYhMuD47k5qOprYvXJE9Lz8DVm3WYD60LdabWduQVFPFEwjFCsrze1ILC48WwO79yE4LkOn25UBuWd/UNR+y1vrBxnPLiuGQ5rRUKRVS2y0km3huznO7urLEKs4HliLiYuMkt1gFkZefw2MVxMXGTu7w/+BWXlJ7Bu4lJ/nZU2zv8FmOf3FwTNzlB/7jq4mUkK5XCfatyNLB9cHA+ZrkU5oJr/NrpoNHyUtmTfL9IyGVBRjnwD7QIMo3M2aOnAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Tính chất'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvType="CheckBox" DesignTimeRectangle="916, 446, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="a8a225fc-a86e-4153-80b9-e0785d3aa6bd" InformativeScreenshot="bf18f2342ed0846dc6ac2caa8fd1d320.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Tinh chat" CvType="Text" DesignTimeRectangle="970, 444, 70, 22" ElementType="Text" FriendlyName="'Tính chất'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Tính chất' tableRow='5' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Tính chất' type='' tag='SPAN' class='' check:innerText='Tính chất' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAaCAYAAAAQXsqGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAL+SURBVFhH7Zcxa9tAFMf7Fe4beChojMEQbRFkCGSxyBBBhoos3iIyGBMookMJHYLIYIQXkUkdCu5QlKGgDsEdPQSUIeAh0AwZBB40dBB4+PfJOseyFacnJ6Fu0A80vNO7d3p/3b27e4MSIUqhBCmFEqQUSpBSKEFKoQQphRJkCaFiRHchwjDmthhxSH2GxfqI8KS4Qw9GTUbrPOINi0mFuu2j+7X7yONjMIl1YUJmYsGnDGDXGVjT4/ZzUTRuBK8pg7EK1HaA/qkO48sv/u5xUqF+mFA2lfun+pYGl+RMWwPODfmNejDXJWidYNxNnNUQKmirqO5Z6F37MLeV/M8e9eGc+Ai5meWBpffI4HFUeMmlrIJQacmIR9wcxflcaLVU6zZFzVNMqDsf1lEL7iW3SXv/JLXDSxfWoQ51U0Pjg4PezG+ZxowmfnWa9jm/BYQBXBqnsatAfWfAbHu8FBSIS8IMLhz6fgN6XYV+aML5OXVKvt/cqYLVVBiUY2smz6JCXdtQGaMpy23uq+yoUDY0tNouumfH0DYqYOst+PczW9TvAa5saBKDtEkCjBOgRPdtpIu/QNxbB/qaisaJQzXXhX2whUpSa78nTukPN15aKFYz4A15UwJ9lLaU3zwh3H1Kum4hmCyZGZaNm5D2rRz53KYWqmHsWZbeIqEO5309tMhPbU+GFPWbh7/vLNqZlosbD+lIQfXKPZjN8+WFyvkuEOqvfnPkxpunQNwbatuVIVF7ZS3dzWVa0q9DqDuqK/Te+MbtHIJxI7JrDHKzi+xG5zVfi1Do43iDofp+WkdmEYybbPtsC9ZVaqYEsLZfjVDUs6OOd6fG5wBRMht+hwjOezwZwbg3yXfTafw0oNMUEYfofdIgJQfrTN/wTKdTuwrrMp12cWb2rbxQybWj325ASZIi3+SprJlI55h43KCjpzeOcQwJ6kcfQSJMtu8ogL0n3Y+T7f+AUKsKv4w/5WKdnMazp/MFjHfFuXH+I6H+LaVQgpRCCVIKJUgplBDAH3Q2rqRQYtawAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Nhóm VTHH'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_3" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" DesignTimeRectangle="916, 488, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="80a5b054-6522-44d1-b141-8249588170a5" InformativeScreenshot="af77ca1cfab83fedf399018d34118def.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Nhom VTHH" CvType="Text" DesignTimeRectangle="970, 487, 95, 22" ElementType="Text" FriendlyName="'Nhóm VTHH'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Nhóm VTHH' tableRow='6' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Nhóm VTHH' type='' tag='SPAN' class='' check:innerText='Nhóm VTHH' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAaCAYAAACjFuKcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPXSURBVGhD7Zixa9tYHMfvX9B/4CGQ1RBoNgsCMdxikUXQIZ5OkOFMhiAKwWQopkMQHYIoFJHJGUqVSRkKKlzpDVdwIaAMAXdyhw6CDBpuMHj43vfJTz7ZkdLErXuvnD4g4ie/9xz9Pu/3e8/+BRXKUMlQiEqGQlQyFKKSoRCVDIWoZCjEN8kYxzHim7Fs3Z/xDcd9iTGeyBsVKTkZIwzOffhvIiTyzhzJEOF5iOHszSHclgbtIJDte3IToLOhYZPjCj/nOxB/DMqfg4w+8Dkv/sBfb/lXPHPZ9WGU9k+uQ7YHjFABaVx8DD7LNnlo/4ycjAC2xuBqm7DfFDzGtQtDM+Bey/ZSMhIEB5upiHiVWXFhozb3v+YZoNfQUD96De83HfqWvB6t89lrqDdy947CdMTwxOB7NiNUQBoXDfaFbJOH9s+4JaO+UYf2yEa46ON7yJiMWZ4SPLywPZBJiC6zzzgZyhs53nVR13T0Psp2BgVqJQL/Mxn2mQ9rjWXk6L28L7lDRnLZh7PfhtFqo3Pk4X0su+SJI/SPO2i3dBi7HThn0UJ2xAiPbfQv+epPD909Ezrns09CjES/dLwFc8tAe9+B/+lupeEhF9W2g0i2M8ruqymDnZJXFtO8Ob96SmToOwb0hsmg9eGf9mA2arcz68qFua5hvWXBOfXhMaiGaD92Ec2E5ObL+j2lELEw9mxYLB/mExf9MxedFkvKWhteQd2dkWZAEw7lzpAZ0zy+pUJdGWIz93YZ1O0eBlmwSmRoGx0EN/KW4LMHc+7DEvh7nKvF1ZjPhCuH89VgnWfWsvm6CHP9pg/Gfq9ydhNmLz+jfVqUghnTvUF/NpBt8lYIKg7412U00X5iw168fjc4Z5GM+/fPKJFBGNQ2V6XxXK6iMhn7i/6n88zq9YSnJ9F+sXi2iCk8P75kvjRIzIIvsp0Swfm1ZE/IER03U7lZwQ0OuCgee8WnHKVlkOELIz2VOFdslMm4tYEvyLgjLYMDjm+5nElQMl8apMWUn/b9mgxcOmhqdXTf8bXIJi4u82WhCpXLlGQSwd2pobbDgC0rQ5aUuTIjCfY5ftdjjghWIEP2q/MwkpyLfXAxw3IoL0Mga7vBFFtKhigp2wzI4fTMPkNupv/W9FXI4O730oTW6KEnStSeX/5F86eQQaLnYnIGaikZ2elsE9bZcPoTyN8jBIes53MnotXImB4omN1r+cNCAT+LDEx4MuHqXlaGIDq1oPM4O5XKY+2WBe8y/11hRTKyg8KaBf8OF4rJ+DEs++Pi/4EfLqOinEqGQlQyFKKSoRCVDGUA/gFoMfx8IZkbfAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Đơn vị tính chính'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_4" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvType="CheckBox" DesignTimeRectangle="916, 531, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="d557dab5-61d7-45a7-a3b8-b76201d96d0d" InformativeScreenshot="8a5ea90b7e6c6962117e0d522c5f65d6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Don vj tinh chinh" CvType="Text" DesignTimeRectangle="970, 529, 129, 22" ElementType="Text" FriendlyName="'Đơn vị tính chính'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Đơn vị tính chính' tableRow='7' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Đơn vị tính chính' type='' tag='SPAN' class='' check:innerText='Đơn vị tính chính' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIUAAAAaCAYAAACZ6p+qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUqSURBVGhD7Zm/a+NIFMfvX9B/oCLg8gyBuIsgsIFtLFKcIEXMNYIUMSmCMASTIpgrjNkimEAQKRanCDjF4i0CSmF8pQ8WvEXABwfeIoUghYoUAhffe6MZybLkH/LalzicPiDwjN6MnuZ9582M/AtSUiKkokiJkYoiJUYqipQYqShSYqSiSImRiiIlxv9XFEMX9pMN+9kVFQkQbZwFmiRioX5dOMxvezEnXDv5u4ZE4aD/0ETzLnx10Fvw4a9J/6oA9dQizxdncF2AvKGi/l1UJOGxDlWSYHwV5VWxSL/tMnJSjmwXees+6nkJ0klLlGcTEoVomMlB2VH49asMiZzN5A20/hFma4MLq5SD/HsDtqiZRPe6ButJFHx+mChklAUHlnhrUQw7KG9loF32REVSlhVFpKH72ITxkcTBZtWjqJyLhTKJSq12RfmtoEHcnOD3y4LLhs9bi8J1Fl42OCsWhYenUAnyYXM8VQ9t9G5qKB6oUPIFFKtN9JnPNBM1KYvyA/3+1oBRtWC7fbQuytB/I7EcFFG769Ncn8JLB2bJQL0dn8n92zKMc3oO/e59Nnjf/NY4dg+NMxVZ8kM9Ijvqz/gsZhjzqRTKIEl9DILnBO/N7MpXHdhDYTMD9+8W6mdFFPIKtEMDtesuBuxG0n6fLNToPRrfRJne3Krysk3vUDum5XRHg35mojM2KKPYOr4di1fMjpNMFETv0y4tJUW0fCeHPdT3M7TcqCheNNC8qaOYp/IWvdB2BkqJHGB2Xw1qR3V7FJzDGsy7BurHKjKSDPWShXYSNsyDCSL0Zr6E3SoPbuuE/M3XPYFEse9rMI6miEL4FGSQpD56wSPB7NHSuk+ivWnCPNegbEjIlWbvbRx6hrIhI7unc19KOjQWJHYzab+xjMJjpuzRpNzWYLA4XFegbVNm3zJgBQ2T2nGEKNiOtoPKRxrkI1qj2e6WXS/8rkdkIJ07HbKkwfzBy5wBBZMeROt88ByvnQT10/g6aJ1mpwaUwfsvwAzvBx7KFOSRD7NE4eEN4oTlY6IoEvgogpI9FsEUDK40ak/7LlGOQ2NLmTbaLiBpv1NEIW3SZH0WVQwvU/+MHUeIogWDbrKBCV/qRWi4IwPZOiabAzOWup1bnexCGcVrt4taZJffv1CpfsZADsknminalZdgPbwg7Zs85RKrFUUCH0VQil9E2SfaXxSvnQzjXpSjJO13mihITOPweI7il9SOk3j5sOkIJwUzd4btxAGPD9hcURBjInCa0Ekk+u1oLq1WFAl8jAVFMKV9wLz7SfudJopYHKaIYq4dJ6EoHDQPaVn4UANPsKxMtjHlEd6LhNJ+0gGfxF8VKKKtt5xs6GiG8uu7EUWbLXvxTBTwHkVhfzGQo/RXuB6l8l6VNp6bZViRXXf3DwXSdgXBYXQZUZAEax+Y011PhNlTS9Rz3o0oWJajduGlcIy1F0Ww0eyhc2eisq/Qhk8enSZ8nlk6l7F71qKjHKtwYbcrUKkuLJ7lRCE2W/sFFDboiNsWlYK5ongyUWAvTacV7qI4YL62KGjk2Ic29q2n0h7ApYnkPvfRve/yPdnai4KMgiuTo/OyAfPPiV8CgO8m9B06hgb2CvQrEQCfJUXh75BHS9eIuaIgepcaHS2Ff77tq4uCGA7QKrFjrvCFrgxt1L3ps76iWAL2hfDJGRfDOsG+BK6Lf/4fceHj/pqxGlG8EZ3zHGR/tqWsjHctCu9f0pPm5M/cKT/NuxZFyn9DKoqUGKkoUiIA/wLy3cv18ON8IQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Kho ngầm định'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_5" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvType="CheckBox" DesignTimeRectangle="916, 913, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='16' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="2794d2bb-c785-41ee-a9c4-a91c7de469f9" InformativeScreenshot="1cdbdf7ad10282fab762158e5c19d072.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Kho ngam dinh" CvType="Text" DesignTimeRectangle="970, 912, 117, 22" ElementType="Text" FriendlyName="'Kho ngầm định'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Kho ngầm định' tableRow='16' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Kho ngầm định' type='' tag='SPAN' class='' check:innerText='Kho ngầm định' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'TK Kho'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_6" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvType="CheckBox" DesignTimeRectangle="916, 506, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='17' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="cce90995-4c71-4209-9fbc-e1f6a9ce917f" InformativeScreenshot="e6aa4cf31cfdc3c25f476ca1a739e9d1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Kho" CvType="Text" DesignTimeRectangle="970, 504, 53, 22" ElementType="Text" FriendlyName="'TK Kho'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='TK Kho' tableRow='17' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='TK Kho' type='' tag='SPAN' class='' check:innerText='TK Kho' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAaCAYAAAANIPQdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMkSURBVFhH7ZbPK7RRFMfff8HeXk1qMiEsCOVHU35sLJgsZDlNshCF2ZgMK1E21GTjRxPFwkZZWIwhETYzoZAhI0IRG9+375n78MzMM0wz3mLe+dSzuOc5997zvefc8zx/8B+QFZkpZEVmClmRmcKPE3l7e4twOIy3tzdlSR8ReX5+jsXFxYTPysoKbm5u8PT0hNXVVRweHspkPXt7e+J3d3enLNH4fD6sr6/j9fVVWSJcX19jeXkZgUBAxt3d3bDZbHh4eJDxdyAi19bWUFVVJU9lZSXy8vKQn5//bmtsbBQRFxcXMh4fH5fJGktLS7BYLPB6vQkzYBT8yckJ6uvr0dPTIwdI/plIPVycm3CzWIxEbm5uoqSkBBMTE5+WWGzwzHh7e7s8+uz/OJEs29raWoyOjuLl5UVsidAH//j4iK6uLrS1tSEUCimPCJrf7u4uBgcH0dTUhL6+PhwcHCiPDxjPyMiI+PCw5ufn3ytCT8oitVLr7e39UiDRgmdT4RzO5Rqx0K+6uhp1dXUYGhrCzMwMmpubUVxcjJ2dHeUFbG1toaysDA0NDZiamhLfoqIidHR0xPWFlES6XC45uZaWFmlIycD1mDm3242CggJsbGyoN9HQj/ebjUrj8vISVqv1vYLYvBwOh6ynF8Q5hYWFWFhYUJYIKYnMzc2VTU0mE2ZnZ9Xbz+F6OTk5qKioQGlpKex2u2EF0K+1tRX39/fKEh/T2dmZNMjJyUkZazw/P6Ozs1Ougr4/pCSyv79f7hXLjmXE5vMVXI+ldXp6Kt2YB2TUrOjH/RmHRmxM29vbkm1+smIxmp9W42GpsGRiO6QR+s0pbGxszPCAkhF5dHSE8vJyzM3NyViD6zKLzCazqpGWSMIgGazT6UzpE8LsXl1diY0kI5Jz2Q9YUfo9tbs7PDysLBHSFkl4L1l+LMNEGAUfDAbljuo7dDIiibanx+ORuRQ+MDAgHXd/f195RfgWkdyEgdbU1OD4+FhZozEKnvBgzGaz/C2RZEUyg9PT09Kp2dD4MIt+v195fBAn8rdBsfz28sc+Eb9eZDJkRWYKWZGZAfAX3HxsAfFn7AQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'TK Doanh thu'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_7" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" DesignTimeRectangle="916, 548, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='18' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="54a3e433-241c-4c77-ac94-f3f9e0421164" InformativeScreenshot="6c124f1f43409d14afef882cb9c42d4d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Doanh thu" CvType="Text" DesignTimeRectangle="970, 547, 109, 22" ElementType="Text" FriendlyName="'TK Doanh thu'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='TK  Doanh thu' tableRow='18' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='TK  Doanh thu' type='' tag='SPAN' class='' check:innerText='TK  Doanh thu' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAAaCAYAAACATbNJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASzSURBVGhD7VjLK3VRFP/+BXMlIyUTQhh4lkfySpFHBjJQIpFCHikSJSFSXhl4JQYGKAMTeec5EgqJvB9FlKyv37pn+e497j0d1/Xhdn51u/fss/baa6/fXo99/5CBXw+DRCeAQaITwCDRCWCQ6AQwSHQCGCQ6AQwSNXB1dUXn5+f0+vqqjHwOjtYnYBKPjo5obGzM5mdiYoIuLi7o4eGBJicnaXt7myebY319neWur6+VEW1Ah3qdhYUFenx8VCS+H0VFRZSZmUl3d3fKyOfgaH0CJnFmZobCw8P5ExYWRh4eHuTl5fU2lpCQwCQdHx/zc2trK08WjI+Pk4+PD42Ojuo+ZdDh5uZGISEhrBPfeMa6bW1t9PT0pEh+H+x1OnwwMDBAe3t7yogJX0qiObAAFsKCalgjEdETEBDAjv9ImoAO6IJOASK9paWFD1F5eTk9Pz8rb74H9jr97OyM0tLSaHl5WRkx4UeSiJQYFRVFjY2NH44cayQKenp6yNvbm+bm5pQREyDb0NBAiYmJlJWVRcPDw0y8Oe7v7zk1l5SUsFxZWRltbW0pb4nTNQ7cysoKzc/PU3FxMcXFxVFNTQ0dHBwoUiaI09fW1qiqqsqqPjVgY0VFBWeU3NxcKi0tpf7+fn6nVx/kZY5A7EY5U8NuEvf39ykmJoaNtCf1aZF4eHjIab25uVkZIVpaWqKgoCCKj4+nrq4uqq2tJT8/P8rOzraow1NTU0wK5g4NDTHZ/v7+tLq6yu9lfygRsB9ynZ2dbEtsbCyvLYAPIiIiKDo6mteDY5OSkiz0qQEngzxbJOrRBzm1/8VuCSBz2EViXV0dOyclJYUbHnugRaLaBqTVgoICysjIsCAMkeTr60sjIyPKyHugaYPjOjo6+Fl0R0ZGWtSsjY0NdiaaMwHWR63HOoKTkxMm25ozBUij2Ju1dKpHH+TU/nc4ia6urrywp6cnDQ4OKm8/ho+QKJEpRAiQYnJycqiwsPBdPcYz2vmdnR1KTU1927zoVs+RvamdmZ6eTre3t8qItn8EWiTq0Yffav0i5zASkfNRe5AqcHrR3HwUWiSiMUBKrKys5Gc4AyfYPEoEsBP2wm5gdnaWUy4OGhou6bbVJKr3Z4tEc92Aln8EWiTq0Yffav0i5zASRRFSG1IcUqve+6FAi0Q0NGhsJE3u7u5ScHAw1zhzIJIQUYhGRCWchvSKOid1Wr15W/v76SReXl5ScnKy40kEEIWIxurq6k9fMQDUWBwKRNPp6SmP4YCg/iIDmK8h9aS+vp6fe3t7OfLMmxNJxb+NxLy8PIsrltTsLyERQF1EfcSlXy+gIzQ0lNtt6MVhaGpq4o4TXSi6UXPIGn19fRxlIBbpFrKbm5ssg84QMvKnA2oiItXd3f2/koirV2BgIO/n5eWF7YU9evXhygbCpqenLfbh4uLydSTCSNRHdcenBeiAUfJBDUMXiXvgzc2NIvUP2Ex3dzenWZmDKFxcXFQkTHYgWvHPD96jzcd1BGP/k0TY2t7e/maH6NCrDwc0Pz+ffSL7wB0R0amLxJ8OOZn4M9kWUB+RihEF34nP2qF3/q8j0cB7GCQ6AQwSnQAGiU4Ag8RfD6K/lpuV0eAbgbYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'TK chi phí'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_8" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvType="CheckBox" DesignTimeRectangle="916, 718, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='22' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="0edd76b4-9978-4322-b680-232ba784e6f0" InformativeScreenshot="260160778e0f81f70f59968a7a13f6be.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="chi phi" CvType="Text" DesignTimeRectangle="970, 717, 74, 22" ElementType="Text" FriendlyName="'TK chi phí'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='TK chi phí' tableRow='22' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='TK chi phí' type='' tag='SPAN' class='' check:innerText='TK chi phí' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAaCAYAAAAZtWr8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOpSURBVGhD7ZfNK3xRGMd//4K9slRSSpINhTKDvG0sGIoFi2k2MxbIa9goKUpekpSkhJJsLNWQNIrYoCQpRF4iSp5f32fOne5c547bmTuTdD91y5x77rnnfO5znuf4Rw5KOOIUccQp4ohTxBGniCNOEUecIr9C3Pv7O11fX9Pb25toSTz39/d0e3tLX19fosWcp6cnurq6ipofi7u8vKSVlRXTa319ne7u7uj19ZU2Nzfp6OiIH9ZzcHDA/R4eHkSLdfb29ig7O5ufj8XHxwf19/fT1NSUaFHH7/eTx+NhKbHAmltaWqixsTFqbSxua2uLioqK+CosLKT09HTKzMyMtFVVVbEYWMfvsbExflhjdXWVF768vGzpCxqxKu7l5YWam5tZXrxYFTc7O0vV1dV0fn4uWsJ826oYCANiYCMycTs7O5SXl0fj4+NK0oBVcXZiRRzWg+0sSyFxicOWdblcNDw8zHnqJ46Pj6mvr4+/YGtrKy0sLPBW0MQhcpeWlnhb4Jqbm+P7GlgAPtD8/Lxo+Q7u4QOcnJxQIBCgiooKjtCLiwvRI4wmLhQKUU9PD8+po6ODDg8PRY8wGA/vNMpTFofQLS0tpfb2dkvS1tbWKCsri2pqavgZjI8JI29BXH5+PlVWVlJDQwNPtru7m9NFZ2cn9wGx5qaBe8XFxeR2u2lkZIRmZmaorKyMCgoKonKzvt/g4CC/E3PLzc2l/f190cs8MpXEDQ0NcUTU1tZy0fgJhDu+aFtbm1SyFnHG+9PT0/w+vBdYFYexMKYGKnZ5eTl1dXVF0onWLxgM8m+g9dOnIlvFpaam8gsyMjJocXFR3DUHi8jJyeGKLEMTh6jUgy2nl2BVXF1dHT0+PoqWMIhgfbusn2x8/G2bOHy55+dn3nIIbRSIWBgFGNHEGYuDqjjZQhFF+uiV9ZONbzZeXMUB55r6+vpvZxwjOO5A8O7urmiJJhniRkdHuVDc3Nzwb1k/2fhm48UlDiDaIKW3t9f0OHJ6esrJGTlLht3ikPRxqNdAZW5qaiKv1xspNDIhSRUHkOeQ73CckIHJojpC8MbGBhcAFIzt7W0u83aLS0lJ4ZyGXYB3TUxMcEXX51CZkKSLw+SQ70pKSujs7Ey0RoOciMWkpaXxwnDhLIf/BuwWh8gaGBiIvAvHmsnJSfr8/BS9EiAu0UAyyr5xInahXyiiGe/SH3HsIuniEo1ZhNiNI06RPycO/wv7fD7OnYnkz4lLFo44JYj+A9a2UzNgH13yAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Đơn vị chuyển đổi'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_9" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" DesignTimeRectangle="916, 801, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='37' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="eb255b81-33b6-4a35-8955-8b62a47e9f88" InformativeScreenshot="07b7653aa03b3414e832be2251ea0661.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Don vi chuyen doi" CvType="Text" DesignTimeRectangle="970, 799, 136, 22" ElementType="Text" FriendlyName="'Đơn vị chuyển đổi'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Đơn vị chuyển đổi' tableRow='37' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Đơn vị chuyển đổi' type='' tag='SPAN' class='' check:innerText='Đơn vị chuyển đổi' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Định mức nguyên vật liệu'" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NCheck_11" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" DesignTimeRectangle="916, 843, 5, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl tableRow='38' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='ms-checkbox--input null' aaname='' /&gt;" Guid="5dc85b64-18d2-41be-baa2-5273043d44b2" InformativeScreenshot="43f63bd6f756e7b2c611aca2330cba69.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='check_export' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Dinh muc nguyen vat lieu" CvType="Text" DesignTimeRectangle="970, 842, 195, 22" ElementType="Text" FriendlyName="'Định mức nguyên vật liệu'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Định mức nguyên vật liệu' tableRow='38' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='TABLE' /&gt;&lt;webctrl aaname='Định mức nguyên vật liệu' type='' tag='SPAN' class='' check:innerText='Định mức nguyên vật liệu' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <ui:GetLastDownloadedFile FileResource="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" sap:VirtualizedContainerService.HintSize="483.2,528" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp,crdownload">
+              <ui:GetLastDownloadedFile.Body>
+                <ActivityAction>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Đồng ý'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/DI/DIInventoryItems" CvElementArea="1741, 997, 102, 40" CvTextArea="1762, 1009, 58, 20" CvTextArgument="Dong y" CvType="Button" DesignTimeRectangle="1743, 1000, 98, 38" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Đồng ý'" FullSelectorArgument="&lt;webctrl aaname=' Đồng ý ' parentid='main-content' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Đồng ý ' parentid='main-content' tag='BUTTON' type='' class='ms-component ms-button add-button ms-button-size-default ms-button-primary ms-button-primary-disabled-false ms-button-radius-false ms-button' check:innerText='Đồng ý' /&gt;" Guid="7502f06d-93fc-4856-80ff-63cf61fd4c83" ImageBase64="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" InformativeScreenshot="2ddb2e56c5fb59a4a0af3357148f9046.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='visible' title='Vật tư hàng hóa | Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="1764, 1010, 56, 16" ElementType="Text" FriendlyName="'Đồng ý'" FullSelectorArgument="&lt;webctrl aaname=' Đồng ý ' parentid='main-content' parentname='button' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Đồng ý ' parentid='main-content' parentname='button' tag='DIV' type='' class='ms-button-text ms-button--text flex align-center' check:innerText='Đồng ý' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:GetLastDownloadedFile.Body>
+              <ui:GetLastDownloadedFile.DownloadFolder>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">userFolder + "\\Downloads"</CSharpValue>
+                </InArgument>
+              </ui:GetLastDownloadedFile.DownloadFolder>
+              <ui:GetLastDownloadedFile.File>
+                <OutArgument x:TypeArguments="si:FileInfo">
+                  <CSharpReference x:TypeArguments="si:FileInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">fileVTHH_Cu</CSharpReference>
+                </OutArgument>
+              </ui:GetLastDownloadedFile.File>
+            </ui:GetLastDownloadedFile>
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Input" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="483.2,160" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True">
+              <ui:MoveFile.Path>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">fileVTHH_Cu.FullName</CSharpValue>
+                </InArgument>
+              </ui:MoveFile.Path>
+            </ui:MoveFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1060" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAvJSURBVFhHtdgJUJNnGgdwuioe3IrQnc4Onboz260Hch+iVWsBuUEiggceqLRal6qrqIBWVEAOuTxQ1K3Vumt3tdu6Wl0hJyQhQCAkIQnBW9GqTa9FKy3/fb4vH4eVeLT2mfkPwzDJ9+N5n+/93sTql5Sn4F6Qh/BmpbvwmtFddKVzgqgdE0RtcBcbMEGihbuklf3pUavs8pbXmXwVtQK/enEa9/LfrrwFX6V5Ce91eArvwEN4CwSEu+gS4S5SCCfWs7AJkha41zRjYm0jvGR18FHUwL9BiEnKC91Tmr8wTmv5PIh7yxdTvoLv0rwF35i8BSZ4Ce7BU/glAW8S8CrlMgscL9JjvLiVoiGgmqKCh7QRHrJ6eNXJCChCoLIaQU3nMFV1GsGtJ4yh+uO/DuonuO/mJ+hUEhDegq8J9xU8BXcwkXAThdcJd4UFjhcZOaAG4yVMWihNcK9tgKdcTpHBr17AdBBTmk9juvoUA0SY4SgijYcE3OWer8y4+52+gv/Bpx+QWdr+wPFCBmdggeNEGowTqykqAjazwIlSBTxlZqBfPZ8Fvqn6nAMeQezFvZh1udSUcK3Qjbv008uP/yCBcN1+hGO65yP4hgUy3esBThDS7AnbCdhGMB3GEm6sSE1REbCZ7eB4iZKQClpmGbzrJASs7tfBvyPc8CGijPsJWIa5N7Z3Jt/a/HSkP/8hde4B4TrBxEfwLeFMFFpe7uaYKLzBAZnZM3A4JipzCDiOBTLLXE8drIVPnQj+BJzcdJZm8N8IbT2KmbojiGnfi4SrhQwQybeyOhffTreMZHD+gh86/QUPWByzvOb567s5PIW3e2dvAi3vOJGWUEznWvCGqJlND5BF1jTSMtfBWy5hgUFKBvgpgrUfI8JwALHt5eBdLkTite1YcDMLBDRxnMcrgP9QGSD4AX3A77kO3oMXdc+TuudB3WPuXrZ7QkMvsAfXPyxU3ETbTR285DXwU1RhUuMZAp7EDM3H1MFDiGrbg9mXcwm3CYturUfKl2uw7O6qUxyprwiXFiB4iD5gz/x9jYnnv8TY09fx2lEdxhzT4bVjarx+xoA3qpjZY7o3MJCJGSgnoAS+Cj4CG5ht5hOEaP+GcH0Foo27kXAlh4AZWNixAcvurELq3dTuFfcWPbrUAfwuEyEJ9wPh7sPz3Nd49aAeo3dI4ZQlhNNWCUZm12JUdg1Gba+B8zYRnLfy8XKBGK9+1IjXq1QDAsdLGmjTJqBMQnNYjYCGM5isPIm3Wo4hVHsAMcZiJF75AElXtyD5xlosvf0OUu+k4t27yUaOZmUVyP8xLZDfRd17CN+q+3A70Aa7DCHst0jhmK2A044GjMxtwsidzRiVr4JzQTOc85UYnd+A0XlyuOyQwGUbn6D1+LOgDzqWujdO3MgCPaU1NIcErD9LwFMcsBKxxnwkXNyM+dfSsfDGKha47NYSvHtnXvfKu3PMXSRcBwP0OP0tnLLlsM2shd3Wethvb4ZDnhpO+a1wKtRhZJEBo4oNcC7Rw7lYh9HFWrgUa+BS1ATXfAVccyT4faEIfzpvRpqBSnqqKGiZa+Fbdx6B9Z9hqvJjzFAdRKhmN6INhQTMpGxkgSkdy7CsYwHeuZ2IlXfiTxHupyDqIOG+g12mDDZZCthkN8Fuhxr2ua1w2KmHY4EBTkVtcNrVhpHFbRhVYoRzmRGjKS5lbRQ9XEs0cC1shGteLV7OExCyr4sTJEwHhfCRn0NQw78wueEfBKxEmHYXonQ5iDNsxmzjesy7vArJV5dj+a0FSL2VSOF1WE3i/1Tpf+EhbDLlGJ5VD5utKths18I2pxV2eQbY7zTAocAIx0LKrnY4FbdjZEk7RpVehHNpO0aXX4RLuRnqWqqF6y7qZp6UkHxabiWLdK+RwktaDR/ZFwhSHCfgcbyt2oeZmmJEaPMQq99CwHWES8WCy0ux5Po8LLs5mwF2W006+33nK3SBYZn1GL5FhRHbtLDZoYNNjh62BLTb2Qb7/DbLyDIClhjgsqf9lOvu9tWuZa1rXIuaPnTNrfnR7XAdbUMyOuWI4VHDh5/sMwTWfYLJio/wdnM5QlTFiNJ+gDjdBvD0aUg0pmLexcVIuZ6IlGs8pHbEwsrj028wNKMRw7KaMewDDYZn6zBih56QlFzDY0gHBllk7EW6pFd3v7LmP9PZYe5XLnmyMS7bBVfHVkkJKIJ3zRn4SU8iQHYCUxXlmKEsRZhqCyLVGzFLtxY83QokGJZhrjEZCy/NxuIrcUi5GgWrMYduwjqjCUM3awioxTACDt+mx4jtHDLHAjJfB/vE/d024QVjONNj5ZIrG/PH4wJ4iE/Dp+Yk/KXHESg7gmkMsKEAIcptCG/ehKiW1YhvTUWCfiGSDHORfJGAl2ORciUcVqPyDbDOUsOagEO3tGLYVt0jSLabDJK62YvM08E2oQI2EQVHOYvFmnhccMlT9E94S07Ar/YjTKrdjSny3Zih2IrQxkxENqUhWrUCsS3LWWCiPhHJ7XFYfCnSDLSn7gzJ0hBQC2sCDv2AgE9B2s49DOocbGPK1nEOi+X7yX+PeYmOwEd8GL7iShY4Vb6TBYbUZyC8cRWim5cjriUZCZoEJOlnI0kXgwVtEVjUHtJpNThDjcEEHELAIZtbOSTFEvIv5wmXD9voMtjF7VvDOSyWJ/9QgqeQgMIK+Iv3IrCmBG9Kd2C6fDOC694n4EpENS1HbPNc8Fp4hIvF3NYwzNfPxELjTIHVoAwNBmdqCckAn4LM1sAmqgi2USWwjd0Lu/gDqzmHxfLi76/0EZTSM70cgeJCTBZvwTRpBqZL1yBYvoKASxHRmIIY5RzwmmOQoI5BoiYMc7UhmN86I8jqd5s0GJRBwB4kCx0ISXnvHM1dIeH2wG7WAdjxDio5x4DlWb3XzYtf1uXD30XP9zwECLMRJMrEFPF6vFW7AsHSpQiVpyC8bh5iGuNZYHxTJOa0hCBRHWz+KEDAzmdFjkg6TEtbCttZFdS9g7CbfaiLfRML5VVVIvCqLoZPdQEBcwi4DUHC9XhT/D6mSd5FcG0ywuTzEamIZ4EMjtcUSsDQDu4tCLhRY2SAPchBDJLSH2nNIUeE76Tu7SZcJXXvEANkflZyb/VYeVUVG72rCwmYC3/+ZkwSrMMU0WpMFa/igAsxU5aEcHk8ohQxiKkPx6zGmUaeMrjvqPXSBk3lSxvNQDOSMgBy6AZ6DEbQ/MXR7PGoe7zDBKTwDnXR7wMe070v5Lr5XMgx+VVvJWAWAvibMEX4HqYKUzFNlIKQmiTKHETI4xBVF90VrYjM4V7aVy9tULsREk9DDv2rFDaRuwi4j+teL5AB9y3JAOVXtSnIv3rDqUn8NOVkwUrTNOES0zTRItPbkiRTSA1PGSaNfRzWvwjZ8SQkM5fWawkYRUBm/h4Hwj6+su+A+cIrXZ1GSPQiOSiL5G6eIevoGBZBm7NlIOVAp/2s/S/2a43eSlebzEiKBeSIsBxLS9wDBAG77WdVCOzjKix/fLRQTuGFQU7hBRb+QeoixQy0gByWUDnQTfJzIKUCBOy2j9undIjd+8RvtRwji90cI3blOEYUdRAQBOzm/jRApauVT0Jar7hAT5Hin28zloCUfSAgHGL2UHabHKLLKWVKx6hSo2NUiYlwnRQQkFJEOBb4xM2fQXYySKsBkIM30oGW2Qv7NurnAYKAlDIQkFICFvcosJOATxmNdLUbpcsS0nr5GXa74R51vXkBwG4CPuPcpqsTnoQczqswn2YIxHaSx+B+FbCbgAnc1Z+xzJ18dLlpG2KQgzaoMCy2zIxkOtmD+2XATgI+9x3fV9yN0x/JdJNFxpRyy00YBhbP4Z4dqKT8ClxPmbcgEwPtj2RncsmnsJmZA3u6MAPqgZlDODqasbhHgSYC/gZfqpuh9Fh8FDloXQOGJ5+gjwAlsKPTth11lQXT0cyBumVPN4FdPHUzuryDgL/9t/2EpAOGupKQRkJ29t8rB6cr6bktw4j3aM9ceQ6jV5198Ie1Vddd085P4V79HGVl9X8MVyNGbluHFAAAAABJRU5ErkJggg==" InformativeScreenshot="f5304f774ce1afbe61e6015b97e6b748.jpg" Selector="&lt;html app='msedge.exe' htmlwindowname='logo' title='Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" Title="Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" Url="https://actasp.misa.vn/app/dashboard/workbench" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="579.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">UiPath.Core.Activities.LogLevel.Trace</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"Tải file tổng hợp VTHH từ ASP thành công"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>
