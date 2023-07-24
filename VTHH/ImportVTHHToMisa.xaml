@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ImportVTHHToMisa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ImportVTHHToMisa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="vthhFileAddress" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1100,3261.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1100,4529.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -47,6 +47,8 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -115,9 +117,10 @@
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ImportVTHHToMisa" sap:VirtualizedContainerService.HintSize="1110.4,3196.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="ImportVTHHToMisa" sap:VirtualizedContainerService.HintSize="1110.4,4464.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="si:FileInfo" Name="supplierFile" />
       <Variable x:TypeArguments="si:FileInfo" Name="vthhFile" />
@@ -128,14 +131,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" sap:VirtualizedContainerService.HintSize="1048,85.6" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_2" SpecialFolder="UserProfile">
+    <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" sap:VirtualizedContainerService.HintSize="1048,85.6" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_3" SpecialFolder="UserProfile">
       <ui:GetEnvironmentFolder.FolderPath>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">userProfile</CSharpReference>
         </OutArgument>
       </ui:GetEnvironmentFolder.FolderPath>
     </ui:GetEnvironmentFolder>
-    <ui:GetFileInfoX DisplayName="Get File Info" sap:VirtualizedContainerService.HintSize="1048,134.4" sap2010:WorkflowViewState.IdRef="GetFileInfoX_2">
+    <ui:GetFileInfoX DisplayName="Get File Info" sap:VirtualizedContainerService.HintSize="1048,134.4" sap2010:WorkflowViewState.IdRef="GetFileInfoX_3">
       <ui:GetFileInfoX.FilePath>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">vthhFileAddress["vthhFileAddress"].ToString()</CSharpValue>
@@ -147,13 +150,13 @@
         </OutArgument>
       </ui:GetFileInfoX.Output>
     </ui:GetFileInfoX>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1048,2784.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1048,4052.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="2fabdcf9-4d53-41f6-8cbc-743bef218e8b" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,2568" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,3796" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -341,13 +344,100 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/Ultilities/Import/9010" CvTextArgument="Khong co dur lieu" CvType="Text" DesignTimeRectangle="842, 662, 154, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Không có dữ liệu'" FullSelectorArgument="&lt;webctrl class='nodata-text' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='nodata-text' tag='SPAN' type='' aaname='Không có dữ liệu' check:innerText='Không có dữ liệu' /&gt;" Guid="523ac8c1-59ff-462a-80c6-400a3589c254" ImageBase64="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" InformativeScreenshot="65d5b6ea5c81884953a4ffb93b111f66.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='state' title='Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvType="Icon" DesignTimeRectangle="842, 527, 165, 93" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='nodata-img' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="952,1188" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="Output\\Danh muc VTHH.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="XOÁ DỮ LIỆU FILE MẪU VTHH" sap:VirtualizedContainerService.HintSize="496,1038.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtNewGoodsList" />
+                      <Variable x:TypeArguments="x:Int32" Name="count" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtUpdateGoodsList" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A1" SheetName="Danh mục mới">
+                      <ui:ExcelReadRange.DataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">dtNewGoodsList</CSharpReference>
+                        </OutArgument>
+                      </ui:ExcelReadRange.DataTable>
+                    </ui:ExcelReadRange>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">
+                          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">count</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">
+                          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">dtNewGoodsList.RowCount() + 1</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_6" SheetName="Danh mục mới" ShiftCells="False" ShiftOption="ShiftUp">
+                      <ui:ExcelDeleteRange.Range>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"3:" + count</CSharpValue>
+                        </InArgument>
+                      </ui:ExcelDeleteRange.Range>
+                    </ui:ExcelDeleteRange>
+                    <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="A1" SheetName="Danh mục cập nhật">
+                      <ui:ExcelReadRange.DataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">dtUpdateGoodsList</CSharpReference>
+                        </OutArgument>
+                      </ui:ExcelReadRange.DataTable>
+                    </ui:ExcelReadRange>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">
+                          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">count</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">
+                          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">dtUpdateGoodsList.RowCount() + 1</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_7" SheetName="Danh mục cập nhật" ShiftCells="False" ShiftOption="ShiftUp">
+                      <ui:ExcelDeleteRange.Range>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">"3:" + count</CSharpValue>
+                        </InArgument>
+                      </ui:ExcelDeleteRange.Range>
+                    </ui:ExcelDeleteRange>
+                    <ui:ExcelDeleteRange DisplayName="XOÁ DƯ LIỆU SHEET DANH MỤC CŨ" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_8" Range="A:V" SheetName="Danh mục cũ" ShiftCells="False" ShiftOption="ShiftUp">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ExcelDeleteRange>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,144" sap2010:WorkflowViewState.IdRef="LogMessage_1">
               <ui:LogMessage.Level>
                 <InArgument x:TypeArguments="ui:LogLevel">
@@ -366,6 +456,12 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-9, -9, 1938, 1060" BrowserType="Edge" IconBase64="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" InformativeScreenshot="00af0fe4fa790545de73f8a6f372cb8a.jpg" Selector="&lt;html app='msedge.exe' htmlwindowname='state' title='Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" Title="ASP - Đăng nhập" Url="https://actasp.misa.vn/app/Ultilities/Import/9010" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>
