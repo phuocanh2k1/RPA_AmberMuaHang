@@ -3,7 +3,7 @@
     <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>828,2052</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>828,2012</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,32 +106,32 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginASPMisa" sap:VirtualizedContainerService.HintSize="713.6,1987.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoginASPMisa" sap:VirtualizedContainerService.HintSize="713.6,1947.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ASP - Đăng nhập" sap:VirtualizedContainerService.HintSize="651.2,1692.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ASP - Đăng nhập" sap:VirtualizedContainerService.HintSize="651.2,1652.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="617.6,1476" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="617.6,1436" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Sequence - Đăng nhập Misa" sap:VirtualizedContainerService.HintSize="555.2,965.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Sequence - Đăng nhập Misa" sap:VirtualizedContainerService.HintSize="555.2,925.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check App State '0906249919'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,850.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Timeout="60" Version="V3">
+              <uix:NCheckState DisplayName="Check App State '0906249919'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,810.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Timeout="60" Version="V3">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,592" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
@@ -181,7 +181,7 @@
                 </uix:NCheckState.Target>
               </uix:NCheckState>
             </Sequence>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'Truy cập'" sap:VirtualizedContainerService.HintSize="555.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Click 'Truy cập'" sap:VirtualizedContainerService.HintSize="555.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="909caf8d-2386-44e8-ac42-04efc7e582fe" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://asp.misa.vn/App/Account/Join" CvTextArgument="Truy cap" CvType="Text" DesignTimeRectangle="1289, 382, 131, 43" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Truy cập'" FullSelectorArgument="&lt;webctrl tag='A' aaname='Truy cập' innertext='Truy cập' parentclass='company-info' visibleinnertext='Truy cập' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' aaname='Truy cập' innertext='Truy cập' parentclass='company-info' visibleinnertext='Truy cập' type='' class='join m-btn primary' check:text='Truy cập' /&gt;" Guid="c7b27997-c9d9-4877-9198-993c5263267f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAvCAYAAADJqNmJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAS0SURBVHhe7ZzNaxtHGIf7LwVayKGHHnzwWeCCwGDwIZCDwBDwIQSK0aHQQ/BB+BRCY3SoRINIDMIQ5LZI1NQi2FEIVrGRcFlBHdY0rLHxYuNf3tF+ze7OSFGxPlZ6Bx6Idj48q3lm5p1V2K/+PTXBMCpYDkYLy8Foicnxy/6vSL38Hl+/uI97P3/DTDlinMV4i3GPuhCS44ffsvg2/52yEWa6EeMuxl/2wZdDmMNizDZi/OUVxJdDLC2qCsxsITyIycExBiMQHsTkUBVkZhOWg9HCcjBaWA5GC8vBaGE5GC0sB6OF5WC0jEeO9018WbKxt6eonzTKRbTcOwJMVKqKMhMIyzFsillULp27sa4s5x92HU+LirITxnjkKC0j82Yl4O+286UJGQ6k68RSSVE/Mcxj7cR0bu2ShCg/CUTprGNOWWdyGI8cUfyVZEq2kSkhAXLkcejmto6eINdqwryhD5+KSFP+pjsxvc/Kes1FWt6f452oJ9JZPjJrF1H4z827rGGtz5Kf+iOPypkJ22vvxob1aQe5ykKk7DwevN3G4YVNd+Yk+6KBwvsaRR5O6vatW1bqb3sDpY9y+xZaJxt4MOKtKFFyhNKgctC1Hw13z0cH5TdS2a0gYDSOV4LrCpaor95Aq5Jx5NWXtpQeSSWHNl3VRhqrJE+OqzaqrSIKB9mB5ZAlsP7J+mUftbxGSJqK3EaELWrTm83XTZT3VpGmwUqVsyidkTKXDTz7fd4pu1uDpyIu6tisLdJqtYDMft1fNURSy2HDMPJYe01tlVaQM4Ia9ulG0J8hkyw5ukFdOH8gOWg2P/vozvubBnLda6soXziXbNpulkJthMkcd5yCNLzVmiuBzwLSYjDdz7lT7++0UYgIt9T0AnC1HLYZ7cci3afb3q3X7+GTKDmMVnzJH0wOwp/RNt69jXzel8op8Af8ut9RdAXlc6corFdx4Yqqvmn66zL3wfuORvecJFFyqL40rRzSFhKuF6wUIjB96sUhNs3ILam+gpAcivyA4Mj6/+SIBrayHBaqu+G8YTE9cpxvIyNdTyuX7niel0yKQfo9dwi2FVU/F5CSnsn4IqGJzcgqk6b79XJVcoi4ItwXeTuk9vpIfFckXo7Hbc8OqkvbghP07cDwAkdKsXrysbabvnCpllYj3FLw+ucyUnQ9VVlHWQSkYvVxY6K5vXoQkFKs5BxzRd/oGHvrXqekkkMks7OBjJBNBKQnHV8mi8TpFRfdJYmX497ONgw3X5dU9YJjLaXIqtOL3kdZG61j5xQ1lKOsIiAfJsmXg0jtvuo+aHKSDeu8jtJf273rSYHo4YfleH4PlA/Bun/zYWw7eNTYkR6C9eqbdJ/HP6EgPQSzr00cnuTxeMQ/JUyGHGPAXznEHj7C2ain/yQYNbMphxRziD08fAQeFyzHRDB30HCXeYu2sejDrCEgfrZ3j8/G0aq6DMsxCQz2I9ud4MdUlLTPSFiO2aS4juqVGHbnNDPp/4/Dg+VgtLAcjBaWg9HCcjBaWA5GC8vBaInJwW/2YQTKN/vwO8EYgfKdYPw2QUb7NkEBv4d0dhHjrn0PqYcwRywtHIPMBmKcxXjLK4ZHTA6GcTDxGYciYRHoVANMAAAAAElFTkSuQmCC" InformativeScreenshot="b8b79f7cb9f9dadc65ed201c7029f4cb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ASP.MISA.VN*' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
