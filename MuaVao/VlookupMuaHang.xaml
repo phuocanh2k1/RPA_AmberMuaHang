@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="VlookupMuaHang" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="697.6,3782.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="VlookupMuaHang" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="799.2,4284" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -93,13 +93,13 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VlookupMuaHang" sap:VirtualizedContainerService.HintSize="708,3717.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VlookupMuaHang" sap:VirtualizedContainerService.HintSize="784.8,4219.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="VLOOKUP LẤY MÃ HÀNG, TK KHO/TK CP, TK CÔNG NỢ/TK TIỀN" sap:VirtualizedContainerService.HintSize="645.6,3605.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="VLOOKUP LẤY MÃ HÀNG, TK KHO/TK CP, TK CÔNG NỢ/TK TIỀN" sap:VirtualizedContainerService.HintSize="722.4,4107.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtGoodsList" />
       </Sequence.Variables>
@@ -108,7 +108,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="583.2,321.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Input\\Danh_sach_hang_hoa_dich_vu.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="660,281.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Input\\Danh_sach_hang_hoa_dich_vu.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
@@ -137,13 +137,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="583.2,3132" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Mua_hang_trong_nuoc.xls">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="660,3673.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Mua_hang_trong_nuoc.xls">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="549.6,2982.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="626.4,3564" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dtLookupValue" />
               </Sequence.Variables>
@@ -153,27 +153,27 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="487.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="Q8" SheetName="Mua hang trong nuoc">
+              <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="564,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="Q8" SheetName="Mua hang trong nuoc">
                 <ui:ExcelReadRange.DataTable>
                   <OutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dtLookupValue</CSharpReference>
                   </OutArgument>
                 </ui:ExcelReadRange.DataTable>
               </ui:ExcelReadRange>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="487.2,2483.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="564,3096" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="453.6,2295.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="530.4,2908" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strLookupValue" />
                         <Variable x:TypeArguments="ui:GenericValue" Name="strResult" />
                         <Variable x:TypeArguments="x:Int32" Default="9" Name="index" />
                         <Variable x:TypeArguments="x:Int32" Name="idxRow" />
                         <Variable x:TypeArguments="x:String" Name="str" />
-                        <Variable x:TypeArguments="x:String" Name="strTKKho" />
+                        <Variable x:TypeArguments="x:String" Name="tkKho_ChiPhi" />
                         <Variable x:TypeArguments="x:String" Name="strTKDoanhThu" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
@@ -181,7 +181,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Tên hàng" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="410.4,188" sap2010:WorkflowViewState.IdRef="GetRowItem_1">
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Tên hàng" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="487.2,188" sap2010:WorkflowViewState.IdRef="GetRowItem_1">
                         <ui:GetRowItem.Row>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">CurrentRow</CSharpValue>
@@ -193,7 +193,7 @@
                           </OutArgument>
                         </ui:GetRowItem.Value>
                       </ui:GetRowItem>
-                      <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Vlookup lấy Mã hàng" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="410.4,326.4" sap2010:WorkflowViewState.IdRef="LookupDataTable_1">
+                      <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Vlookup lấy Mã hàng" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="487.2,326.4" sap2010:WorkflowViewState.IdRef="LookupDataTable_1">
                         <ui:LookupDataTable.CellValue>
                           <OutArgument x:TypeArguments="ui:GenericValue">
                             <CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">strResult</CSharpReference>
@@ -230,7 +230,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LookupDataTable>
-                      <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Cập nhật Mã hàng" ColumnName="Mã hàng" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="410.4,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_1">
+                      <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Cập nhật Mã hàng" ColumnName="Mã hàng" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="487.2,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_1">
                         <ui:UpdateRowItem.Row>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">CurrentRow</CSharpValue>
@@ -247,32 +247,94 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:UpdateRowItem>
-                      <If sap:VirtualizedContainerService.HintSize="410.4,1216.8" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If sap:VirtualizedContainerService.HintSize="487.2,1565.6" sap2010:WorkflowViewState.IdRef="If_1">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">idxRow != -1</CSharpValue>
                           </InArgument>
                         </If.Condition>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="376.8,1033.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence sap:VirtualizedContainerService.HintSize="453.6,1382.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="goodsType" />
+                            </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="6" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="GetRowItem_4">
+                            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="410.4,188" sap2010:WorkflowViewState.IdRef="GetRowItem_6">
                               <ui:GetRowItem.Row>
                                 <InArgument x:TypeArguments="sd:DataRow">
-                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">dtGoodsList.Rows[idxRow]</CSharpValue>
+                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">dtGoodsList.Rows[idxRow]</CSharpValue>
                                 </InArgument>
                               </ui:GetRowItem.Row>
                               <ui:GetRowItem.Value>
                                 <OutArgument x:TypeArguments="x:String">
-                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">strTKKho</CSharpReference>
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">goodsType</CSharpReference>
                                 </OutArgument>
                               </ui:GetRowItem.Value>
                             </ui:GetRowItem>
-                            <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Cập nhật TK kho/TK chi phí" ColumnName="TK kho/TK chi phí (*)" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="333.6,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_2">
+                            <If sap:VirtualizedContainerService.HintSize="410.4,800.8" sap2010:WorkflowViewState.IdRef="If_2">
+                              <If.Condition>
+                                <InArgument x:TypeArguments="x:Boolean">
+                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">goodsType =="Dịch vụ"</CSharpValue>
+                                </InArgument>
+                              </If.Condition>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376.8,308.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" sap2010:Annotation.AnnotationText="Nếu tính chất hàng hóa là dịch vụ sẽ lấy TK chi phí" ColumnIndex="8" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="333.6,219.2" sap2010:WorkflowViewState.IdRef="GetRowItem_7">
+                                    <ui:GetRowItem.Row>
+                                      <InArgument x:TypeArguments="sd:DataRow">
+                                        <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">dtGoodsList.Rows[idxRow]</CSharpValue>
+                                      </InArgument>
+                                    </ui:GetRowItem.Row>
+                                    <ui:GetRowItem.Value>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">tkKho_ChiPhi</CSharpReference>
+                                      </OutArgument>
+                                    </ui:GetRowItem.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:GetRowItem>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376.8,308.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" sap2010:Annotation.AnnotationText="Còn lại lấy TK Kho" ColumnIndex="6" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="333.6,219.2" sap2010:WorkflowViewState.IdRef="GetRowItem_4">
+                                    <ui:GetRowItem.Row>
+                                      <InArgument x:TypeArguments="sd:DataRow">
+                                        <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">dtGoodsList.Rows[idxRow]</CSharpValue>
+                                      </InArgument>
+                                    </ui:GetRowItem.Row>
+                                    <ui:GetRowItem.Value>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">tkKho_ChiPhi</CSharpReference>
+                                      </OutArgument>
+                                    </ui:GetRowItem.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:GetRowItem>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Cập nhật TK kho/TK chi phí" ColumnName="TK kho/TK chi phí (*)" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="410.4,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_2">
                               <ui:UpdateRowItem.Row>
                                 <InArgument x:TypeArguments="sd:DataRow">
                                   <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">CurrentRow</CSharpValue>
@@ -280,36 +342,7 @@
                               </ui:UpdateRowItem.Row>
                               <ui:UpdateRowItem.Value>
                                 <InArgument x:TypeArguments="x:Object">
-                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">strTKKho</CSharpValue>
-                                </InArgument>
-                              </ui:UpdateRowItem.Value>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:UpdateRowItem>
-                            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="7" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="GetRowItem_5">
-                              <ui:GetRowItem.Row>
-                                <InArgument x:TypeArguments="sd:DataRow">
-                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">dtGoodsList.Rows[idxRow]</CSharpValue>
-                                </InArgument>
-                              </ui:GetRowItem.Row>
-                              <ui:GetRowItem.Value>
-                                <OutArgument x:TypeArguments="x:String">
-                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">strTKDoanhThu</CSharpReference>
-                                </OutArgument>
-                              </ui:GetRowItem.Value>
-                            </ui:GetRowItem>
-                            <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Cập nhật TK công nợ/TK tiền" ColumnName="TK công nợ/TK tiền (*)" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="333.6,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_3">
-                              <ui:UpdateRowItem.Row>
-                                <InArgument x:TypeArguments="sd:DataRow">
-                                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">CurrentRow</CSharpValue>
-                                </InArgument>
-                              </ui:UpdateRowItem.Row>
-                              <ui:UpdateRowItem.Value>
-                                <InArgument x:TypeArguments="x:Object">
-                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">strTKDoanhThu</CSharpValue>
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">tkKho_ChiPhi</CSharpValue>
                                 </InArgument>
                               </ui:UpdateRowItem.Value>
                               <sap:WorkflowViewStateService.ViewState>
@@ -330,7 +363,24 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="410.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+                      <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Cập nhật TK công nợ/TK tiền (Mặc định 331)" ColumnName="TK công nợ/TK tiền (*)" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="487.2,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_3">
+                        <ui:UpdateRowItem.Row>
+                          <InArgument x:TypeArguments="sd:DataRow">
+                            <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">CurrentRow</CSharpValue>
+                          </InArgument>
+                        </ui:UpdateRowItem.Row>
+                        <ui:UpdateRowItem.Value>
+                          <InArgument x:TypeArguments="x:Object">
+                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">"331"</CSharpValue>
+                          </InArgument>
+                        </ui:UpdateRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:UpdateRowItem>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="487.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2">
                         <InArgument x:TypeArguments="x:String">
                           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">idxRow.ToString()</CSharpValue>
                         </InArgument>
@@ -344,14 +394,14 @@
                   </InArgument>
                 </ui:ForEachRow.DataTable>
               </ui:ForEachRow>
-              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="487.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Mua hang trong nuoc" StartingCell="Q9">
+              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="564,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Mua hang trong nuoc" StartingCell="Q9">
                 <ui:ExcelWriteRange.DataTable>
                   <InArgument x:TypeArguments="sd:DataTable">
                     <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">dtLookupValue.DefaultView.ToTable(false,"Mã hàng")</CSharpValue>
                   </InArgument>
                 </ui:ExcelWriteRange.DataTable>
               </ui:ExcelWriteRange>
-              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="487.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="Mua hang trong nuoc" StartingCell="T9">
+              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="564,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="Mua hang trong nuoc" StartingCell="T9">
                 <ui:ExcelWriteRange.DataTable>
                   <InArgument x:TypeArguments="sd:DataTable">
                     <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">dtLookupValue.DefaultView.ToTable(false,"TK kho/TK chi phí (*)","TK công nợ/TK tiền (*)")</CSharpValue>
