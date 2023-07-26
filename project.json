@@ -42,7 +42,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "Test_drive.xaml"
+      ]
     },
     "fileInfoCollection": [],
     "modernBehavior": true
