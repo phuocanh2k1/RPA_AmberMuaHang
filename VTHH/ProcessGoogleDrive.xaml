@@ -5,7 +5,7 @@
     <x:Property Name="in_FileToCheck" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>828,1431.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,1391.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -142,7 +142,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProcessGoogleDrive" sap:VirtualizedContainerService.HintSize="825.6,1366.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessGoogleDrive" sap:VirtualizedContainerService.HintSize="825.6,1326.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="folderMaHHVT" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="isCodeMissing" />
@@ -174,7 +174,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Timeout="{x:Null}" Account="quanghoangnhat01@gmail.com" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="763.2,1112.8" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="False" UserEmail="quanghoangnhat01@gmail.com">
+    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Timeout="{x:Null}" Account="rpademoacc01@gmail.com" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="763.2,1072.8" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="False" UserEmail="rpademoacc01@gmail.com">
       <ugad:GoogleDriveApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugad:IGoogleDriveTarget">
           <ActivityAction.Argument>
@@ -205,7 +205,7 @@
               <Flowchart.StartNode>
                 <x:Reference>__ReferenceID3</x:Reference>
               </Flowchart.StartNode>
-              <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID3" DisplayName="Kiểm tra stage" sap:VirtualizedContainerService.HintSize="81.6,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+              <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID3" DisplayName="Kiểm tra stage" sap:VirtualizedContainerService.HintSize="82.4,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                 <FlowSwitch.Default>
                   <FlowStep x:Name="__ReferenceID0">
                     <sap:WorkflowViewStateService.ViewState>
@@ -214,7 +214,7 @@
                         <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Tạo mới folder và đẩy file lên drive" sap:VirtualizedContainerService.HintSize="449.6000000000001,1046.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="Tạo mới folder và đẩy file lên drive" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="file" />
                         <Variable x:TypeArguments="x:String" Name="newFolder" />
@@ -308,7 +308,7 @@
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <av:Point x:Key="ShapeLocation">249.2,116.4</av:Point>
-                    <av:Size x:Key="ShapeSize">81.6,87.2</av:Size>
+                    <av:Size x:Key="ShapeSize">82.4,87.2</av:Size>
                     <av:PointCollection x:Key="Default">330.79999999999995,181.8 360.79999999999995,181.8 360.79999999999995,249.99999999999997 410,249.99999999999997</av:PointCollection>
                     <x:String x:Key="DefaultCaseDisplayName">1</x:String>
                     <av:PointCollection x:Key="2Connector">269.8,203.60000000000002 269.8,230 200,230</av:PointCollection>
@@ -327,11 +327,7 @@
                       <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
                       <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
                       <Variable x:TypeArguments="gadvd:File" Name="filetoCheck" />
-                      <Variable x:TypeArguments="x:Int32" Name="count">
-                        <Variable.Default>
-                          <Literal x:TypeArguments="x:Int32" />
-                        </Variable.Default>
-                      </Variable>
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
