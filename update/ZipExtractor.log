@@ -1,0 +1,16 @@
+02 Tháng Tám 2023 3:18:22 CH
+
+ZipExtractor started with following command line arguments.
+[0] E:\RPA_Amber_MuaHang\update\ZipExtractor.exe
+[1] update\updateVsign.zip
+[2] E:\OneDrive - CONG TY CO PHAN AMBER CAPITAL\USB Drive\VSIGN
+[3] E:\OneDrive - CONG TY CO PHAN AMBER CAPITAL\USB Drive\VSIGN\vsign.exe
+
+Waiting for application process to exit...
+BackgroundWorker started successfully.
+Found total of 68 files and folders inside the zip file.
+
+System.IO.IOException: The process cannot access the file 'E:\OneDrive - CONG TY CO PHAN AMBER CAPITAL\USB Drive\VSIGN\Vsign.exe' because it is being used by another process.
+   at ZipExtractor.FormMain.<>c__DisplayClass4_1.<FormMain_Shown>b__2(Object o, RunWorkerCompletedEventArgs eventArgs)
+
+
