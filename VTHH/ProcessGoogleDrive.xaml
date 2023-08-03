@@ -5,7 +5,7 @@
     <x:Property Name="in_FileToCheck" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>824.8,1208.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1130.4,1239.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -142,17 +142,18 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProcessGoogleDrive" sap:VirtualizedContainerService.HintSize="825.6,1144" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessGoogleDrive" sap:VirtualizedContainerService.HintSize="825.6,1174.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="folderMaHHVT" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="isCodeMissing" />
+      <Variable x:TypeArguments="x:String" Name="folderForBot" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="763.2,101.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="763.2,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -165,7 +166,19 @@
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">DanhSachHHVT</InArgument>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_250" xml:space="preserve">"DanhSachHHVT "  + DateTime.Now. ToString("dd/MM/yyyy")</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">folderForBot</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Folder bot chạy</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -177,7 +190,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" Account="rpademoacc01@gmail.com" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="763.2,890.4" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" Timeout="{x:Null}" UseConnectionService="False" UserEmail="rpademoacc01@gmail.com">
+    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Timeout="{x:Null}" Account="rpademoacc01@gmail.com" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="763.2,890.4" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="False" UserEmail="rpademoacc01@gmail.com">
       <ugad:GoogleDriveApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugad:IGoogleDriveTarget">
           <ActivityAction.Argument>
@@ -220,72 +233,192 @@
                     <Sequence DisplayName="Tạo mới folder và đẩy file lên drive" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="file" />
-                        <Variable x:TypeArguments="x:String" Name="newFolder" />
+                        <Variable x:TypeArguments="x:String" Name="folderBotChay" />
+                        <Variable x:TypeArguments="gadvd:File[]" Name="isExist" />
+                        <Variable x:TypeArguments="x:String" Name="folderMaHhvtID" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uga:CreateFolder AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Create Folder" FolderDescription="{x:Null}" sap:VirtualizedContainerService.HintSize="387.2,183.2" sap2010:WorkflowViewState.IdRef="CreateFolder_2" ParentFriendlyName="Folder bot chạy" ParentId="https://drive.google.com/drive/folders/1GUZJVfo3LytT-wN8H0hLvDftVAOd3K51" ParentIdSelectionMode="Browse" SupportsTeamDrives="False">
-                        <uga:CreateFolder.DriveTarget>
+                      <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_7" MaxResults="50" SupportsTeamDrives="False">
+                        <uga:FindFiles.DriveTarget>
                           <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_190">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                              </CSharpValue.Result>GoogleDrive</CSharpValue>
+                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_251">GoogleDrive</CSharpValue>
                           </InArgument>
-                        </uga:CreateFolder.DriveTarget>
-                        <uga:CreateFolder.FolderName>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="x:String" />
-                              </CSharpValue.Result>folderMaHHVT</CSharpValue>
-                          </InArgument>
-                        </uga:CreateFolder.FolderName>
-                        <uga:CreateFolder.Result>
-                          <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">
-                              <CSharpReference.Result>
-                                <OutArgument x:TypeArguments="Location(x:String)" />
-                              </CSharpReference.Result>newFolder</CSharpReference>
+                        </uga:FindFiles.DriveTarget>
+                        <uga:FindFiles.Result>
+                          <OutArgument x:TypeArguments="gadvd:File[]">
+                            <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">isExist</CSharpReference>
                           </OutArgument>
-                        </uga:CreateFolder.Result>
-                      </uga:CreateFolder>
-                      <uga:UploadFile AuthScopesInvalid="False" ContinueOnError="{x:Null}" Convert="False" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="387.2,239.2" sap2010:WorkflowViewState.IdRef="UploadFile_2" LocalFilePath="Output\Danh muc VTHH.xlsx" ParentFolderName="{x:Null}" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False" UpdateExisting="False">
-                        <uga:UploadFile.DriveTarget>
+                        </uga:FindFiles.Result>
+                        <uga:FindFiles.SearchExpression>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_233">string.Format("name = '{0}'", FolderForBot)</CSharpValue>
+                          </InArgument>
+                        </uga:FindFiles.SearchExpression>
+                      </uga:FindFiles>
+                      <If sap:VirtualizedContainerService.HintSize="510.4,627.2" sap2010:WorkflowViewState.IdRef="If_8">
+                        <If.Condition>
+                          <InArgument x:TypeArguments="x:Boolean">
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_228">isExist.Length &lt;= 0</CSharpValue>
+                          </InArgument>
+                        </If.Condition>
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376.8,272.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,183.2" sap2010:WorkflowViewState.IdRef="CreateFolder_5" ParentFriendlyName="Folder bot chạy" ParentId="root" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False">
+                              <uga:CreateFolder.DriveTarget>
+                                <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_252">GoogleDrive</CSharpValue>
+                                </InArgument>
+                              </uga:CreateFolder.DriveTarget>
+                              <uga:CreateFolder.FolderName>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_229">FolderForBot</CSharpValue>
+                                </InArgument>
+                              </uga:CreateFolder.FolderName>
+                              <uga:CreateFolder.Result>
+                                <OutArgument x:TypeArguments="x:String">
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">folderBotChay</CSharpReference>
+                                </OutArgument>
+                              </uga:CreateFolder.Result>
+                            </uga:CreateFolder>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">folderBotChay</CSharpReference>
+                                </OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_231">isExist[0].Id</CSharpValue>
+                                </InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_6" MaxResults="50" SupportsTeamDrives="False">
+                        <uga:FindFiles.DriveTarget>
                           <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_192">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                              </CSharpValue.Result>GoogleDrive</CSharpValue>
+                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_253">GoogleDrive</CSharpValue>
                           </InArgument>
-                        </uga:UploadFile.DriveTarget>
-                        <uga:UploadFile.ParentId>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="x:String" />
-                              </CSharpValue.Result>newFolder</CSharpValue>
-                          </InArgument>
-                        </uga:UploadFile.ParentId>
-                        <uga:UploadFile.Result>
-                          <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">
-                              <CSharpReference.Result>
-                                <OutArgument x:TypeArguments="Location(x:String)" />
-                              </CSharpReference.Result>file</CSharpReference>
+                        </uga:FindFiles.DriveTarget>
+                        <uga:FindFiles.Result>
+                          <OutArgument x:TypeArguments="gadvd:File[]">
+                            <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">isExist</CSharpReference>
                           </OutArgument>
-                        </uga:UploadFile.Result>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </uga:UploadFile>
-                      <ui:WriteCell Cell="B8" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" Password="{x:Null}" SheetName="Config" WorkbookPath="config\config.xlsx">
+                        </uga:FindFiles.Result>
+                        <uga:FindFiles.SearchExpression>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_211">string.Format("name = '{0}'", folderMaHHVT)</CSharpValue>
+                          </InArgument>
+                        </uga:FindFiles.SearchExpression>
+                      </uga:FindFiles>
+                      <If sap:VirtualizedContainerService.HintSize="510.4,906.4" sap2010:WorkflowViewState.IdRef="If_7">
+                        <If.Condition>
+                          <InArgument x:TypeArguments="x:Boolean">
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_218">isExist.Length &lt;= 0</CSharpValue>
+                          </InArgument>
+                        </If.Condition>
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376.8,552" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,183.2" sap2010:WorkflowViewState.IdRef="CreateFolder_2" ParentFriendlyName="Folder bot chạy" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False">
+                              <uga:CreateFolder.DriveTarget>
+                                <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_254">GoogleDrive</CSharpValue>
+                                </InArgument>
+                              </uga:CreateFolder.DriveTarget>
+                              <uga:CreateFolder.FolderName>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">
+                                    <CSharpValue.Result>
+                                      <OutArgument x:TypeArguments="x:String" />
+                                    </CSharpValue.Result>folderMaHHVT</CSharpValue>
+                                </InArgument>
+                              </uga:CreateFolder.FolderName>
+                              <uga:CreateFolder.ParentId>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_206">folderBotChay</CSharpValue>
+                                </InArgument>
+                              </uga:CreateFolder.ParentId>
+                              <uga:CreateFolder.Result>
+                                <OutArgument x:TypeArguments="x:String">
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">folderMaHhvtID</CSharpReference>
+                                </OutArgument>
+                              </uga:CreateFolder.Result>
+                            </uga:CreateFolder>
+                            <uga:UploadFile ContinueOnError="{x:Null}" ParentFolderName="{x:Null}" AuthScopesInvalid="False" Convert="False" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="333.6,239.2" sap2010:WorkflowViewState.IdRef="UploadFile_2" LocalFilePath="Output\Danh muc VTHH.xlsx" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False" UpdateExisting="False">
+                              <uga:UploadFile.DriveTarget>
+                                <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_255">GoogleDrive</CSharpValue>
+                                </InArgument>
+                              </uga:UploadFile.DriveTarget>
+                              <uga:UploadFile.ParentId>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_244">folderMaHhvtID</CSharpValue>
+                                </InArgument>
+                              </uga:UploadFile.ParentId>
+                              <uga:UploadFile.Result>
+                                <OutArgument x:TypeArguments="x:String">
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">
+                                    <CSharpReference.Result>
+                                      <OutArgument x:TypeArguments="Location(x:String)" />
+                                    </CSharpReference.Result>file</CSharpReference>
+                                </OutArgument>
+                              </uga:UploadFile.Result>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uga:UploadFile>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">folderMaHhvtID</CSharpReference>
+                                </OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_238">isExist[0].Id</CSharpValue>
+                                </InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <ui:WriteCell Cell="B8" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="510.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Config" WorkbookPath="config\config.xlsx">
                         <ui:WriteCell.Text>
                           <InArgument x:TypeArguments="x:String">
                             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">
@@ -301,7 +434,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:WriteCell>
-                      <ui:WriteCell Cell="B9" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" Password="{x:Null}" SheetName="Config" WorkbookPath="config\config.xlsx">
+                      <ui:WriteCell Cell="B9" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="510.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Config" WorkbookPath="config\config.xlsx">
                         <ui:WriteCell.Text>
                           <InArgument x:TypeArguments="x:String">
                             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">
@@ -317,7 +450,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:WriteCell>
-                      <ui:WriteCell Cell="B7" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" Password="{x:Null}" SheetName="Config" Text="2" WorkbookPath="config\config.xlsx">
+                      <ui:WriteCell Cell="B7" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="510.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Config" Text="2" WorkbookPath="config\config.xlsx">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -379,13 +512,10 @@
                         <InArgument x:TypeArguments="x:Int32">0</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uga:FindFiles AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Find Files and Folders" FirstResultId="{x:Null}" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SupportsTeamDrives="False">
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SupportsTeamDrives="False">
                       <uga:FindFiles.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_193">
-                            <CSharpValue.Result>
-                              <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                            </CSharpValue.Result>GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_256">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:FindFiles.DriveTarget>
                       <uga:FindFiles.Result>
@@ -405,13 +535,10 @@
                         </InArgument>
                       </uga:FindFiles.SearchExpression>
                     </uga:FindFiles>
-                    <uga:FindFiles AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Find Files and Folders" FirstResultId="{x:Null}" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_2" MaxResults="50" SupportsTeamDrives="False">
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_2" MaxResults="50" SupportsTeamDrives="False">
                       <uga:FindFiles.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_194">
-                            <CSharpValue.Result>
-                              <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                            </CSharpValue.Result>GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_257">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:FindFiles.DriveTarget>
                       <uga:FindFiles.Result>
@@ -449,13 +576,10 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uga:DownloadFile AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Download File" FileFriendlyName="{x:Null}" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="856,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_2" SupportsTeamDrives="False">
+                    <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="856,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_2" SupportsTeamDrives="False">
                       <uga:DownloadFile.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_195">
-                            <CSharpValue.Result>
-                              <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                            </CSharpValue.Result>GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_258">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:DownloadFile.DriveTarget>
                       <uga:DownloadFile.FileId>
@@ -487,7 +611,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" DisplayName="Use Excel File" EditPassword="{x:Null}" sap:VirtualizedContainerService.HintSize="760,1508" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" Password="{x:Null}" ResizeWindow="None" TemplatePath="{x:Null}">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="760,1508" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
@@ -509,7 +633,7 @@
                                         </OutArgument>
                                       </ui:ExcelReadRange.DataTable>
                                     </ui:ExcelReadRange>
-                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="664,1026.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
+                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="664,1026.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                       <ui:ForEachRow.Body>
                                         <ActivityAction x:TypeArguments="sd:DataRow">
                                           <ActivityAction.Argument>
@@ -757,7 +881,7 @@
                               </InArgument>
                             </ui:LogMessage.Message>
                           </ui:LogMessage>
-                          <ui:SendMail AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" From="{x:Null}" sap:VirtualizedContainerService.HintSize="334.4,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" MailMessage="{x:Null}" Name="{x:Null}" Password="eryhaosialfqcxfo" Port="465" ReplyTo="{x:Null}" Result="{x:Null}" SecureConnection="Auto" SecurePassword="{x:Null}" Server="smtp.gmail.com" Subject="RPA_Amber" TimeoutMS="{x:Null}" UseOAuth="{x:Null}">
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334.4,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="eryhaosialfqcxfo" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA_Amber">
                             <ui:SendMail.Body>
                               <InArgument x:TypeArguments="x:String">
                                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_199">
@@ -778,7 +902,7 @@
                               </InArgument>
                             </ui:SendMail.To>
                           </ui:SendMail>
-                          <ui:SendMail AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" From="{x:Null}" sap:VirtualizedContainerService.HintSize="334.4,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" MailMessage="{x:Null}" Name="{x:Null}" Password="eryhaosialfqcxfo" Port="465" ReplyTo="{x:Null}" Result="{x:Null}" SecureConnection="Auto" SecurePassword="{x:Null}" Server="smtp.gmail.com" Subject="RPA_Amber" TimeoutMS="{x:Null}" UseOAuth="{x:Null}">
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334.4,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Password="eryhaosialfqcxfo" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA_Amber">
                             <ui:SendMail.Body>
                               <InArgument x:TypeArguments="x:String">
                                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_200">
@@ -826,7 +950,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:WriteCell Cell="B7" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" Password="{x:Null}" SheetName="Config" Text="3" WorkbookPath="config\config.xlsx">
+                          <ui:WriteCell Cell="B7" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Config" Text="3" WorkbookPath="config\config.xlsx">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -876,13 +1000,10 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uga:FindFiles AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Find Files and Folders" FirstResultId="{x:Null}" sap:VirtualizedContainerService.HintSize="579.2,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_3" MaxResults="50" SupportsTeamDrives="False">
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="579.2,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_3" MaxResults="50" SupportsTeamDrives="False">
                       <uga:FindFiles.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">
-                            <CSharpValue.Result>
-                              <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                            </CSharpValue.Result>GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_259">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:FindFiles.DriveTarget>
                       <uga:FindFiles.Result>
@@ -902,13 +1023,10 @@
                         </InArgument>
                       </uga:FindFiles.SearchExpression>
                     </uga:FindFiles>
-                    <uga:FindFiles AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Find Files and Folders" FirstResultId="{x:Null}" sap:VirtualizedContainerService.HintSize="579.2,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_4" MaxResults="50" SupportsTeamDrives="False">
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="579.2,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_4" MaxResults="50" SupportsTeamDrives="False">
                       <uga:FindFiles.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">
-                            <CSharpValue.Result>
-                              <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                            </CSharpValue.Result>GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_260">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:FindFiles.DriveTarget>
                       <uga:FindFiles.Result>
@@ -946,13 +1064,10 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uga:DownloadFile AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Download File" FileFriendlyName="{x:Null}" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="579.2,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_3" SupportsTeamDrives="False">
+                    <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="579.2,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_3" SupportsTeamDrives="False">
                       <uga:DownloadFile.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">
-                            <CSharpValue.Result>
-                              <OutArgument x:TypeArguments="ugad:IGoogleDriveTarget" />
-                            </CSharpValue.Result>GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_261">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:DownloadFile.DriveTarget>
                       <uga:DownloadFile.FileId>
@@ -990,7 +1105,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" DisplayName="Use Excel File" EditPassword="{x:Null}" sap:VirtualizedContainerService.HintSize="483.2,441.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" Password="{x:Null}" ResizeWindow="None" TemplatePath="{x:Null}">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="483.2,441.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
@@ -1024,7 +1139,7 @@
                                 </InArgument>
                               </ueab:ExcelApplicationCard.WorkbookPath>
                             </ueab:ExcelApplicationCard>
-                            <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" DisplayName="Use Excel File" EditPassword="{x:Null}" sap:VirtualizedContainerService.HintSize="483.2,469.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" Password="{x:Null}" ResizeWindow="None" TemplatePath="{x:Null}">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="483.2,469.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
