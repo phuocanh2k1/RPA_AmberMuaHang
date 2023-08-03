@@ -483,7 +483,7 @@
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Kiểm tra file đã update hay chưa" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Kiểm tra file đã update hay chưa" sap:VirtualizedContainerService.HintSize="918.4,4108" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
                       <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
@@ -513,7 +513,7 @@
                     <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SupportsTeamDrives="False">
                       <uga:FindFiles.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_285">GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_291">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:FindFiles.DriveTarget>
                       <uga:FindFiles.Result>
@@ -536,7 +536,7 @@
                     <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_2" MaxResults="50" SupportsTeamDrives="False">
                       <uga:FindFiles.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_286">GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_292">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:FindFiles.DriveTarget>
                       <uga:FindFiles.Result>
@@ -577,7 +577,7 @@
                     <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="856,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_2" SupportsTeamDrives="False">
                       <uga:DownloadFile.DriveTarget>
                         <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_287">GoogleDrive</CSharpValue>
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_293">GoogleDrive</CSharpValue>
                         </InArgument>
                       </uga:DownloadFile.DriveTarget>
                       <uga:DownloadFile.FileId>
@@ -983,7 +983,7 @@
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Tải file Danh sách Mã vật tư hoàn chỉnh" sap:VirtualizedContainerService.HintSize="641.6,1816.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <Sequence DisplayName="Tải file Danh sách Mã vật tư hoàn chỉnh" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
                       <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
@@ -1146,7 +1146,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExcelWriteRange AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Danh mục cập nhật" StartingCell="A2">
+                                    <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Danh mục cập nhật" StartingCell="A3">
                                       <ui:ExcelWriteRange.DataTable>
                                         <InArgument x:TypeArguments="sd:DataTable">
                                           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_184">
