@@ -222,7 +222,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="588.8,2109.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="588.8,2109.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
