@@ -751,14 +751,14 @@
                   <av:PointCollection x:Key="ConnectorLocation">250,351.59999999999997 250,381.59999999999997 160,381.59999999999997 160,393.6</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Nhập thời gian tải" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_39">
+              <Sequence DisplayName="Nhập thời gian tải" sap:VirtualizedContainerService.HintSize="762.4,2901.6" sap2010:WorkflowViewState.IdRef="Sequence_39">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Ngày bắt đầu" sap:VirtualizedContainerService.HintSize="488,871.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Ngày bắt đầu" sap:VirtualizedContainerService.HintSize="700,871.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                   <ui:InterruptibleDoWhile.Body>
                     <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="454.4,734.4" sap2010:WorkflowViewState.IdRef="Sequence_38">
                       <sap:WorkflowViewStateService.ViewState>
@@ -891,25 +891,25 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InterruptibleDoWhile>
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Ngày kết thúc" sap:VirtualizedContainerService.HintSize="488,871.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Ngày kết thúc" sap:VirtualizedContainerService.HintSize="700,1878.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="454.4,734.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="666.4,1741.6" sap2010:WorkflowViewState.IdRef="Sequence_40">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Nhập Ngày Kết thúc" sap:VirtualizedContainerService.HintSize="411.2,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="vd: 30/06/2023" Title="Nhập ngày kết thúc (dd/mm/yyyy): ">
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Nhập Ngày Kết thúc" sap:VirtualizedContainerService.HintSize="623.2,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="vd: 30/06/2023" Title="Nhập ngày kết thúc (dd/mm/yyyy): ">
                         <ui:InputDialog.Result>
                           <OutArgument x:TypeArguments="x:String">
                             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">inputTimeEnd</CSharpReference>
                           </OutArgument>
                         </ui:InputDialog.Result>
                       </ui:InputDialog>
-                      <If sap:VirtualizedContainerService.HintSize="411.2,363.2" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If sap:VirtualizedContainerService.HintSize="623.2,1370.4" sap2010:WorkflowViewState.IdRef="If_3">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
-                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">string.IsNullOrEmpty(InputTimeEnd)</CSharpValue>
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">string.IsNullOrEmpty(inputTimeEnd)</CSharpValue>
                           </InArgument>
                         </If.Condition>
                         <sap:WorkflowViewStateService.ViewState>
@@ -941,7 +941,7 @@
                                   <ui:IfElseIfBlock BlockType="If">
                                     <ui:IfElseIfBlock.Condition>
                                       <InArgument x:TypeArguments="x:Boolean">
-                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">InputTimeEnd.Length != 10 || InputTimeEnd[2] != '/' || InputTimeEnd[5] != '/'</CSharpValue>
+                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">inputTimeEnd.Length != 10 || inputTimeEnd[2] != '/' || inputTimeEnd[5] != '/'</CSharpValue>
                                       </InArgument>
                                     </ui:IfElseIfBlock.Condition>
                                     <ui:IfElseIfBlock.Then>
@@ -1034,7 +1034,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">160,446.40000000000003 160,478.40000000000003</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="test\\DownloadFromVsign.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="test\\DownloadFromVsign.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="test\\DownloadFromVsign.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="test\\DownloadFromVsign.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_taxCode">
                         <Literal x:TypeArguments="x:String">0106777886</Literal>
