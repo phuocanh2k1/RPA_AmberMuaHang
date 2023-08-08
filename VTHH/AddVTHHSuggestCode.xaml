@@ -1,9 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AddVTHHSuggestCode" this:AddVTHHSuggestCode.in_FileNhapMa="Output/Danh muc VTHH.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AddVTHHSuggestCode" this:AddVTHHSuggestCode.in_FileNhapMa="Output/Danh muc VTHH co Ma goi y.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_FileNhapMa" Type="InArgument(x:String)" />
+    <x:Property Name="in_FileToCheck" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>828,1729.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>631.2,1729.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -147,7 +148,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A2" SheetName="Danh mục cập nhật">
+                    <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A2" SheetName="Danh mục mới">
                       <ui:ExcelReadRange.DataTable>
                         <OutArgument x:TypeArguments="sd:DataTable">
                           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">dataTable</CSharpReference>
@@ -159,7 +160,7 @@
               </ueab:ExcelApplicationCard.Body>
               <ueab:ExcelApplicationCard.WorkbookPath>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_FileNhapMa</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_FileToCheck</CSharpValue>
                 </InArgument>
               </ueab:ExcelApplicationCard.WorkbookPath>
             </ueab:ExcelApplicationCard>
@@ -167,7 +168,7 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="if(!in_DT.Columns.Contains(&quot;Mã hàng gợi ý&quot;)){&#xD;&#xA;&#x9; in_DT.Columns.Add(&quot;Mã hàng gợi ý&quot;,typeof(string));&#xD;&#xA;&#x9;in_DT.Columns[&quot;Mã hàng gợi ý&quot;].SetOrdinal(0);&#xD;&#xA;}&#xD;&#xA;string str;&#xD;&#xA;foreach(DataRow row in  in_DT.Rows){&#xD;&#xA;&#x9;if(!string.IsNullOrEmpty(row[&quot;Tên hàng (*)&quot;].ToString())) {&#xD;&#xA;&#x9;str = row[&quot;Tên hàng (*)&quot;].ToString().Trim();&#xD;&#xA;&#x9;row[&quot;Mã hàng gợi ý&quot;] = string.Join(&quot;&quot;, str.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x[0])).ToUpper();&#xD;&#xA;&#x9;}&#xD;&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="579.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="if(!in_DT.Columns.Contains(&quot;Mã hàng gợi ý&quot;)){&#xA;&#x9; in_DT.Columns.Add(&quot;Mã hàng gợi ý&quot;,typeof(string));&#xA;&#x9;in_DT.Columns[&quot;Mã hàng gợi ý&quot;].SetOrdinal(0);&#xA;}&#xA;string str;&#xA;foreach(DataRow row in  in_DT.Rows){&#xA;&#x9;if(!string.IsNullOrEmpty(row[&quot;Tên hàng (*)&quot;].ToString())) {&#xA;&#x9;str = row[&quot;Tên hàng (*)&quot;].ToString().Trim();&#xA;&#x9;row[&quot;Mã hàng gợi ý&quot;] = string.Join(&quot;&quot;, str.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x[0])).ToUpper();&#xA;&#x9;}&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="579.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dataTable</CSharpReference>
