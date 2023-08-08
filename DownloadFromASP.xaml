@@ -3,7 +3,7 @@
     <x:Property Name="in_MST" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>824.8,3007.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,3372</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,7 +112,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DownloadFromASP" sap:VirtualizedContainerService.HintSize="651.2,2942.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DownloadFromASP" sap:VirtualizedContainerService.HintSize="651.2,3307.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="userProfile" />
     </Sequence.Variables>
@@ -228,13 +228,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="588.8,2429.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Danh mục | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="588.8,2794.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="1443cd4c-2014-4b33-ad1b-c93437cfce69" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,2212.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,2577.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="si:FileInfo" Name="fileNCC_Cu" />
             </Sequence.Variables>
@@ -260,6 +260,29 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Bàn làm việc'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,324.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Timeout="20" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/dashboard/workbench" CvTextArgument="Ban lam viec" CvType="Text" DesignTimeRectangle="290, 219, 103, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Bàn làm việc'" FullSelectorArgument="&lt;webctrl aaname='Bàn làm việc ' parentid='main-content' tag='DIV' innertext='Bàn làm việc ' visibleinnertext='Bàn làm việc' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Bàn làm việc ' parentid='main-content' tag='DIV' innertext='Bàn làm việc ' visibleinnertext='Bàn làm việc' type='' class='ms-label tab-label' check:text='Bàn làm việc' /&gt;" Guid="2432bf5e-802e-4f10-a37d-230f0c78b681" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAAaCAYAAACwwaJoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVWSURBVGhD7Vi9SyNbFH//Qv4Ip0whbwvBbZIygqjFMjxQeSBBeKhN2EaxcLB4ikXAIoEHBhYiCBtYMMWCKRYTtphiiYLFFJIsBKYQn2Dxut8792vmznhjom7cDUzxQ3Pmfpxzfvd83Pvbv//dIsF4ICFrjJCQNUZIyBojJGSNERKyxggJWWOE55N100HXZ/DN31+KO9P6vpQR7rSxvwrIJ75Jfq/pfWP4PiQ0sjpwz05Rj6Hp9VHAq2E9m0IqNYHlavvh9xfCq9q0NlvfQSOQ+2gW52AxeZbkLzD8R6NbX5N6FeFGvrVRWZmQtrxMb42sBhy1YByTNoquIYJuXJRX0zQmA6f1YyPMTJZA9/MmclYK1koFF7FvPwshWXtoBvIOGrsZ7p/1j2103SLsSdJ75nmEGcma39jD/gFhJ8+dwp32VldChwrx1yOLQ6Zh/97w7WeBpUFdH5X+dGKU7Blp3EiW0woH+J8L0mk2Kteh3GtVsL9hIzebQXoyQ3/zcD666MrvfMynAslz4lR9q8JZzfHfucU1FL90gnEmGMny26gdFZBna0yl8WYmB3ujiPp3fa6H2nu2zxqOKYW71QJsNp6Q363CJcf5l1Fdyl/76UIp7C8590M01Xfrwrbcuz00iCBla262GD3UlH2OD9YCHXKrDo6/PdzPp7JS5P5U4woot6LjBpLlluaE0yKR5aO+LfKwNUULZ1kqFHOzxfNgbuDwbAZZ+T1EBvtuuE8cRrKuSpjnsjSyZNAbFfXWGmo9NddDZVHIs7RvuJ+A9c7GvJoXYA7lKzU/iosjaf9sSUu5HRyvirnTB8Jeo7435FNe16WfZn4XqTJWNvyWY/BPCuufhiArnRXsKmdYU0sPa1avDbcXytxSTmyikRoakIJdklHXq6Eg153WiI3DaDwdkovLdphqbqjJkeuHhoVksWxQvmI6dlDfmZYyInG3IXTxSrClbPnEk/Nj6FWR52Omw8NlkJn0dQ/lYVkMa6t3kheyBUX+OfbfsnnkZ1aDWXqkVHnRaoj/5TyGIRuMORQolekTGXxKS03VOZakEpqyoQF08n01r4PahlyXnKavp8NMFoEM8S4bslutYmtWrGVXlbM1sjZqYVqm0yvWo3TuSRlLc3/E58ehRZE8XIFugcNN+moRvl2R+hJOqDni4wqoMzKuK/LAaIehDx5Pg+QY98OSDF0tVfRO4SyEqS8KE1lRhzd25dgnkUW6HOXD1BeDkSx9/YAs6aTY2P5k0aE82xQ+4FnDPOehvo8cfg7ZA+iHSOsJTBhYs0LmlTysV+zOUFe14sum3HREZAX1iu51VOzF3c8UGYPI0nUZjizuG35Icih/Vv7I4ziokyZb2yirqP+HSgDvmKPgNpBdItJo7T51U2EAWZQ7g8iagPOVyczOCGrWqMgynUCtZo2WrFs0D0TNW15Z4n+t7dPIY4HJ1sauPNRazVLwVXTfnaLA59GViep6MObeg3s1RINhgn4BDZSwqKXd2cMWtbeWNSFJHRFZWoSnFwt0D6SWfJL2lGlx1GSFEcAwga2zaMNltNWrYFk1aTN5bPG7K7XxrHsOdPPR/DvsWkVzR9ch+j+u00CyrKk5rB+ewtMve6wlnQmfUKyZAmoehf0C+z0isggX1EkxI4Q8DfvwHF1ZT0ZOFktr3D6C4YGgn63sWc75U7XsEtSwrZ/oDVsHjYOlaD2mMc5Z38h6OnyWe1/7fU6+ABjfK39lqJeLAf7iPu3zGvQishIMiTu6S7FMNElNyYCO7zEkZL0GvlexzNObatKeh4SsV4J/fY7GZbQGPRUJWWOEhKyxwS3+B5fqNkYYJwPTAAAAAElFTkSuQmCC" InformativeScreenshot="e883c524923dbce107c7698584e0a74a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='logo' title='Tổng quan | Tổng quan | *' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
             <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="492.8,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://actasp.misa.vn/app/DI" Version="V3" />
             <uix:NCheckState DisplayName="Check App State 'Nhà cung cấp'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,324.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1443cd4c-2014-4b33-ad1b-c93437cfce69" Timeout="60" Version="V3">
               <uix:NCheckState.IfExists>
@@ -340,7 +363,7 @@
                 </OutArgument>
               </ui:GetLastDownloadedFile.File>
             </ui:GetLastDownloadedFile>
-            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Input" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="492.8,160" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True">
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Input\Danh_sach_nha_cung_cap.xlsx" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="492.8,160" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True">
               <ui:MoveFile.Path>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">fileNCC_Cu.FullName</CSharpValue>
