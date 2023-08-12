@@ -1,0 +1,237 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VlookupVTHH_v2" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="799.2,644.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="VlookupVTHH_v2" sap:VirtualizedContainerService.HintSize="608,580" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="545.6,468" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,318.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="LOAI BO KHOANG TRANG TRONG TEN HANG" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Int32" Name="indexLastRow" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="DANH MUC MOI" sap:VirtualizedContainerService.HintSize="496,549.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="sd:DataTable" Name="dtNewVTHH" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ExcelWriteCell Cell="K3" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Danh mục mới">
+                  <ui:ExcelWriteCell.Text>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"=SUBSTITUTE(B3,\" \",\"\")"</CSharpValue>
+                    </InArgument>
+                  </ui:ExcelWriteCell.Text>
+                </ui:ExcelWriteCell>
+                <ui:ExcelReadRange AddHeaders="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="Danh mục mới">
+                  <ui:ExcelReadRange.DataTable>
+                    <OutArgument x:TypeArguments="sd:DataTable">
+                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dtNewVTHH</CSharpReference>
+                    </OutArgument>
+                  </ui:ExcelReadRange.DataTable>
+                </ui:ExcelReadRange>
+                <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">indexLastRow</CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">dtNewVTHH.RowCount()</CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:ExcelAutoFillRange DisplayName="Auto Fill Range" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ExcelAutoFillRange_1" SheetName="Danh mục mới" SourceRange="K3">
+                  <ui:ExcelAutoFillRange.FillRange>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"K3:K" + indexLastRow</CSharpValue>
+                    </InArgument>
+                  </ui:ExcelAutoFillRange.FillRange>
+                </ui:ExcelAutoFillRange>
+              </Sequence>
+              <Sequence DisplayName="DANH MUC CU" sap:VirtualizedContainerService.HintSize="496,83.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="sd:DataTable" Name="dtOldVTHH" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ExcelWriteCell Cell="K1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Danh mục cũ">
+                  <ui:ExcelWriteCell.Text>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"=SUBSTITUTE(B1,\" \",\"\")"</CSharpValue>
+                    </InArgument>
+                  </ui:ExcelWriteCell.Text>
+                </ui:ExcelWriteCell>
+                <ui:ExcelReadRange AddHeaders="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="Danh mục cũ">
+                  <ui:ExcelReadRange.DataTable>
+                    <OutArgument x:TypeArguments="sd:DataTable">
+                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">dtOldVTHH</CSharpReference>
+                    </OutArgument>
+                  </ui:ExcelReadRange.DataTable>
+                </ui:ExcelReadRange>
+                <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">indexLastRow</CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">dtOldVTHH.RowCount()</CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:ExcelAutoFillRange DisplayName="Auto Fill Range" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ExcelAutoFillRange_2" SheetName="Danh mục cũ" SourceRange="K1">
+                  <ui:ExcelAutoFillRange.FillRange>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"K1:K" + indexLastRow</CSharpValue>
+                    </InArgument>
+                  </ui:ExcelAutoFillRange.FillRange>
+                </ui:ExcelAutoFillRange>
+              </Sequence>
+            </Sequence>
+            <Sequence DisplayName="BO DAU TRONG TEN HANG" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="dtNewVTHH" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="K2" SheetName="Danh mục mới">
+                <ui:ExcelReadRange.DataTable>
+                  <OutArgument x:TypeArguments="sd:DataTable">
+                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">dtNewVTHH</CSharpReference>
+                  </OutArgument>
+                </ui:ExcelReadRange.DataTable>
+              </ui:ExcelReadRange>
+              <ui:InvokeCode ContinueOnError="{x:Null}" Code="/*string RemoveVietnameseDiacritics(string inputText)&#xA;{&#xA;    string normalizedString = inputText.Normalize(NormalizationForm.FormD);&#xA;    Regex regex = new Regex(@&quot;\p{IsCombiningDiacriticalMarks}+&quot;);&#xA;    string removedDiacritics = regex.Replace(normalizedString, string.Empty);&#xA;    return removedDiacritics;&#xA;}&#xA;*/&#xA;string RemoveVietnameseDiacritics(string inputText)&#xA;{&#xA;    string[] vietnameseChars = new string[]&#xA;    {&#xA;        &quot;à&quot;, &quot;á&quot;, &quot;ạ&quot;, &quot;ả&quot;, &quot;ã&quot;, &quot;â&quot;, &quot;ầ&quot;, &quot;ấ&quot;, &quot;ậ&quot;, &quot;ẩ&quot;, &quot;ẫ&quot;, &quot;ă&quot;, &quot;ằ&quot;, &quot;ắ&quot;, &quot;ặ&quot;, &quot;ẳ&quot;, &quot;ẵ&quot;,&#xA;        &quot;è&quot;, &quot;é&quot;, &quot;ẹ&quot;, &quot;ẻ&quot;, &quot;ẽ&quot;, &quot;ê&quot;, &quot;ề&quot;, &quot;ế&quot;, &quot;ệ&quot;, &quot;ể&quot;, &quot;ễ&quot;,&#xA;        &quot;ì&quot;, &quot;í&quot;, &quot;ị&quot;, &quot;ỉ&quot;, &quot;ĩ&quot;,&#xA;        &quot;ò&quot;, &quot;ó&quot;, &quot;ọ&quot;, &quot;ỏ&quot;, &quot;õ&quot;, &quot;ô&quot;, &quot;ồ&quot;, &quot;ố&quot;, &quot;ộ&quot;, &quot;ổ&quot;, &quot;ỗ&quot;, &quot;ơ&quot;, &quot;ờ&quot;, &quot;ớ&quot;, &quot;ợ&quot;, &quot;ở&quot;, &quot;ỡ&quot;,&#xA;        &quot;ù&quot;, &quot;ú&quot;, &quot;ụ&quot;, &quot;ủ&quot;, &quot;ũ&quot;, &quot;ư&quot;, &quot;ừ&quot;, &quot;ứ&quot;, &quot;ự&quot;, &quot;ử&quot;, &quot;ữ&quot;,&#xA;        &quot;ỳ&quot;, &quot;ý&quot;, &quot;ỵ&quot;, &quot;ỷ&quot;, &quot;ỹ&quot;,&#xA;        &quot;đ&quot;,&#xA;        &quot;À&quot;, &quot;Á&quot;, &quot;Ạ&quot;, &quot;Ả&quot;, &quot;Ã&quot;, &quot;Â&quot;, &quot;Ầ&quot;, &quot;Ấ&quot;, &quot;Ậ&quot;, &quot;Ẩ&quot;, &quot;Ẫ&quot;, &quot;Ă&quot;, &quot;Ằ&quot;, &quot;Ắ&quot;, &quot;Ặ&quot;, &quot;Ẳ&quot;, &quot;Ẵ&quot;,&#xA;        &quot;È&quot;, &quot;É&quot;, &quot;Ẹ&quot;, &quot;Ẻ&quot;, &quot;Ẽ&quot;, &quot;Ê&quot;, &quot;Ề&quot;, &quot;Ế&quot;, &quot;Ệ&quot;, &quot;Ể&quot;, &quot;Ễ&quot;,&#xA;        &quot;Ì&quot;, &quot;Í&quot;, &quot;Ị&quot;, &quot;Ỉ&quot;, &quot;Ĩ&quot;,&#xA;        &quot;Ò&quot;, &quot;Ó&quot;, &quot;Ọ&quot;, &quot;Ỏ&quot;, &quot;Õ&quot;, &quot;Ô&quot;, &quot;Ồ&quot;, &quot;Ố&quot;, &quot;Ộ&quot;, &quot;Ổ&quot;, &quot;Ỗ&quot;, &quot;Ơ&quot;, &quot;Ờ&quot;, &quot;Ớ&quot;, &quot;Ợ&quot;, &quot;Ở&quot;, &quot;Ỡ&quot;,&#xA;        &quot;Ù&quot;, &quot;Ú&quot;, &quot;Ụ&quot;, &quot;Ủ&quot;, &quot;Ũ&quot;, &quot;Ư&quot;, &quot;Ừ&quot;, &quot;Ứ&quot;, &quot;Ự&quot;, &quot;Ử&quot;, &quot;Ữ&quot;,&#xA;        &quot;Ỳ&quot;, &quot;Ý&quot;, &quot;Ỵ&quot;, &quot;Ỷ&quot;, &quot;Ỹ&quot;,&#xA;        &quot;Đ&quot;&#xA;    };&#xA;&#xA;    string[] nonVietnameseChars = new string[]&#xA;    {&#xA;        &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;,&#xA;        &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;, &quot;e&quot;,&#xA;        &quot;i&quot;, &quot;i&quot;, &quot;i&quot;, &quot;i&quot;, &quot;i&quot;,&#xA;        &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;,&#xA;        &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;, &quot;u&quot;,&#xA;        &quot;y&quot;, &quot;y&quot;, &quot;y&quot;, &quot;y&quot;, &quot;y&quot;,&#xA;        &quot;d&quot;,&#xA;        &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;,&#xA;        &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;, &quot;E&quot;,&#xA;        &quot;I&quot;, &quot;I&quot;, &quot;I&quot;, &quot;I&quot;, &quot;I&quot;,&#xA;        &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;, &quot;O&quot;,&#xA;        &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;, &quot;U&quot;,&#xA;        &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;,&#xA;        &quot;D&quot;&#xA;    };&#xA;&#xA;    StringBuilder result = new StringBuilder(inputText);&#xA;    &#xA;    for (int i = 0; i &lt; vietnameseChars.Length; i++)&#xA;    {&#xA;        result = result.Replace(vietnameseChars[i], nonVietnameseChars[i]);&#xA;    }&#xA;    &#xA;    return result.ToString();&#xA;}&#xA;&#xA; foreach (DataRow row in in_DT.Rows)&#xA;{&#xA;    string originalText = row[&quot;Mô tả&quot;].ToString().Trim();&#xA;    if (!string.IsNullOrEmpty(originalText))&#xA;    {&#xA;        string str = RemoveVietnameseDiacritics(originalText);&#xA;        row[&quot;Mô tả&quot;] = str;&#xA;    }&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="387.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                <ui:InvokeCode.Arguments>
+                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
+                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">dtNewVTHH</CSharpReference>
+                  </InOutArgument>
+                </ui:InvokeCode.Arguments>
+              </ui:InvokeCode>
+              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Danh mục mới" StartingCell="K3">
+                <ui:ExcelWriteRange.DataTable>
+                  <InArgument x:TypeArguments="sd:DataTable">
+                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">dtNewVTHH</CSharpValue>
+                  </InArgument>
+                </ui:ExcelWriteRange.DataTable>
+              </ui:ExcelWriteRange>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+  </Sequence>
+</Activity>
