@@ -4,7 +4,7 @@
     <x:Property Name="in_FileToCheck" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>850.4,1769.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,1885.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +115,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddVTHHSuggestCode" sap:VirtualizedContainerService.HintSize="641.6,1704.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddVTHHSuggestCode" sap:VirtualizedContainerService.HintSize="688,1820.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
     </Sequence.Variables>
@@ -124,19 +124,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="579.2,680" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="625.6,640" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,593.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,553.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="483.2,481.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="483.2,441.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
@@ -168,38 +168,45 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="/*if(!in_DT.Columns.Contains(&quot;Mã hàng gợi ý&quot;)){&#xA;&#x9; in_DT.Columns.Add(&quot;Mã hàng gợi ý&quot;,typeof(string));&#xA;&#x9;in_DT.Columns[&quot;Mã hàng gợi ý&quot;].SetOrdinal(0);&#xA;}&#xA;string str;&#xA;foreach(DataRow row in  in_DT.Rows){&#xA;&#x9;if(!string.IsNullOrEmpty(row[&quot;Tên hàng (*)&quot;].ToString())) {&#xA;&#x9;str = row[&quot;Tên hàng (*)&quot;].ToString().Trim();&#xA;&#x9;row[&quot;Mã hàng gợi ý&quot;] = string.Join(&quot;&quot;, str.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x[0])).ToUpper();&#xA;&#x9;}&#xA;}*/&#xA;&#xA;if (!in_DT.Columns.Contains(&quot;Mã hàng gợi ý&quot;))&#xA;{&#xA;    in_DT.Columns.Add(&quot;Mã hàng gợi ý&quot;, typeof(string));&#xA;    in_DT.Columns[&quot;Mã hàng gợi ý&quot;].SetOrdinal(0);&#xA;}&#xA;&#xA;Dictionary&lt;string, int&gt; existingCodes = new Dictionary&lt;string, int&gt;();&#xA;string str;&#xA;&#xA;foreach (DataRow row in in_DT.Rows)&#xA;{&#xA;    if (!string.IsNullOrEmpty(row[&quot;Tên hàng (*)&quot;].ToString()))&#xA;    {&#xA;        str = row[&quot;Tên hàng (*)&quot;].ToString().Trim();&#xA;        string suggestedCode = string.Join(&quot;&quot;, str.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x[0])).ToUpper();&#xA;&#xA;        if (existingCodes.ContainsKey(suggestedCode))&#xA;        {&#xA;            existingCodes[suggestedCode]++;&#xA;            row[&quot;Mã hàng gợi ý&quot;] = suggestedCode + existingCodes[suggestedCode];&#xA;        }&#xA;        else&#xA;        {&#xA;            existingCodes[suggestedCode] = 0;&#xA;            row[&quot;Mã hàng gợi ý&quot;] = suggestedCode;&#xA;        }&#xA;    }&#xA;}&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="579.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="/*if(!in_DT.Columns.Contains(&quot;Mã hàng gợi ý&quot;)){&#xA;&#x9; in_DT.Columns.Add(&quot;Mã hàng gợi ý&quot;,typeof(string));&#xA;&#x9;in_DT.Columns[&quot;Mã hàng gợi ý&quot;].SetOrdinal(0);&#xA;}&#xA;string str;&#xA;foreach(DataRow row in  in_DT.Rows){&#xA;&#x9;if(!string.IsNullOrEmpty(row[&quot;Tên hàng (*)&quot;].ToString())) {&#xA;&#x9;str = row[&quot;Tên hàng (*)&quot;].ToString().Trim();&#xA;&#x9;row[&quot;Mã hàng gợi ý&quot;] = string.Join(&quot;&quot;, str.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x[0])).ToUpper();&#xA;&#x9;}&#xA;}*/&#xA;&#xA;if (!in_DT.Columns.Contains(&quot;Mã hàng gợi ý&quot;))&#xA;{&#xA;    in_DT.Columns.Add(&quot;Mã hàng gợi ý&quot;, typeof(string));&#xA;    in_DT.Columns[&quot;Mã hàng gợi ý&quot;].SetOrdinal(0);&#xA;}&#xA;&#xA;Dictionary&lt;string, int&gt; existingCodes = new Dictionary&lt;string, int&gt;();&#xA;string str;&#xA;&#xA;foreach (DataRow row in in_DT.Rows)&#xA;{&#xA;    if (!string.IsNullOrEmpty(row[&quot;Tên hàng (*)&quot;].ToString()))&#xA;    {&#xA;        str = row[&quot;Tên hàng (*)&quot;].ToString().Trim();&#xA;        string suggestedCode = string.Join(&quot;&quot;, str.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries).Select(x =&gt; x[0])).ToUpper();&#xA;&#xA;        if (existingCodes.ContainsKey(suggestedCode))&#xA;        {&#xA;            existingCodes[suggestedCode]++;&#xA;            row[&quot;Mã hàng gợi ý&quot;] = suggestedCode + existingCodes[suggestedCode];&#xA;        }&#xA;        else&#xA;        {&#xA;            existingCodes[suggestedCode] = 0;&#xA;            row[&quot;Mã hàng gợi ý&quot;] = suggestedCode;&#xA;        }&#xA;    }&#xA;}&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="625.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dataTable</CSharpReference>
         </InOutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="579.2,668" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="625.6,824" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,581.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,737.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="483.2,469.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,625.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,200" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,356" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelWriteRange AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Danh mục cập nhật" StartingCell="A2">
+                    <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="ClearRangeX_2">
+                      <ueab:ClearRangeX.TargetRange>
+                        <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
+                          <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">Excel.Sheet["Danh mục cập nhật"]</CSharpValue>
+                        </InArgument>
+                      </ueab:ClearRangeX.TargetRange>
+                    </ueab:ClearRangeX>
+                    <ui:ExcelWriteRange AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Danh mục cập nhật" StartingCell="A2">
                       <ui:ExcelWriteRange.DataTable>
                         <InArgument x:TypeArguments="sd:DataTable">
                           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">dataTable</CSharpValue>
