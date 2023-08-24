@@ -1,10 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ImportMuaVaoToMisa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ImportMuaVaoToMisa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="mhFileAddress" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_MST" Type="InArgument(x:String)" />
+    <x:Property Name="in_mailPhuTrach" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1196,4362.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1196,6184</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -46,6 +47,10 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -114,9 +119,11 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ImportMuaVaoToMisa" sap:VirtualizedContainerService.HintSize="1206.4,4297.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ImportMuaVaoToMisa" sap:VirtualizedContainerService.HintSize="1206.4,6119.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="si:FileInfo" Name="mhFile" />
       <Variable x:TypeArguments="x:String" Name="userProfile" />
@@ -146,13 +153,13 @@
         </OutArgument>
       </ui:GetFileInfoX.Output>
     </ui:GetFileInfoX>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Tổng quan | Tổng quan | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1144,5186.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Tổng quan | Tổng quan | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1144,5532.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110.4,4969.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110.4,5316" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,7 +209,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/dashboard/workbench" CvTextArgument="Mua hang" CvType="Text" DesignTimeRectangle="67, 452, 77, 53" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Mua hàng'" FullSelectorArgument="&lt;webctrl aaname='Mua hàng ' class='menu-item__title' parentid='app' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Mua hàng ' class='menu-item__title' parentid='app' tag='DIV' type='' check:innerText='Mua hàng' /&gt;" Guid="a5f664fe-4ab1-4ca7-836b-120c8b12f8f1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAA5CAYAAABOKMcBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASsSURBVHhe7Zi/a+NIFMfvX1FncBFIYbgiqeJqRYqYawxbCFIIAmvYZgkEsbCIbUyKEAKLm0UEgggcKBBIEXARUBO0RfAWR7YISrHgIqDiQIXhe0+jsSLbcmJf3oYt3gcMHnk0Pz5682bkPyC8GJHIgEhkQCQyIBIZEIkMiEQGRCIDIpEBkciASGRAJDIgEhkQiQyIRAZEIgMikQGRyIBIZEAkMiASGRCJDPz+EkcpkocE6UiXnyFNEqqf6tLrUJKY4PYqRHgVIf5XX6pg+D2rEyK6f6WB/vRhGQbca11+hvTaRdNYp/qvJ7IkMYJLgzXo0zqO9bUp0hBOPa9jnQ71xV/MkhIzhn0HzQ0X0RPBwMmMRHvHhrHp4VZfLZNeOahtOXCs31tihlrWrxSMMxLdswA2LYfDG325IEGwk0Wpp+pNSLy7QHf/AtPxm1x76B5HdOcj6f0AwXEX7vs22u9d9M4GSJ7Kd4XEFPEl9f3UfaMsJfno7TuwN204+x7Cn/o3RYKI+r64o28/+vA+ddDO6n0JMCgPUqPq7Nkw33bQPY0wpPbH95eZlUiDDT/WUPsc6euah0yujeAhrzchkfKQYdDy0cUxw1MLhuXjsSY9iHcNWHseAsqr/VMXLUoPzf0Ic4NGSTRhbZsw33XhX4YIvnRgVt13cwhzK5twn/J2gJ7dhFG3EBQih/BpFZnbFsw3ut5ZD503NRgbXUSlxvLcWkNrNxtrQDLbaNB9VauiQqJetnUHYanR+LgFY69Pg36JxFlUnTpNQJdn0JG4/imcEJacUdqp6HOCEY2VZFt/j0eQSzTWXITlfKkCpCznFr2N2T7jExrrohIxGuBwzYDTHzeRlWtwrrIyk0R9dEkunadljJdzqMtjVJ8W/Inl+kh+1BnAa5fHqiWSnEmm5qT6rKH7LS8WFKlFlzXVEonB0TqMnSDPZ7RM1tcOMVA56AUSR0OEBzaaqzSRegPmJi3RjZXFJE4NvEpi+o8P568GalR/ZYPapvYbWSROS5xOVdNzmvuAJh2NmSsRdx5aqqE8R64fDPQPi0u8/WqWJFIi+EwPho4e4YO6kDPn3oJFJerosU5uSwfzXNrSEr9T0Bht+Pd5sSDtw1lKIu213hbtxkc9Ohu24BU70jyJDorVr8h380eJeYpon0zu4fFJm0Vict5R7YTlHXsUTo11QYnJBTpUts+mtuwfHsyKsTwhcZy8qdMtr3R8qZCoopai4Ks+dlC+iynXNbN7C4lDBNsGats+Yj3R5MaDvUo7I0ckfuvSMm5S7tQTT2P0P5q0Qf4PicWqocAYt5/l150VlSqWklj9RCokEvH5B3XsUNJJqLnrY3BBEy3nxPsAnT8zaXm9lbc9DO6zPjhyIk38oIUV3bZRN/HhPFa5fXmJxChGsEsPYdzeahu9m/6sI6IkkYd0gT8LfunbhNr1GRtPS39oPJ8ThedIQ5c2HDq8Ty5CkTiP6Mii10EfffXPVuntilLBdJyLxDkkN/QOnr03Z2fZ7JO9P895zxeJDIhEBkQiAyKRAZHIgEhkQCQyIBIZEIkMiEQGRCIDIpEBkciASGRAJDIgEhkQiQyIxBcD/AeTJ45cEobfAAAAAABJRU5ErkJggg==" InformativeScreenshot="60b44abada9c37c2e44580f362966593.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='logo' title='Tổng quan | Tổng quan | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvType="Icon" DesignTimeRectangle="27, 463, 30, 30" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div&amp;gt;div' idx='7' isleaf='1' parentid='app' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mi mi-24 mi-sidebar-pu' isleaf='1' parentid='app' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJGSURBVFhH7Zb9S5pRFMf7f1djpVtl+dKyLQfrBWqsWhpbWY9vzdCtsiLZYjKiISOWLxuh+yntx3wB9cxzOiGJ3udeG6OBHzjwPN977vd+1etznx64J3SDNNMN0kw3SDP/f5CrqwIEgyFYWHRSBbfCUCwWeVSdjoLkcnmwWO3woHfgVtnGnkE+f8ldaigHqVar8HzyJS3sdL2D4+MTqmXnW9JwDHtUUQ7yJfaVFgwEtlhp4PO/p7FYvUcV5SDrGz5aLJFMsdLg7CxJYxuajxV5lIPgxsTFstnfrDRADcewRxWpIMVSCTSPH0ZGx2ghmRo1PwWvbxNK9bkySAV5vbBM5oNDlnqZ6drhmIKZmflbhdp1n5l68XrpzQq7iNENUigUoLfPACaTDSqVivRPg73DJiv0PTSShx66QU5Pf5C52+2he5U9subW6B499NANsrO7T2bR6GdW5DmMfqK5kcgBK+3RDYIPLTRLp3+xIk8q9ZPmulZWWWmPbpBxu4PMyuUyK/LgHJxrn3jBSnuEQXDD4Ua12iZYUcdsGScP9BIhDHJ+nqFPtLjkYkWdm79+JpNlpTXCIEdHMTIJf9hhRZ1Q6CN54BklQhjE4wmQSTz+nRV1Tr7FyQMPRBHCIFPTc2SSv+zsHQO5uMiRx+zsK1ZaIwxifDxCdRdqtRo86n9Cj3wRwiD9A0MUBI/8ZDLdUSUSKTAYhsFgNLFra4RBNM1PX+vfKK93k11bIwyCr3yRvQMIh7fvVOih9/ooDPIv6QZp5p4EAfgDGKMVEOxNuGIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -218,7 +225,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/PU/PUVoucherServiceList" CvType="ArrowButton" DesignTimeRectangle="1614, 285, 43, 39" DesignTimeScaleFactor="1.25" ElementType="ArrowButton" FriendlyName="'msedge.exe Mua'" Guid="37b2c936-05bc-4a4a-aaca-719d845a1e7d" InformativeScreenshot="120855d862533e7af761f08aa21ebeca.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='logo' title='Mua hàng | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvType="Icon" DesignTimeRectangle="1669, 288, 34, 34" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' isleaf='1' parentid='layout-voucher-list-body' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mi mi-24 mi-tour' isleaf='1' parentid='layout-voucher-list-body' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGHSURBVFhH7ZVdT4MwFIb9/7/HLeLXFIKbCzEIuummaDK8nBcucAEkdWf2VNaVFttmcrEneTNSwumzUnqOSEc4iPB0W6QoChJFD2Q0GmsnDCOyXH7Simp2REDC825Ir3dinr5DvlYrWlnOlggvcTm4Fv7bNsEar8kbrS6HiYCE6/qsAFzDmC5YZzZ7oSNymMjtOGAPw6qYSADaIqdnF+zhxSKlo/poi6TpB3vYhoy2CACT12WS5H3zCeoEa8znGiIAL2Oatiu7IwK0kTkWjPEZXLmkqipaVY5QBICDSLTkmPA+ZhOK7mdZRiu1o1FEBWxCFLHBQYRHKVKW5aaTOs45mxjSZrNi+uvmB/1HdlorRabTZ2Fxnchah1IEexB0YngdOnG932baJKMUwZYOv7rAxKrOvhcRgJeJ40d654e9iQB1mX8RsfJqmjbrcC2GqY+LYmWzTiZPrEg9fzlHMEafb57nJAjujA40iO8PGyUApUgTsOQ4iQ0OIjxGIvjV2EBbxDYdESHkG+pmGasWBE+eAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -347,9 +354,9 @@
                 <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/Ultilities/Import/302" CvTextArgument="Khong hop le" CvType="Text" DesignTimeRectangle="1542, 451, 186, 33" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Không hợp lệ'" FullSelectorArgument="&lt;webctrl aaname='Không hợp lệ' class='combobox-item--text' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Không hợp lệ' class='combobox-item--text' tag='DIV' type='' check:innerText='Không hợp lệ' /&gt;" Guid="8b1baf38-cbeb-4e35-b524-78696b8950ab" ImageBase64="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" InformativeScreenshot="c3cbbcf03a1b664a42eed0ca725d81df.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='state' title='Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Không có dữ liệu'" sap:VirtualizedContainerService.HintSize="1048,1465.6" sap2010:WorkflowViewState.IdRef="NCheckState_8" Mode="WaitDisappear" ScopeIdentifier="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Không có dữ liệu'" sap:VirtualizedContainerService.HintSize="1048,1812" sap2010:WorkflowViewState.IdRef="NCheckState_8" Mode="WaitDisappear" ScopeIdentifier="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="545.6,1224.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="545.6,1593.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="si:FileInfo" Name="dsLoi" />
                   </Sequence.Variables>
@@ -386,7 +393,7 @@
                       </OutArgument>
                     </ui:GetLastDownloadedFile.File>
                   </ui:GetLastDownloadedFile>
-                  <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Output" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="483.2,160" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True">
+                  <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="DSLoiMuaVao" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="483.2,160" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True">
                     <ui:MoveFile.Path>
                       <InArgument x:TypeArguments="x:String">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">dsLoi.FullName</CSharpValue>
@@ -398,18 +405,45 @@
                       <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/Ultilities/Import/302" CvType="CloseButton" DesignTimeRectangle="1801, 153, 30, 30" DesignTimeScaleFactor="1.25" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' isleaf='1' parentid='header-layout' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mi mi-24 mi-close' isleaf='1' parentid='header-layout' tag='DIV' aaname='' /&gt;" Guid="65b0d04a-f2e8-4034-bf1c-47f5bab1b158" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD1SURBVFhH7dbBCsIwDMZx39d50ddT8DEUPGy4s7InqHyFQKlZ2iRQeujhf9DS5IfusMPnu4UeGpC8AcnrHzIv7xh3Zqk0j4XMyxqm0yV2vd3/zrVhBs3bw4iQ43R2YwhBs1QQlA+wYDQzxIfVg9HeFSHIgrHcKUKQZrAFgaogqGaBFYGqIUha5EEgFQRxC70IpIagdDEt9yCQCYKwkCBeBHJB0l8FNYekiBTT9K/JEfjMfcfdlVJBpIVeTDWkZpEHUwXRLLBiihDLYMsdEWIZSGnv7kI8CEozg4V086rYzcszejxfMe7MUmme+LC2bEDyOoFs4Qff8EJJPc9HswAAAABJRU5ErkJggg==" InformativeScreenshot="a9efd062c61bea9411a07df7e8a00a31.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='state' title='Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_3">
-                    <ui:LogMessage.Level>
-                      <InArgument x:TypeArguments="ui:LogLevel">
-                        <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">UiPath.Core.Activities.LogLevel.Trace</CSharpValue>
+                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="File Danh sách MuaVao đẩy lên ASP không thành công, vui lòng kiểm tra file lỗi" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="483.2,151.2" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="eryhaosialfqcxfo" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA_Amber">
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>"Output\\" + dsLoi.Name</CSharpValue>
+                        </InArgument>
+                      </scg:List>
+                    </ui:SendMail.Files>
+                    <ui:SendMail.To>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">
+                          <CSharpValue.Result>
+                            <OutArgument x:TypeArguments="x:String" />
+                          </CSharpValue.Result>in_mailPhuTrach</CSharpValue>
                       </InArgument>
-                    </ui:LogMessage.Level>
-                    <ui:LogMessage.Message>
-                      <InArgument x:TypeArguments="x:Object">
-                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">"Tải file lỗi thành công"</CSharpValue>
-                      </InArgument>
-                    </ui:LogMessage.Message>
-                  </ui:LogMessage>
+                    </ui:SendMail.To>
+                  </ui:SendMail>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="483.2,321.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Đẩy file lên Asp không thành công" />
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
