@@ -409,10 +409,7 @@
                     <ui:SendMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">
-                            <CSharpValue.Result>
-                              <OutArgument x:TypeArguments="x:String" />
-                            </CSharpValue.Result>"Output\\" + dsLoi.Name</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">"DSLoiMuaVao\\" + dsLoi.Name</CSharpValue>
                         </InArgument>
                       </scg:List>
                     </ui:SendMail.Files>
