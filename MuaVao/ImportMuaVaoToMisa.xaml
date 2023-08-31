@@ -5,7 +5,7 @@
     <x:Property Name="in_mailPhuTrach" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1196,6116</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1196,6349.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -127,7 +127,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ImportMuaVaoToMisa" sap:VirtualizedContainerService.HintSize="1206.4,6051.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ImportMuaVaoToMisa" sap:VirtualizedContainerService.HintSize="1206.4,6284.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="si:FileInfo" Name="mhFile" />
       <Variable x:TypeArguments="x:String" Name="userProfile" />
@@ -157,13 +157,13 @@
         </OutArgument>
       </ui:GetFileInfoX.Output>
     </ui:GetFileInfoX>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Tổng quan | Tổng quan | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1144,5464.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Tổng quan | Tổng quan | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN" sap:VirtualizedContainerService.HintSize="1144,5698.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110.4,5248" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110.4,5481.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -358,9 +358,9 @@
                 <uix:TargetAnchorable BrowserURL="https://actasp.misa.vn/app/Ultilities/Import/302" CvTextArgument="Khong hop le" CvType="Text" DesignTimeRectangle="1542, 451, 186, 33" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Không hợp lệ'" FullSelectorArgument="&lt;webctrl aaname='Không hợp lệ' class='combobox-item--text' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Không hợp lệ' class='combobox-item--text' tag='DIV' type='' check:innerText='Không hợp lệ' /&gt;" Guid="8b1baf38-cbeb-4e35-b524-78696b8950ab" ImageBase64="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" InformativeScreenshot="c3cbbcf03a1b664a42eed0ca725d81df.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='state' title='Nhập từ Excel | CÔNG TY TNHH 678 HÀ NỘI | KẾ TOÁN' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Không có dữ liệu'" sap:VirtualizedContainerService.HintSize="1048,1744" sap2010:WorkflowViewState.IdRef="NCheckState_8" Mode="WaitDisappear" ScopeIdentifier="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Không có dữ liệu'" sap:VirtualizedContainerService.HintSize="1048,1977.6" sap2010:WorkflowViewState.IdRef="NCheckState_8" Mode="WaitDisappear" ScopeIdentifier="b98753fe-87dd-49c0-b8ac-867b3bf3990b" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="545.6,1490.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="545.6,1759.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="si:FileInfo" Name="dsLoi" />
                   </Sequence.Variables>
@@ -433,46 +433,29 @@
                       </InArgument>
                     </ui:MessageBox.Text>
                   </ui:MessageBox>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="499.2,433.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="483.2,321.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch.Try>
+                      <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Đẩy file lên Asp không thành công" />
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,321.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-                          <TryCatch.Try>
-                            <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Đẩy file lên Asp không thành công" />
-                          </TryCatch.Try>
-                          <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ActivityAction x:TypeArguments="s:Exception">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                </ActivityAction.Argument>
-                              </ActivityAction>
-                            </Catch>
-                          </TryCatch.Catches>
-                        </TryCatch>
-                      </Sequence>
-                    </ui:CommentOut.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:CommentOut>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="449.6,1525.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="449.6,1369.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -534,14 +517,6 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <ui:WriteCell Cell="B7" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Config" Text="4" WorkbookPath="config\config.xlsx">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:WriteCell>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_4">
                     <ui:LogMessage.Level>
                       <InArgument x:TypeArguments="ui:LogLevel">
