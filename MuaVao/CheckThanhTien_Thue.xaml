@@ -7,7 +7,7 @@
     <x:Property Name="out_tongThue" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>930.4,5384.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>930.4,5645.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -126,13 +126,13 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="940.8,5320" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence sap:VirtualizedContainerService.HintSize="940.8,5580.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="CheckThanhTien_Thue" sap:VirtualizedContainerService.HintSize="878.4,5208" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence DisplayName="CheckThanhTien_Thue" sap:VirtualizedContainerService.HintSize="878.4,5468.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Double" Name="mvTongTien" />
         <Variable x:TypeArguments="x:Double" Name="mvTongThue" />
@@ -334,7 +334,7 @@
           </ui:ForEachFileX.Body>
         </ui:ForEachFileX>
       </Sequence>
-      <Sequence DisplayName="TÍNH TỔNG THÀNH TIỀN VÀ TỔNG THUẾ GTGT FILE MUA HÀNG" sap:VirtualizedContainerService.HintSize="643.2,1101.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <Sequence DisplayName="TÍNH TỔNG THÀNH TIỀN VÀ TỔNG THUẾ GTGT FILE MUA HÀNG" sap:VirtualizedContainerService.HintSize="816,1101.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -433,7 +433,7 @@
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence DisplayName="SO SÁNH THÀNH TIỀN VÀ THUẾ GIỮA FILE MUA VÀO VÀ VSIGN" sap:VirtualizedContainerService.HintSize="643.2,1415.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence DisplayName="SO SÁNH THÀNH TIỀN VÀ THUẾ GIỮA FILE MUA VÀO VÀ VSIGN" sap:VirtualizedContainerService.HintSize="816,1415.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -518,7 +518,7 @@
           </If.Else>
         </If>
       </Sequence>
-      <Assign sap:VirtualizedContainerService.HintSize="643.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign sap:VirtualizedContainerService.HintSize="816,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">
             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">out_tongTien</CSharpReference>
@@ -530,7 +530,7 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="643.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign sap:VirtualizedContainerService.HintSize="816,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">
             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">out_tongThue</CSharpReference>
@@ -542,6 +542,16 @@
           </InArgument>
         </Assign.Value>
       </Assign>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="816,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_10">
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">out_tongThue</CSharpValue>
+        </InArgument>
+      </WriteLine>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="816,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_11">
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">out_tongTien</CSharpValue>
+        </InArgument>
+      </WriteLine>
     </Sequence>
   </Sequence>
 </Activity>
