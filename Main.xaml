@@ -577,7 +577,9 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadFromVsign.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_64" UnSafe="False" WorkflowFileName="DownloadFromVsign.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_taxCode">0106777886</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_taxCode">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">config["maSoThue"].ToString()</CSharpValue>
+                  </InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
@@ -653,6 +655,9 @@
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="supplierFileAddress">
                                 <CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">config</CSharpValue>
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_mailPhuTrach">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">config["mailPhuTrach"].ToString()</CSharpValue>
                               </InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
