@@ -1,6 +1,8 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="VsignNCC_Handle" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_NCCOutput" Type="InArgument(x:String)" />
+    <x:Property Name="in_vsignMonthEnd" Type="InArgument(x:String)" />
+    <x:Property Name="in_vsignMonthBegin" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>860,3507.2</sap:VirtualizedContainerService.HintSize>
@@ -149,7 +151,7 @@
                     <If sap:VirtualizedContainerService.HintSize="616,1384.8" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
-                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">CurrentFile.Name.Contains("Mua_hang_Vsign")</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16" xml:space="preserve">CurrentFile.Name.Contains("Mua_hang_Vsign_T" +in_vsignMonthBegin +"-T" +  in_vsignMonthEnd)</CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
