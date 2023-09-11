@@ -230,7 +230,7 @@
                         <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Tạo mới folder và đẩy file lên drive" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="Tạo mới folder và đẩy file lên drive" sap:VirtualizedContainerService.HintSize="572.8,2504.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="file" />
                         <Variable x:TypeArguments="x:String" Name="folderForBotID" />
@@ -245,7 +245,7 @@
                       <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_7" MaxResults="50" SupportsTeamDrives="False">
                         <uga:FindFiles.DriveTarget>
                           <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_354">GoogleDrive</CSharpValue>
+                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_380">GoogleDrive</CSharpValue>
                           </InArgument>
                         </uga:FindFiles.DriveTarget>
                         <uga:FindFiles.Result>
@@ -259,7 +259,7 @@
                           </InArgument>
                         </uga:FindFiles.SearchExpression>
                       </uga:FindFiles>
-                      <If sap:VirtualizedContainerService.HintSize="510.4,627.2" sap2010:WorkflowViewState.IdRef="If_8">
+                      <If sap:VirtualizedContainerService.HintSize="510.4,456" sap2010:WorkflowViewState.IdRef="If_8">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_228">isExist.Length &lt;= 0</CSharpValue>
@@ -275,7 +275,7 @@
                             <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,183.2" sap2010:WorkflowViewState.IdRef="CreateFolder_5" ParentFriendlyName="Folder bot chạy" ParentId="root" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False">
                               <uga:CreateFolder.DriveTarget>
                                 <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_355">GoogleDrive</CSharpValue>
+                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_381">GoogleDrive</CSharpValue>
                                 </InArgument>
                               </uga:CreateFolder.DriveTarget>
                               <uga:CreateFolder.FolderName>
@@ -316,7 +316,7 @@
                       <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_6" MaxResults="50" SupportsTeamDrives="False">
                         <uga:FindFiles.DriveTarget>
                           <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_356">GoogleDrive</CSharpValue>
+                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_382">GoogleDrive</CSharpValue>
                           </InArgument>
                         </uga:FindFiles.DriveTarget>
                         <uga:FindFiles.Result>
@@ -346,7 +346,7 @@
                             <uga:CreateFolder ContinueOnError="{x:Null}" FolderDescription="{x:Null}" AuthScopesInvalid="False" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,183.2" sap2010:WorkflowViewState.IdRef="CreateFolder_2" ParentFriendlyName="Folder bot chạy" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False">
                               <uga:CreateFolder.DriveTarget>
                                 <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_357">GoogleDrive</CSharpValue>
+                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_383">GoogleDrive</CSharpValue>
                                 </InArgument>
                               </uga:CreateFolder.DriveTarget>
                               <uga:CreateFolder.FolderName>
@@ -371,7 +371,7 @@
                             <uga:UploadFile ContinueOnError="{x:Null}" ParentFolderName="{x:Null}" AuthScopesInvalid="False" Convert="False" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="333.6,239.2" sap2010:WorkflowViewState.IdRef="UploadFile_2" LocalFilePath="Output\Danh muc VTHH co Ma goi y.xlsx" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False" UpdateExisting="True">
                               <uga:UploadFile.DriveTarget>
                                 <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_358">GoogleDrive</CSharpValue>
+                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_384">GoogleDrive</CSharpValue>
                                 </InArgument>
                               </uga:UploadFile.DriveTarget>
                               <uga:UploadFile.ParentId>
@@ -418,7 +418,7 @@
                             <uga:UploadFile ContinueOnError="{x:Null}" ParentFolderName="{x:Null}" AuthScopesInvalid="False" Convert="False" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="433.6,239.2" sap2010:WorkflowViewState.IdRef="UploadFile_3" LocalFilePath="Output\Danh muc VTHH co Ma goi y.xlsx" ParentIdSelectionMode="EnterId" SupportsTeamDrives="False" UpdateExisting="True">
                               <uga:UploadFile.DriveTarget>
                                 <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_359">GoogleDrive</CSharpValue>
+                                  <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_385">GoogleDrive</CSharpValue>
                                 </InArgument>
                               </uga:UploadFile.DriveTarget>
                               <uga:UploadFile.ParentId>
@@ -511,7 +511,7 @@
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Kiểm tra file đã update hay chưa" sap:VirtualizedContainerService.HintSize="918.4,3720" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Kiểm tra file đã update hay chưa" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
                       <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
