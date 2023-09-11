@@ -8,7 +8,7 @@
     <x:Property Name="taxCode" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>834.4,1088.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>830.4,1088.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -484,10 +484,13 @@
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MuaVao\\CopyMuaHangVsign.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="MuaVao\\CopyMuaHangVsign.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_vsignMonthBegin">
-                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">vsignMonthBegin</CSharpValue>
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_122">config["monthBegin"].ToString()</CSharpValue>
                                     </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_vsignMonthEnd">
-                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">vsignMonthEnd</CSharpValue>
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_121">config["monthEnd"].ToString()</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_taxCode">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">config["maSoThue"].ToString()</CSharpValue>
                                     </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
@@ -513,16 +516,19 @@
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">senderPassword</CSharpValue>
                                     </InArgument>
                                     <OutArgument x:TypeArguments="x:String" x:Key="out_tongTien">
-                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">tongTien</CSharpReference>
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">tongTien</CSharpReference>
                                     </OutArgument>
                                     <OutArgument x:TypeArguments="x:String" x:Key="out_tongThue">
                                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">tongThue</CSharpReference>
                                     </OutArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_vsignMonthBegin">
-                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">vsignMonthBegin</CSharpValue>
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_125">config["monthBegin"].ToString()</CSharpValue>
                                     </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_vsignMonthEnd">
-                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">vsignMonthEnd</CSharpValue>
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">config["monthEnd"].ToString()</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_taxCode">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">config["maSoThue"].ToString()</CSharpValue>
                                     </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
@@ -649,7 +655,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">150,466.40000000000003 150,548.4</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadFromVsign.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_75" UnSafe="False" WorkflowFileName="DownloadFromVsign.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadFromVsign.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_82" UnSafe="False" WorkflowFileName="DownloadFromVsign.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_taxCode">
                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">config["maSoThue"].ToString()</CSharpValue>
@@ -680,7 +686,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">150,631.6 150,678.4</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Khai báo NCC" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                  <Sequence DisplayName="Khai báo NCC" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_90">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Default="1" Name="count" />
                       <Variable x:TypeArguments="x:Int32" Default="2" Name="countMaxVal" />

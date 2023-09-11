@@ -2,9 +2,10 @@
   <x:Members>
     <x:Property Name="in_vsignMonthBegin" Type="InArgument(x:String)" />
     <x:Property Name="in_vsignMonthEnd" Type="InArgument(x:String)" />
+    <x:Property Name="in_taxCode" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>770.4,2928.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>830.4,2928.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -148,7 +149,7 @@
               <If sap:VirtualizedContainerService.HintSize="560,554.4" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Condition>
                   <InArgument x:TypeArguments="x:Boolean">
-                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">CurrentFile.Name.Contains("Mua_hang_Vsign_T")</CSharpValue>
+                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">CurrentFile.Name.Contains("Mua_hang_Vsign_"+in_taxCode+"_T"+in_vsignMonthBegin+"-T"+in_vsignMonthEnd)</CSharpValue>
                   </InArgument>
                 </If.Condition>
                 <If.Then>

@@ -4,7 +4,7 @@
     <x:Property Name="in_vthhBackupFolder" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>834.4,840</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>834.4,896.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -77,7 +77,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BackupFileVTHH" sap:VirtualizedContainerService.HintSize="496,775.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="BackupFileVTHH" sap:VirtualizedContainerService.HintSize="496,832" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="nowDate" />
     </Sequence.Variables>
@@ -120,12 +120,17 @@
         </InArgument>
       </ui:CopyFile.Path>
     </ui:CopyFile>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1">
-      <ui:MessageBox.Text>
-        <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Done"</CSharpValue>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">UiPath.Core.Activities.LogLevel.Trace</CSharpValue>
         </InArgument>
-      </ui:MessageBox.Text>
-    </ui:MessageBox>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"Backup file thành công"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
   </Sequence>
 </Activity>
