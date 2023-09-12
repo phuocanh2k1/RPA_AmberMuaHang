@@ -2,9 +2,10 @@
   <x:Members>
     <x:Property Name="in_mhFileOutput" Type="InArgument(x:String)" />
     <x:Property Name="in_mhBackupFolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_taxCode" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>834.4,896.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>830.4,896.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,7 +118,7 @@
     <ui:CopyFile ContinueOnError="{x:Null}" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_1">
       <ui:CopyFile.Destination>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">in_mhBackupFolder +"\\Danh muc VTHH " + nowDate + ".xlsx"</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_mhBackupFolder +"\\Danh muc MuaHang "+ " " +in_taxCode+ " " + nowDate + ".xlsx"</CSharpValue>
         </InArgument>
       </ui:CopyFile.Destination>
       <ui:CopyFile.Path>
