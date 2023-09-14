@@ -5,7 +5,7 @@
     <x:Property Name="in_taxCode" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>830.4,5904</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>770,5868.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,7 +109,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VlookupVTHH_V2" sap:VirtualizedContainerService.HintSize="780.8,5839.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence DisplayName="VlookupVTHH_V2" sap:VirtualizedContainerService.HintSize="780,5804" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="indexLastRow" />
     </Sequence.Variables>
@@ -118,7 +118,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="718.4,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="718,53.333333333333336" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -312,31 +312,31 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="718.4,793.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="718,797.3333333333334" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,707.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,710" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,595.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Output\\Danh muc VTHH.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,599.3333333333334" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Output\\Danh muc VTHH.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,325.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,325.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_25">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:RemoveDuplicatesX DisplayName="Remove Duplicates" sap:VirtualizedContainerService.HintSize="433.6,213.6" sap2010:WorkflowViewState.IdRef="RemoveDuplicatesX_1">
+                    <ueab:RemoveDuplicatesX DisplayName="Remove Duplicates" sap:VirtualizedContainerService.HintSize="434,214.66666666666666" sap2010:WorkflowViewState.IdRef="RemoveDuplicatesX_1">
                       <ueab:RemoveDuplicatesX.Columns>
                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
                           <InArgument x:TypeArguments="x:String">Mô tả</InArgument>
@@ -368,19 +368,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="718.4,2025.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="718,2027.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,1916" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534,1917.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="VLOOKUP THEO MO TA" sap:VirtualizedContainerService.HintSize="473.6,1804" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <Sequence DisplayName="VLOOKUP THEO MO TA" sap:VirtualizedContainerService.HintSize="472,1806.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dtOldGoodsList" />
                 <Variable x:TypeArguments="sd:DataTable" Name="dtLookupValue" />
@@ -392,27 +392,27 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="411.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" Range="A1" SheetName="Danh mục cũ">
+              <ui:ExcelReadRange AddHeaders="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="410,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" Range="A1" SheetName="Danh mục cũ">
                 <ui:ExcelReadRange.DataTable>
                   <OutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">dtOldGoodsList</CSharpReference>
                   </OutArgument>
                 </ui:ExcelReadRange.DataTable>
               </ui:ExcelReadRange>
-              <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="411.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" Range="B2" SheetName="Danh mục mới">
+              <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="410,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" Range="B2" SheetName="Danh mục mới">
                 <ui:ExcelReadRange.DataTable>
                   <OutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">dtLookupValue</CSharpReference>
                   </OutArgument>
                 </ui:ExcelReadRange.DataTable>
               </ui:ExcelReadRange>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="411.2,1033.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,1037.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,845.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,848.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_21">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strLookupValue" />
                         <Variable x:TypeArguments="x:String" Name="strResult" />
@@ -422,7 +422,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Mô tả" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334.4,188" sap2010:WorkflowViewState.IdRef="GetRowItem_1">
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Mô tả" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,189.33333333333334" sap2010:WorkflowViewState.IdRef="GetRowItem_1">
                         <ui:GetRowItem.Row>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">CurrentRow</CSharpValue>
@@ -434,7 +434,7 @@
                           </OutArgument>
                         </ui:GetRowItem.Value>
                       </ui:GetRowItem>
-                      <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334.4,295.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_1">
+                      <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,297.3333333333333" sap2010:WorkflowViewState.IdRef="LookupDataTable_3">
                         <ui:LookupDataTable.CellValue>
                           <OutArgument x:TypeArguments="x:String">
                             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">strResult</CSharpReference>
@@ -461,7 +461,7 @@
                           </InArgument>
                         </ui:LookupDataTable.TargetColumnIndex>
                       </ui:LookupDataTable>
-                      <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Check" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="334.4,192.8" sap2010:WorkflowViewState.IdRef="UpdateRowItem_1">
+                      <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Check" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="334,194.66666666666666" sap2010:WorkflowViewState.IdRef="UpdateRowItem_1">
                         <ui:UpdateRowItem.Row>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">CurrentRow</CSharpValue>
@@ -488,14 +488,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="411.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="Danh mục mới" StartingCell="BA3">
+              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="410,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="Danh mục mới" StartingCell="BA3">
                 <ui:ExcelWriteRange.DataTable>
                   <InArgument x:TypeArguments="sd:DataTable">
                     <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">dtLookupValue.DefaultView.ToTable(false,"Check")</CSharpValue>
                   </InArgument>
                 </ui:ExcelWriteRange.DataTable>
               </ui:ExcelWriteRange>
-              <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="411.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Keep">
+              <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="410,162.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Keep">
                 <ui:FilterDataTable.DataTable>
                   <InArgument x:TypeArguments="sd:DataTable">
                     <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">dtLookupValue</CSharpValue>
@@ -523,7 +523,7 @@
                   </scg:List>
                 </ui:FilterDataTable.SelectColumns>
               </ui:FilterDataTable>
-              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="411.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_5" SheetName="Danh mục cập nhật" StartingCell="B3">
+              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="410,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_5" SheetName="Danh mục cập nhật" StartingCell="B3">
                 <ui:ExcelWriteRange.DataTable>
                   <InArgument x:TypeArguments="sd:DataTable">
                     <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">dtUpdateGoodsList.DefaultView.ToTable(false,"Tên hàng (*)")</CSharpValue>
@@ -541,7 +541,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Sequence DisplayName="THEM DON VI VAO SHEET CAP NHAT" sap:VirtualizedContainerService.HintSize="718.4,2735.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence DisplayName="THEM DON VI VAO SHEET CAP NHAT" sap:VirtualizedContainerService.HintSize="718,2695.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtMisaVsign" />
       </Sequence.Variables>
@@ -550,7 +550,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="Input" sap:VirtualizedContainerService.HintSize="656,969.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="Input" sap:VirtualizedContainerService.HintSize="656,927.3333333333334" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -559,38 +559,38 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="622.4,706.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="622,662" sap2010:WorkflowViewState.IdRef="Sequence_32">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If sap:VirtualizedContainerService.HintSize="560,594.4" sap2010:WorkflowViewState.IdRef="If_1">
+              <If sap:VirtualizedContainerService.HintSize="560,551.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Condition>
                   <InArgument x:TypeArguments="x:Boolean">
                     <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45" xml:space="preserve">CurrentFile.Name.Contains("Mua_hang_Vsign_" +in_taxCode+"_T"+in_downloadMonthBegin +"-T" +  in_downloadMonthEnd)</CSharpValue>
                   </InArgument>
                 </If.Condition>
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="526.4,411.2" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,368" sap2010:WorkflowViewState.IdRef="Sequence_30">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,321.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" Visible="False">
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="484,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" Visible="False">
                       <ui:ExcelApplicationScope.Body>
                         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,172" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,170.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_29">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_10" Range="S1" SheetName="misa">
+                            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_10" Range="S1" SheetName="misa">
                               <ui:ExcelReadRange.DataTable>
                                 <OutArgument x:TypeArguments="sd:DataTable">
                                   <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">dtMisaVsign</CSharpReference>
@@ -622,13 +622,13 @@
           </ActivityAction>
         </ui:ForEachFileX.Body>
       </ui:ForEachFileX>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="656,1613.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="656,1617.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473.6,1504" sap2010:WorkflowViewState.IdRef="Sequence_33">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,1507.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_33">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dtLookupValue" />
               </Sequence.Variables>
@@ -637,20 +637,20 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="411.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_11" Range="A2" SheetName="Danh mục cập nhật">
+              <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="410,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_11" Range="A2" SheetName="Danh mục cập nhật">
                 <ui:ExcelReadRange.DataTable>
                   <OutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">dtLookupValue</CSharpReference>
                   </OutArgument>
                 </ui:ExcelReadRange.DataTable>
               </ui:ExcelReadRange>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="411.2,1164" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,1168.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,976" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,980" sap2010:WorkflowViewState.IdRef="Sequence_34">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strLookupValue" />
                         <Variable x:TypeArguments="x:String" Name="strResult" />
@@ -660,7 +660,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Tên hàng (*)" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334.4,188" sap2010:WorkflowViewState.IdRef="GetRowItem_2">
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Tên hàng (*)" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,189.33333333333334" sap2010:WorkflowViewState.IdRef="GetRowItem_2">
                         <ui:GetRowItem.Row>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">CurrentRow</CSharpValue>
@@ -672,7 +672,7 @@
                           </OutArgument>
                         </ui:GetRowItem.Value>
                       </ui:GetRowItem>
-                      <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334.4,295.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_2">
+                      <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,297.3333333333333" sap2010:WorkflowViewState.IdRef="LookupDataTable_2">
                         <ui:LookupDataTable.CellValue>
                           <OutArgument x:TypeArguments="x:String">
                             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">strResult</CSharpReference>
@@ -699,7 +699,7 @@
                           </InArgument>
                         </ui:LookupDataTable.TargetColumnIndex>
                       </ui:LookupDataTable>
-                      <ui:UpdateRowItem ColumnName="{x:Null}" ColumnIndex="3" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="334.4,192.8" sap2010:WorkflowViewState.IdRef="UpdateRowItem_2">
+                      <ui:UpdateRowItem ColumnName="{x:Null}" ColumnIndex="3" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="334,194.66666666666666" sap2010:WorkflowViewState.IdRef="UpdateRowItem_2">
                         <ui:UpdateRowItem.Row>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">CurrentRow</CSharpValue>
@@ -711,7 +711,7 @@
                           </InArgument>
                         </ui:UpdateRowItem.Value>
                       </ui:UpdateRowItem>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,91.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_2">
                         <InArgument x:TypeArguments="x:String">
                           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">strResult</CSharpValue>
                         </InArgument>
@@ -731,7 +731,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="411.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_6" SheetName="Danh mục cập nhật" StartingCell="D3">
+              <ui:ExcelWriteRange AddHeaders="False" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="410,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_6" SheetName="Danh mục cập nhật" StartingCell="D3">
                 <ui:ExcelWriteRange.DataTable>
                   <InArgument x:TypeArguments="sd:DataTable">
                     <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">dtLookupValue.DefaultView.ToTable(false, dtLookupValue.Columns[3].ColumnName);</CSharpValue>
