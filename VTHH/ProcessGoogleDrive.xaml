@@ -5,7 +5,7 @@
     <x:Property Name="in_FileToCheck" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1114.4,1239.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,1239.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -219,9 +219,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Flowchart.StartNode>
-                <x:Reference>__ReferenceID2</x:Reference>
+                <x:Reference>__ReferenceID3</x:Reference>
               </Flowchart.StartNode>
-              <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID2" DisplayName="Kiểm tra stage" sap:VirtualizedContainerService.HintSize="81.6,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+              <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID3" DisplayName="Kiểm tra stage" sap:VirtualizedContainerService.HintSize="82.4,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                 <FlowSwitch.Default>
                   <FlowStep x:Name="__ReferenceID0">
                     <sap:WorkflowViewStateService.ViewState>
@@ -504,20 +504,521 @@
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <av:Point x:Key="ShapeLocation">249.2,116.4</av:Point>
-                    <av:Size x:Key="ShapeSize">81.6,87.2</av:Size>
+                    <av:Size x:Key="ShapeSize">82.4,87.2</av:Size>
                     <av:PointCollection x:Key="Default">331.6,181.8 361.6,181.8 361.6,250.79999999999998 410,250.79999999999998</av:PointCollection>
                     <x:String x:Key="DefaultCaseDisplayName">1</x:String>
+                    <av:PointCollection x:Key="2Connector">269.8,203.60000000000002 269.8,230 200,230</av:PointCollection>
                     <av:PointCollection x:Key="3Connector">311,203.60000000000002 311,233.60000000000002 290,233.60000000000002 290,338.4</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <FlowStep x:Key="3" x:Name="__ReferenceID1">
+                <FlowStep x:Key="2" x:Name="__ReferenceID1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">0,188.4</av:Point>
+                      <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Kiểm tra file đã update hay chưa" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
+                      <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
+                      <Variable x:TypeArguments="gadvd:File" Name="filetoCheck" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
+                      <Variable x:TypeArguments="x:String" Name="message" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">
+                          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">
+                            <CSharpReference.Result>
+                              <OutArgument x:TypeArguments="Location(x:Int32)" />
+                            </CSharpReference.Result>count</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SupportsTeamDrives="False">
+                      <uga:FindFiles.DriveTarget>
+                        <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_415">GoogleDrive</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.DriveTarget>
+                      <uga:FindFiles.Result>
+                        <OutArgument x:TypeArguments="gadvd:File[]">
+                          <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">
+                            <CSharpReference.Result>
+                              <OutArgument x:TypeArguments="Location(gadvd:File[])" />
+                            </CSharpReference.Result>folderList</CSharpReference>
+                        </OutArgument>
+                      </uga:FindFiles.Result>
+                      <uga:FindFiles.SearchExpression>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>string.Format("name = '{0}'",in_config["uploadFolderName"])</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.SearchExpression>
+                    </uga:FindFiles>
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_2" MaxResults="50" SupportsTeamDrives="False">
+                      <uga:FindFiles.DriveTarget>
+                        <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_416">GoogleDrive</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.DriveTarget>
+                      <uga:FindFiles.Result>
+                        <OutArgument x:TypeArguments="gadvd:File[]">
+                          <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">
+                            <CSharpReference.Result>
+                              <OutArgument x:TypeArguments="Location(gadvd:File[])" />
+                            </CSharpReference.Result>fileList</CSharpReference>
+                        </OutArgument>
+                      </uga:FindFiles.Result>
+                      <uga:FindFiles.SearchExpression>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>string.Format("parents in '{0}'", folderList[0].Id)</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.SearchExpression>
+                    </uga:FindFiles>
+                    <Assign sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="gadvd:File">
+                          <CSharpReference x:TypeArguments="gadvd:File" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">
+                            <CSharpReference.Result>
+                              <OutArgument x:TypeArguments="Location(gadvd:File)" />
+                            </CSharpReference.Result>filetoCheck</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="gadvd:File">
+                          <CSharpValue x:TypeArguments="gadvd:File" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="gadvd:File" />
+                            </CSharpValue.Result>fileList[0]</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="856,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_2" SupportsTeamDrives="False">
+                      <uga:DownloadFile.DriveTarget>
+                        <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_417">GoogleDrive</CSharpValue>
+                        </InArgument>
+                      </uga:DownloadFile.DriveTarget>
+                      <uga:DownloadFile.FileId>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>fileList[0].Id</CSharpValue>
+                        </InArgument>
+                      </uga:DownloadFile.FileId>
+                      <uga:DownloadFile.LocalPath>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>in_FileToCheck</CSharpValue>
+                        </InArgument>
+                      </uga:DownloadFile.LocalPath>
+                    </uga:DownloadFile>
+                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="856,1706.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
+                      <ueab:ExcelProcessScopeX.Body>
+                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="822.4,1620" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="760,1508" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None">
+                              <ueab:ExcelApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726.4,1238.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="664,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A2" SheetName="Danh mục cập nhật">
+                                      <ui:ExcelReadRange.DataTable>
+                                        <OutArgument x:TypeArguments="sd:DataTable">
+                                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">
+                                            <CSharpReference.Result>
+                                              <OutArgument x:TypeArguments="Location(sd:DataTable)" />
+                                            </CSharpReference.Result>dataTable</CSharpReference>
+                                        </OutArgument>
+                                      </ui:ExcelReadRange.DataTable>
+                                    </ui:ExcelReadRange>
+                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="664,1026.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                                      <ui:ForEachRow.Body>
+                                        <ActivityAction x:TypeArguments="sd:DataRow">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="630.4,838.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If sap:VirtualizedContainerService.HintSize="587.2,748.8" sap2010:WorkflowViewState.IdRef="If_4">
+                                              <If.Condition>
+                                                <InArgument x:TypeArguments="x:Boolean">
+                                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">
+                                                    <CSharpValue.Result>
+                                                      <OutArgument x:TypeArguments="x:Boolean" />
+                                                    </CSharpValue.Result>!string.IsNullOrEmpty(CurrentRow["Tên hàng (*)"].ToString())</CSharpValue>
+                                                </InArgument>
+                                              </If.Condition>
+                                              <If.Then>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="553.6,565.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <If sap:VirtualizedContainerService.HintSize="510.4,476" sap2010:WorkflowViewState.IdRef="If_3">
+                                                    <If.Condition>
+                                                      <InArgument x:TypeArguments="x:Boolean">
+                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">
+                                                          <CSharpValue.Result>
+                                                            <OutArgument x:TypeArguments="x:Boolean" />
+                                                          </CSharpValue.Result>string.IsNullOrEmpty(CurrentRow["Mã hàng (*)"].ToString())</CSharpValue>
+                                                      </InArgument>
+                                                    </If.Condition>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,292.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Boolean">
+                                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">
+                                                                <CSharpReference.Result>
+                                                                  <OutArgument x:TypeArguments="Location(x:Boolean)" />
+                                                                </CSharpReference.Result>isCodeMissing</CSharpReference>
+                                                            </OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">
+                                                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">
+                                                                <CSharpReference.Result>
+                                                                  <OutArgument x:TypeArguments="Location(x:Int32)" />
+                                                                </CSharpReference.Result>count</CSharpReference>
+                                                            </OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">
+                                                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">
+                                                                <CSharpValue.Result>
+                                                                  <OutArgument x:TypeArguments="x:Int32" />
+                                                                </CSharpValue.Result>count + 1</CSharpValue>
+                                                            </InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_20" />
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEachRow.Body>
+                                      <ui:ForEachRow.DataTable>
+                                        <InArgument x:TypeArguments="sd:DataTable">
+                                          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">
+                                            <CSharpValue.Result>
+                                              <OutArgument x:TypeArguments="sd:DataTable" />
+                                            </CSharpValue.Result>dataTable</CSharpValue>
+                                        </InArgument>
+                                      </ui:ForEachRow.DataTable>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ForEachRow>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelApplicationCard.Body>
+                              <ueab:ExcelApplicationCard.WorkbookPath>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_126">
+                                    <CSharpValue.Result>
+                                      <OutArgument x:TypeArguments="x:String" />
+                                    </CSharpValue.Result>in_FileToCheck</CSharpValue>
+                                </InArgument>
+                              </ueab:ExcelApplicationCard.WorkbookPath>
+                            </ueab:ExcelApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelProcessScopeX.Body>
+                    </ueab:ExcelProcessScopeX>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="856,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="472.8,533.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If sap:VirtualizedContainerService.HintSize="410.4,421.6" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">filetoCheck.ModifiedTime &gt;DateTime.Parse(in_config["dayUpdate"].ToString())</CSharpValue>
+                              </InArgument>
+                            </If.Condition>
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376.8,238.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="ugdm:GDriveLocalItem" Name="downloadedFile" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="333.6,148.8" sap2010:WorkflowViewState.IdRef="DownloadFile_1" LocalPath="Download/abc.xlsx" SupportsTeamDrives="False">
+                                  <uga:DownloadFile.DriveTarget>
+                                    <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                                      <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_414">GoogleDrive</CSharpValue>
+                                    </InArgument>
+                                  </uga:DownloadFile.DriveTarget>
+                                  <uga:DownloadFile.FileId>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">fileList[0].Id</CSharpValue>
+                                    </InArgument>
+                                  </uga:DownloadFile.FileId>
+                                </uga:DownloadFile>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <If sap:VirtualizedContainerService.HintSize="856,1480" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:Boolean" />
+                            </CSharpValue.Result>isCodeMissing</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="476.8,908.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_42">
+                                  <CSharpReference.Result>
+                                    <OutArgument x:TypeArguments="Location(x:String)" />
+                                  </CSharpReference.Result>message</CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_284">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="x:String" />
+                                  </CSharpValue.Result>DateTime.Now.ToString() + "- Số mã còn thiếu: " + count + "/" + dataTable.RowCount()</CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                            <ui:LogMessage.Level>
+                              <InArgument x:TypeArguments="ui:LogLevel">
+                                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="ui:LogLevel" />
+                                  </CSharpValue.Result>UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Level>
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="x:Object" />
+                                  </CSharpValue.Result>"Số mã còn thiếu: " + count</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="eryhaosialfqcxfo" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA_Amber">
+                            <ui:SendMail.Body>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_199">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="x:String" />
+                                  </CSharpValue.Result>message</CSharpValue>
+                              </InArgument>
+                            </ui:SendMail.Body>
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                            </ui:SendMail.Files>
+                            <ui:SendMail.To>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_164">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="x:String" />
+                                  </CSharpValue.Result>in_config["mailPhuTrach"].ToString()</CSharpValue>
+                              </InArgument>
+                            </ui:SendMail.To>
+                          </ui:SendMail>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Password="eryhaosialfqcxfo" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA_Amber">
+                            <ui:SendMail.Body>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_200">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="x:String" />
+                                  </CSharpValue.Result>message</CSharpValue>
+                              </InArgument>
+                            </ui:SendMail.Body>
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                            </ui:SendMail.Files>
+                            <ui:SendMail.To>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_280">in_config["mailAmber"].ToString()</CSharpValue>
+                              </InArgument>
+                            </ui:SendMail.To>
+                          </ui:SendMail>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5">
+                            <ui:LogMessage.Level>
+                              <InArgument x:TypeArguments="ui:LogLevel">
+                                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_133">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="ui:LogLevel" />
+                                  </CSharpValue.Result>UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Level>
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_134">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="x:Object" />
+                                  </CSharpValue.Result>"check drive done"</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="377.6,388" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteCell Cell="B7" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Config" Text="3" WorkbookPath="config\config.xlsx">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:WriteCell>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_6">
+                            <ui:LogMessage.Level>
+                              <InArgument x:TypeArguments="ui:LogLevel">
+                                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_135">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="ui:LogLevel" />
+                                  </CSharpValue.Result>UiPath.Core.Activities.LogLevel.Trace</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Level>
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_136">
+                                  <CSharpValue.Result>
+                                    <OutArgument x:TypeArguments="x:Object" />
+                                  </CSharpValue.Result>"file trên drive đã đầy đủ mã"</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </FlowStep>
+                <FlowStep x:Key="3" x:Name="__ReferenceID2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">190.00000000000003,338.4</av:Point>
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Tải file Danh sách Mã vật tư hoàn chỉnh" sap:VirtualizedContainerService.HintSize="980.8,6252.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <Sequence DisplayName="Tải file Danh sách Mã vật tư hoàn chỉnh" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
                       <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
@@ -529,519 +1030,112 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Kiểm tra file đã update hay chưa" sap:VirtualizedContainerService.HintSize="918.4,3850.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
-                        <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
-                        <Variable x:TypeArguments="gadvd:File" Name="filetoCheck" />
-                        <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
-                        <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
-                        <Variable x:TypeArguments="x:String" Name="message" />
-                      </Sequence.Variables>
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="625.6,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_3" MaxResults="50" SupportsTeamDrives="False">
+                      <uga:FindFiles.DriveTarget>
+                        <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_418">GoogleDrive</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.DriveTarget>
+                      <uga:FindFiles.Result>
+                        <OutArgument x:TypeArguments="gadvd:File[]">
+                          <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">
+                            <CSharpReference.Result>
+                              <OutArgument x:TypeArguments="Location(gadvd:File[])" />
+                            </CSharpReference.Result>folderList</CSharpReference>
+                        </OutArgument>
+                      </uga:FindFiles.Result>
+                      <uga:FindFiles.SearchExpression>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_140">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>string.Format("name = '{0}'",in_config["uploadFolderName"])</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.SearchExpression>
+                    </uga:FindFiles>
+                    <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="625.6,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_4" MaxResults="50" SupportsTeamDrives="False">
+                      <uga:FindFiles.DriveTarget>
+                        <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_419">GoogleDrive</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.DriveTarget>
+                      <uga:FindFiles.Result>
+                        <OutArgument x:TypeArguments="gadvd:File[]">
+                          <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">
+                            <CSharpReference.Result>
+                              <OutArgument x:TypeArguments="Location(gadvd:File[])" />
+                            </CSharpReference.Result>fileList</CSharpReference>
+                        </OutArgument>
+                      </uga:FindFiles.Result>
+                      <uga:FindFiles.SearchExpression>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>string.Format("parents in '{0}'", folderList[0].Id)</CSharpValue>
+                        </InArgument>
+                      </uga:FindFiles.SearchExpression>
+                    </uga:FindFiles>
+                    <Assign sap:VirtualizedContainerService.HintSize="625.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="gadvd:File">
+                          <CSharpReference x:TypeArguments="gadvd:File" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">
+                            <CSharpReference.Result>
+                              <OutArgument x:TypeArguments="Location(gadvd:File)" />
+                            </CSharpReference.Result>filetoCheck</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="gadvd:File">
+                          <CSharpValue x:TypeArguments="gadvd:File" sap2010:WorkflowViewState.IdRef="CSharpValue`1_144">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="gadvd:File" />
+                            </CSharpValue.Result>fileList[0]</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="625.6,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_3" SupportsTeamDrives="False">
+                      <uga:DownloadFile.DriveTarget>
+                        <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_420">GoogleDrive</CSharpValue>
+                        </InArgument>
+                      </uga:DownloadFile.DriveTarget>
+                      <uga:DownloadFile.FileId>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>fileList[0].Id</CSharpValue>
+                        </InArgument>
+                      </uga:DownloadFile.FileId>
+                      <uga:DownloadFile.LocalPath>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">
+                            <CSharpValue.Result>
+                              <OutArgument x:TypeArguments="x:String" />
+                            </CSharpValue.Result>in_FileToCheck</CSharpValue>
+                        </InArgument>
+                      </uga:DownloadFile.LocalPath>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="Assign_14">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Int32">
-                            <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_46">
-                              <CSharpReference.Result>
-                                <OutArgument x:TypeArguments="Location(x:Int32)" />
-                              </CSharpReference.Result>count</CSharpReference>
-                          </OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_8" MaxResults="50" SupportsTeamDrives="False">
-                        <uga:FindFiles.DriveTarget>
-                          <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_443">GoogleDrive</CSharpValue>
-                          </InArgument>
-                        </uga:FindFiles.DriveTarget>
-                        <uga:FindFiles.Result>
-                          <OutArgument x:TypeArguments="gadvd:File[]">
-                            <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">
-                              <CSharpReference.Result>
-                                <OutArgument x:TypeArguments="Location(gadvd:File[])" />
-                              </CSharpReference.Result>folderList</CSharpReference>
-                          </OutArgument>
-                        </uga:FindFiles.Result>
-                        <uga:FindFiles.SearchExpression>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_411">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="x:String" />
-                              </CSharpValue.Result>string.Format("name = '{0}'",in_config["uploadFolderName"])</CSharpValue>
-                          </InArgument>
-                        </uga:FindFiles.SearchExpression>
-                      </uga:FindFiles>
-                      <uga:FindFiles ContinueOnError="{x:Null}" FirstResultId="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_9" MaxResults="50" SupportsTeamDrives="False">
-                        <uga:FindFiles.DriveTarget>
-                          <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_444">GoogleDrive</CSharpValue>
-                          </InArgument>
-                        </uga:FindFiles.DriveTarget>
-                        <uga:FindFiles.Result>
-                          <OutArgument x:TypeArguments="gadvd:File[]">
-                            <CSharpReference x:TypeArguments="gadvd:File[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_48">
-                              <CSharpReference.Result>
-                                <OutArgument x:TypeArguments="Location(gadvd:File[])" />
-                              </CSharpReference.Result>fileList</CSharpReference>
-                          </OutArgument>
-                        </uga:FindFiles.Result>
-                        <uga:FindFiles.SearchExpression>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_413">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="x:String" />
-                              </CSharpValue.Result>string.Format("parents in '{0}'", folderList[0].Id)</CSharpValue>
-                          </InArgument>
-                        </uga:FindFiles.SearchExpression>
-                      </uga:FindFiles>
-                      <Assign sap:VirtualizedContainerService.HintSize="856,81.6" sap2010:WorkflowViewState.IdRef="Assign_15">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="gadvd:File">
-                            <CSharpReference x:TypeArguments="gadvd:File" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">
-                              <CSharpReference.Result>
-                                <OutArgument x:TypeArguments="Location(gadvd:File)" />
-                              </CSharpReference.Result>filetoCheck</CSharpReference>
-                          </OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="gadvd:File">
-                            <CSharpValue x:TypeArguments="gadvd:File" sap2010:WorkflowViewState.IdRef="CSharpValue`1_415">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="gadvd:File" />
-                              </CSharpValue.Result>fileList[0]</CSharpValue>
-                          </InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="856,150.4" sap2010:WorkflowViewState.IdRef="DownloadFile_4" SupportsTeamDrives="False">
-                        <uga:DownloadFile.DriveTarget>
-                          <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                            <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_445">GoogleDrive</CSharpValue>
-                          </InArgument>
-                        </uga:DownloadFile.DriveTarget>
-                        <uga:DownloadFile.FileId>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_416">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="x:String" />
-                              </CSharpValue.Result>fileList[0].Id</CSharpValue>
-                          </InArgument>
-                        </uga:DownloadFile.FileId>
-                        <uga:DownloadFile.LocalPath>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_417">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="x:String" />
-                              </CSharpValue.Result>in_FileToCheck</CSharpValue>
-                          </InArgument>
-                        </uga:DownloadFile.LocalPath>
-                      </uga:DownloadFile>
-                      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="856,1706.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
-                        <ueab:ExcelProcessScopeX.Body>
-                          <ActivityAction x:TypeArguments="ui:IExcelProcess">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="822.4,1620" sap2010:WorkflowViewState.IdRef="Sequence_49">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="760,1508" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None">
-                                <ueab:ExcelApplicationCard.Body>
-                                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                                    </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726.4,1238.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="664,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" Range="A2" SheetName="Danh mục cập nhật">
-                                        <ui:ExcelReadRange.DataTable>
-                                          <OutArgument x:TypeArguments="sd:DataTable">
-                                            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_50">
-                                              <CSharpReference.Result>
-                                                <OutArgument x:TypeArguments="Location(sd:DataTable)" />
-                                              </CSharpReference.Result>dataTable</CSharpReference>
-                                          </OutArgument>
-                                        </ui:ExcelReadRange.DataTable>
-                                      </ui:ExcelReadRange>
-                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="664,1026.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                                        <ui:ForEachRow.Body>
-                                          <ActivityAction x:TypeArguments="sd:DataRow">
-                                            <ActivityAction.Argument>
-                                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                                            </ActivityAction.Argument>
-                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="630.4,838.4" sap2010:WorkflowViewState.IdRef="Sequence_47">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <If sap:VirtualizedContainerService.HintSize="587.2,748.8" sap2010:WorkflowViewState.IdRef="If_10">
-                                                <If.Condition>
-                                                  <InArgument x:TypeArguments="x:Boolean">
-                                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_421">
-                                                      <CSharpValue.Result>
-                                                        <OutArgument x:TypeArguments="x:Boolean" />
-                                                      </CSharpValue.Result>!string.IsNullOrEmpty(CurrentRow["Tên hàng (*)"].ToString())</CSharpValue>
-                                                  </InArgument>
-                                                </If.Condition>
-                                                <If.Then>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="553.6,565.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <If sap:VirtualizedContainerService.HintSize="510.4,476" sap2010:WorkflowViewState.IdRef="If_11">
-                                                      <If.Condition>
-                                                        <InArgument x:TypeArguments="x:Boolean">
-                                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_422">
-                                                            <CSharpValue.Result>
-                                                              <OutArgument x:TypeArguments="x:Boolean" />
-                                                            </CSharpValue.Result>string.IsNullOrEmpty(CurrentRow["Mã hàng (*)"].ToString())</CSharpValue>
-                                                        </InArgument>
-                                                      </If.Condition>
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <If.Then>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="476.8,292.8" sap2010:WorkflowViewState.IdRef="Sequence_43">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                          <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_16">
-                                                            <Assign.To>
-                                                              <OutArgument x:TypeArguments="x:Boolean">
-                                                                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_51">
-                                                                  <CSharpReference.Result>
-                                                                    <OutArgument x:TypeArguments="Location(x:Boolean)" />
-                                                                  </CSharpReference.Result>isCodeMissing</CSharpReference>
-                                                              </OutArgument>
-                                                            </Assign.To>
-                                                            <Assign.Value>
-                                                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                                            </Assign.Value>
-                                                          </Assign>
-                                                          <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_17">
-                                                            <Assign.To>
-                                                              <OutArgument x:TypeArguments="x:Int32">
-                                                                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_52">
-                                                                  <CSharpReference.Result>
-                                                                    <OutArgument x:TypeArguments="Location(x:Int32)" />
-                                                                  </CSharpReference.Result>count</CSharpReference>
-                                                              </OutArgument>
-                                                            </Assign.To>
-                                                            <Assign.Value>
-                                                              <InArgument x:TypeArguments="x:Int32">
-                                                                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_423">
-                                                                  <CSharpValue.Result>
-                                                                    <OutArgument x:TypeArguments="x:Int32" />
-                                                                  </CSharpValue.Result>count + 1</CSharpValue>
-                                                              </InArgument>
-                                                            </Assign.Value>
-                                                          </Assign>
-                                                        </Sequence>
-                                                      </If.Then>
-                                                      <If.Else>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_44">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                        </Sequence>
-                                                      </If.Else>
-                                                    </If>
-                                                  </Sequence>
-                                                </If.Then>
-                                                <If.Else>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </Sequence>
-                                                </If.Else>
-                                              </If>
-                                            </Sequence>
-                                          </ActivityAction>
-                                        </ui:ForEachRow.Body>
-                                        <ui:ForEachRow.DataTable>
-                                          <InArgument x:TypeArguments="sd:DataTable">
-                                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_420">
-                                              <CSharpValue.Result>
-                                                <OutArgument x:TypeArguments="sd:DataTable" />
-                                              </CSharpValue.Result>dataTable</CSharpValue>
-                                          </InArgument>
-                                        </ui:ForEachRow.DataTable>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:ForEachRow>
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ueab:ExcelApplicationCard.Body>
-                                <ueab:ExcelApplicationCard.WorkbookPath>
-                                  <InArgument x:TypeArguments="x:String">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_419">
-                                      <CSharpValue.Result>
-                                        <OutArgument x:TypeArguments="x:String" />
-                                      </CSharpValue.Result>in_FileToCheck</CSharpValue>
-                                  </InArgument>
-                                </ueab:ExcelApplicationCard.WorkbookPath>
-                              </ueab:ExcelApplicationCard>
-                            </Sequence>
-                          </ActivityAction>
-                        </ueab:ExcelProcessScopeX.Body>
-                      </ueab:ExcelProcessScopeX>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="856,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                        <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="472.8,533.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <If sap:VirtualizedContainerService.HintSize="410.4,421.6" sap2010:WorkflowViewState.IdRef="If_13">
-                              <If.Condition>
-                                <InArgument x:TypeArguments="x:Boolean">
-                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_424">filetoCheck.ModifiedTime &gt;DateTime.Parse(in_config["dayUpdate"].ToString())</CSharpValue>
-                                </InArgument>
-                              </If.Condition>
-                              <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376.8,238.4" sap2010:WorkflowViewState.IdRef="Sequence_42">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="ugdm:GDriveLocalItem" Name="downloadedFile" />
-                                  </Sequence.Variables>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uga:DownloadFile ContinueOnError="{x:Null}" FileFriendlyName="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" FileIdSelectionMode="EnterId" sap:VirtualizedContainerService.HintSize="333.6,148.8" sap2010:WorkflowViewState.IdRef="DownloadFile_5" LocalPath="Download/abc.xlsx" SupportsTeamDrives="False">
-                                    <uga:DownloadFile.DriveTarget>
-                                      <InArgument x:TypeArguments="ugad:IGoogleDriveTarget">
-                                        <CSharpValue x:TypeArguments="ugad:IGoogleDriveTarget" sap2010:WorkflowViewState.IdRef="CSharpValue`1_426">GoogleDrive</CSharpValue>
-                                      </InArgument>
-                                    </uga:DownloadFile.DriveTarget>
-                                    <uga:DownloadFile.FileId>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_425">fileList[0].Id</CSharpValue>
-                                      </InArgument>
-                                    </uga:DownloadFile.FileId>
-                                  </uga:DownloadFile>
-                                </Sequence>
-                              </If.Then>
-                              <If.Else>
-                                <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_50">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </If.Else>
-                            </If>
-                          </Sequence>
-                        </ui:CommentOut.Body>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:CommentOut>
-                      <If sap:VirtualizedContainerService.HintSize="856,1222.4" sap2010:WorkflowViewState.IdRef="If_12">
-                        <If.Condition>
-                          <InArgument x:TypeArguments="x:Boolean">
-                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_427">
-                              <CSharpValue.Result>
-                                <OutArgument x:TypeArguments="x:Boolean" />
-                              </CSharpValue.Result>isCodeMissing</CSharpValue>
-                          </InArgument>
-                        </If.Condition>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="476.8,1039.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_18">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">
-                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_53">
-                                    <CSharpReference.Result>
-                                      <OutArgument x:TypeArguments="Location(x:String)" />
-                                    </CSharpReference.Result>message</CSharpReference>
-                                </OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_428">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="x:String" />
-                                    </CSharpValue.Result>DateTime.Now.ToString() + "- Số mã còn thiếu: " + count + "/" + dataTable.RowCount()</CSharpValue>
-                                </InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_7">
-                              <ui:LogMessage.Level>
-                                <InArgument x:TypeArguments="ui:LogLevel">
-                                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_429">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="ui:LogLevel" />
-                                    </CSharpValue.Result>UiPath.Core.Activities.LogLevel.Info</CSharpValue>
-                                </InArgument>
-                              </ui:LogMessage.Level>
-                              <ui:LogMessage.Message>
-                                <InArgument x:TypeArguments="x:Object">
-                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_430">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="x:Object" />
-                                    </CSharpValue.Result>"Số mã còn thiếu: " + count</CSharpValue>
-                                </InArgument>
-                              </ui:LogMessage.Message>
-                            </ui:LogMessage>
-                            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Password="eryhaosialfqcxfo" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA_Amber">
-                              <ui:SendMail.Body>
-                                <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_432">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="x:String" />
-                                    </CSharpValue.Result>message</CSharpValue>
-                                </InArgument>
-                              </ui:SendMail.Body>
-                              <ui:SendMail.Files>
-                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                              </ui:SendMail.Files>
-                              <ui:SendMail.To>
-                                <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_431">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="x:String" />
-                                    </CSharpValue.Result>in_config["mailPhuTrach"].ToString()</CSharpValue>
-                                </InArgument>
-                              </ui:SendMail.To>
-                            </ui:SendMail>
-                            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DisplayName="Send SMTP Mail Message" Email="quanghoangnhat01@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="False" Password="eryhaosialfqcxfo" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA_Amber">
-                              <ui:SendMail.Body>
-                                <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_434">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="x:String" />
-                                    </CSharpValue.Result>message</CSharpValue>
-                                </InArgument>
-                              </ui:SendMail.Body>
-                              <ui:SendMail.Files>
-                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                              </ui:SendMail.Files>
-                              <ui:SendMail.To>
-                                <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_433">in_config["mailAmber"].ToString()</CSharpValue>
-                                </InArgument>
-                              </ui:SendMail.To>
-                            </ui:SendMail>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_8">
-                              <ui:LogMessage.Level>
-                                <InArgument x:TypeArguments="ui:LogLevel">
-                                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_435">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="ui:LogLevel" />
-                                    </CSharpValue.Result>UiPath.Core.Activities.LogLevel.Error</CSharpValue>
-                                </InArgument>
-                              </ui:LogMessage.Level>
-                              <ui:LogMessage.Message>
-                                <InArgument x:TypeArguments="x:Object">
-                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_436">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="x:Object" />
-                                    </CSharpValue.Result>"check drive done"</CSharpValue>
-                                </InArgument>
-                              </ui:LogMessage.Message>
-                            </ui:LogMessage>
-                            <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason=" Người dùng chưa điền đủ mã" />
-                          </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="377.6,388" sap2010:WorkflowViewState.IdRef="Sequence_53">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:WriteCell Cell="B7" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Config" Text="3" WorkbookPath="config\config.xlsx">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:WriteCell>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_9">
-                              <ui:LogMessage.Level>
-                                <InArgument x:TypeArguments="ui:LogLevel">
-                                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_437">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="ui:LogLevel" />
-                                    </CSharpValue.Result>UiPath.Core.Activities.LogLevel.Trace</CSharpValue>
-                                </InArgument>
-                              </ui:LogMessage.Level>
-                              <ui:LogMessage.Message>
-                                <InArgument x:TypeArguments="x:Object">
-                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_438">
-                                    <CSharpValue.Result>
-                                      <OutArgument x:TypeArguments="x:Object" />
-                                    </CSharpValue.Result>"file trên drive đã đầy đủ mã"</CSharpValue>
-                                </InArgument>
-                              </ui:LogMessage.Message>
-                            </ui:LogMessage>
-                          </Sequence>
-                        </If.Else>
-                      </If>
-                    </Sequence>
-                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="918.4,2250.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
+                    </uga:DownloadFile>
+                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="625.6,2170.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ProcessMode="AlwaysCreateNew" ShowExcelWindow="False">
                       <ueab:ExcelProcessScopeX.Body>
                         <ActivityAction x:TypeArguments="ui:IExcelProcess">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2164" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2084" sap2010:WorkflowViewState.IdRef="Sequence_30">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,481.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,441.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
@@ -1075,7 +1169,7 @@
                                 </InArgument>
                               </ueab:ExcelApplicationCard.WorkbookPath>
                             </ueab:ExcelApplicationCard>
-                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="529.6,1020.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
+                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="529.6,980.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Output\\Danh muc VTHH.xlsx">
                               <ui:ExcelApplicationScope.Body>
                                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                   <ActivityAction.Argument>
@@ -1139,13 +1233,7 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </Sequence>
+                                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_40" />
                                       </If.Else>
                                     </If>
                                   </Sequence>
@@ -1201,6 +1289,7 @@
               </FlowSwitch>
               <x:Reference>__ReferenceID0</x:Reference>
               <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID2</x:Reference>
             </Flowchart>
           </Sequence>
         </ActivityAction>
