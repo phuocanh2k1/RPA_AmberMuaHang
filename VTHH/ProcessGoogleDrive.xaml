@@ -5,7 +5,7 @@
     <x:Property Name="in_FileToCheck" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>815.1999999999999,1239.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1051.2,1239.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -221,7 +221,7 @@
               <Flowchart.StartNode>
                 <x:Reference>__ReferenceID2</x:Reference>
               </Flowchart.StartNode>
-              <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID2" DisplayName="Kiểm tra stage" sap:VirtualizedContainerService.HintSize="81.6,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+              <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID2" DisplayName="Kiểm tra stage" sap:VirtualizedContainerService.HintSize="82.4,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                 <FlowSwitch.Default>
                   <FlowStep x:Name="__ReferenceID0">
                     <sap:WorkflowViewStateService.ViewState>
@@ -504,7 +504,7 @@
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <av:Point x:Key="ShapeLocation">249.2,116.4</av:Point>
-                    <av:Size x:Key="ShapeSize">81.6,87.2</av:Size>
+                    <av:Size x:Key="ShapeSize">82.4,87.2</av:Size>
                     <av:PointCollection x:Key="Default">331.6,181.8 361.6,181.8 361.6,250.79999999999998 410,250.79999999999998</av:PointCollection>
                     <x:String x:Key="DefaultCaseDisplayName">1</x:String>
                     <av:PointCollection x:Key="3Connector">311,203.60000000000002 311,233.60000000000002 290,233.60000000000002 290,338.4</av:PointCollection>
@@ -517,7 +517,7 @@
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Tải file Danh sách Mã vật tư hoàn chỉnh" sap:VirtualizedContainerService.HintSize="980.8,4625.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <Sequence DisplayName="Tải file Danh sách Mã vật tư hoàn chỉnh" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="gadvd:File[]" Name="folderList" />
                       <Variable x:TypeArguments="gadvd:File[]" Name="fileList" />
