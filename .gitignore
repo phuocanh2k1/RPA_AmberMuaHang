@@ -1,5 +1,1 @@
-*.xlsx
-Output/*
-Input/*
-template/*
-test/*
+/*.xlsx

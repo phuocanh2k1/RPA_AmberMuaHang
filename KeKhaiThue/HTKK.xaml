@@ -6,7 +6,7 @@
     <x:Property Name="file" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>834.4,5780</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,5962.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -141,7 +141,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HTKK" sap:VirtualizedContainerService.HintSize="641.6,5715.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="HTKK" sap:VirtualizedContainerService.HintSize="641.6,5897.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="userProfile" />
     </Sequence.Variables>
@@ -150,6 +150,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="579.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">"HTKK start..."</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
     <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="HTKK.exe - shortcut" sap:VirtualizedContainerService.HintSize="579.2,88" sap2010:WorkflowViewState.IdRef="StartProcess_2" Timeout="3000" />
     <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" sap:VirtualizedContainerService.HintSize="579.2,85.6" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_1" SpecialFolder="UserProfile">
       <ui:GetEnvironmentFolder.FolderPath>
